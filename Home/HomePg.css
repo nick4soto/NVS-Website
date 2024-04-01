@@ -1,8 +1,13 @@
+html{
+    background-color: #242424;
+    color: aliceblue;
+}
+
 .nvsLogo{
     width: 20%;
     height: 20%;
-    margin-top: 5%;
-    float: right;
+    margin-top: 1%;
+    float: left;
     z-index: 1;
 }
 
@@ -15,11 +20,22 @@
     z-index: 1;
 }
 
+.requestQuote{
+    width: 20%;
+    height: 20%;
+    margin-top: 1%;
+    float: right;
+    z-index: 1;
+}
+
 body{
     background-image: url("./Images/man_mopping_the_floor-scaled.jpg");
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 h3, div img {
