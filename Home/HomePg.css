@@ -3,9 +3,9 @@ html{
     color: aliceblue;
 }
 
-.nvsLogo{
-    width: 20%;
-    height: 20%;
+.nvsLogo img{
+    width: 15%;
+    height: auto;
     margin-top: 1%;
     float: left;
     z-index: 1;
