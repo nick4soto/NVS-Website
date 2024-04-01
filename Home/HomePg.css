@@ -15,6 +15,13 @@
     z-index: 1;
 }
 
+body{
+    background-image: url("./Images/man_mopping_the_floor-scaled.jpg");
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 h3, div img {
     width: 150px; /* Adjust this value as needed */
     height: auto; /* This will maintain the aspect ratio of the images */
