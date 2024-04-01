@@ -1,5 +1,30 @@
-h1{
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
+.nvsLogo{
+    width: 20%;
+    height: 20%;
+    margin-top: 5%;
+    float: right;
+    z-index: 1;
+}
+
+.navbar{
+    
+    height: 10%;
+    width: 100%;
+
+    float: right;
+    z-index: 1;
+}
+
+h3, div img {
+    width: 150px; /* Adjust this value as needed */
+    height: auto; /* This will maintain the aspect ratio of the images */
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    color: white;
+    text-align: center;
 }
