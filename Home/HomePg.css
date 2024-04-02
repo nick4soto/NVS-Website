@@ -84,6 +84,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
 }
 
+h3, div img {
+    width: 150px; /* Adjust this value as needed */
+    height: auto; /* This will maintain the aspect ratio of the images */
+}
+
 footer {
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center content */
