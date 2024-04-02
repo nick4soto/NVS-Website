@@ -25,35 +25,63 @@ body {
 }
 
 .nvsLogo img {
-    width: 120px; /* Adjust size as necessary */
+    width: 150px; /* Adjust size as necessary */
     height: auto;
 }
 
 .navBar {
-    display: flex; /* Ensure nav items are also flexed for alignment */
+    display: flex;
+    align-items: center; /* Vertically center items */
+    padding: 0;
     margin-left: 20px; /* Adjust as needed for spacing */
+    list-style: none; /* Remove if your navBar is within a <ul> */
 }
 
 .navBar a {
-    font-size: large;
+    font-size: 16px; /* Consistent and readable size */
     color: white;
     text-decoration: none;
     margin-right: 20px; /* Adjust as needed for spacing between links */
+    padding: 10px; /* Padding for a larger clickable area */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
 }
 
-.navBar a:hover {
-    color: #ff7c1a; /* Change color on hover */
+.navBar a:hover, .navBar a:focus {
+    color: #ffffff; /* Maintain text color or change as preferred */
+    background-color: #ff7c1a; /* Background color on hover/focus for visual feedback */
+    text-decoration: none; /* Ensures no underline appears on hover/focus */
 }
+
+/* Optional: Add a slight shadow to the active navigation item */
+.navBar a.active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 
 .requestQuote {
-    background-color: #ff7c1a;
-    color: #3e2a75;
-    padding: 10px 20px; /* Use padding instead of width/height for button sizing */
+    background-color: transparent;
+    color: #3e2a75; /* Consider a vibrant or contrasting color for visibility */
+    border-radius: 20px; /* More pronounced rounded corners for a modern look */
+    border: 2px solid #3e2a75; /* Ensure the border is visible */
+    padding: 15px 30px; /* Adjust padding for a larger, more clickable area */
+    font-size: 16px; /* Adjust based on your design */
+    font-weight: bold; /* Make the text bold */
     cursor: pointer;
     position: absolute;
-    right: 10px; /* Adjust based on desired spacing from the right edge */
+    right: 20px; /* Adjust based on desired spacing from the right edge */
     top: 50%;
-    transform: translateY(-50%); /* Center vertically */
+    transform: translateY(-50%);
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-transform: uppercase; /* Optional: Makes the button text uppercase for emphasis */
+    letter-spacing: 1px; /* Increases spacing between letters for readability */
+}
+
+.requestQuote:hover, .requestQuote:focus {
+    background-color: #3e2a75; /* Button fills with color on hover/focus */
+    color: #fff; /* Text color changes to maintain contrast */
+    border-color: #3e2a75; /* Optional: Adjust if you want a different border color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
 }
 
 footer {
