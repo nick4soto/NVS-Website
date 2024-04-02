@@ -101,6 +101,13 @@ body {
     font-size: 25px;
 }
 
+.secondText{
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: large;
+    padding-left: 2%;
+}
+
 section{
     margin-bottom: 50%;
 }
