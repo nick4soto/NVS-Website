@@ -1,6 +1,23 @@
 html{
+    background-color:antiquewhite;
+    background-image: url("./Images/man_mopping_the_floor-scaled.jpg");
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    border-bottom: #ff7c1a 2px solid;
+}
+
+.header{
     background-color: #3e2a75;
-    color: #ff7c1a;
+    color: white;
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    padding-bottom: 100%;
 }
 
 .nvsLogo img{
@@ -12,30 +29,27 @@ html{
 }
 
 .navbar{
-    
     height: 10%;
     width: 100%;
-
     float: right;
     z-index: 1;
 }
 
 .requestQuote{
-    width: 20%;
-    height: 20%;
-    margin-top: 1%;
+    background-color: #ff7c1a;
+    color: #3e2a75;
+    width: 10%;
+    height: 10%;
+    margin-top: -6cm;
+    margin-right: 5%;
     float: right;
     z-index: 1;
 }
 
 body{
-    background-image: url("./Images/man_mopping_the_floor-scaled.jpg");
-    margin: 0;
-    padding: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    background-color: aqua;
+    margin-top: 50%;
+    font-family: Arial, sans-serif;
 }
 
 h3, div img {
