@@ -84,6 +84,27 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
 }
 
+.frontText{
+    color: white;
+    margin-top: 20%;
+    font-family: Arial, sans-serif;
+    font-size: xx-large;
+    padding-left: 2%;
+}
+
+.frontText h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.frontText h4{
+    font-size: 25px;
+}
+
+section{
+    margin-bottom: 50%;
+}
+
 h3, div img {
     width: 150px; /* Adjust this value as needed */
     height: auto; /* This will maintain the aspect ratio of the images */
