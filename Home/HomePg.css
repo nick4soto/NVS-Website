@@ -165,11 +165,11 @@ body {
     font-size: 2.5rem; /* Large font size for the header */
     font-weight: 700; /* Bold font weight for emphasis */
     letter-spacing: 1.5px; /* Increases spacing between letters for a modern look */
-    color: #3e2a75; /* Maintains your primary color choice */
+    color: #ff7c1a; /* Maintains your primary color choice */
     margin: 0 auto 20px; /* Centers the heading and adds space below */
     padding: 0; /* Resets any padding */
     padding-top: 8%;
-    padding-bottom: 10%;
+    padding-bottom: 2%;
 }
 
 .janImg, .dryWallImg{
@@ -193,6 +193,56 @@ body {
     align-items: center;
     margin: 20px 0; /* Adds space above and below the images */
 }
+
+.janGrnd, .mechBuild, .repRenCon{
+    color: black;
+    margin: 20px 0;
+    padding-bottom: 10%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.janGrnd h4, .mechBuild h4, .repRenCon h4{
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    letter-spacing: 1.5px; 
+    color: #3e2a75; 
+    margin: 0 auto 20px; 
+    padding: 0; 
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+
+.janGrnd p, .mechBuild p, .repRenCon p{
+    font-size: 1.5rem; 
+    font-weight: 400; 
+    text-align: center;
+}
+
+.janGrnd button, .mechBuild button, .repRenCon button{
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px; 
+    border: 2px solid #3e2a75; 
+    margin-top: 5%;
+    padding: 15px 30px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+.janGrnd button:hover, .mechBuild button:hover, .repRenCon button:hover, .janGrnd button:focus, .mechBuild button:focus, .repRenCon button:focus{
+    background-color: #3e2a75; 
+    color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
 
 
 div img {
