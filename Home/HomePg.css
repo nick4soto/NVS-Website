@@ -112,7 +112,7 @@ body {
 }
 
 .secondText {
-    max-width: 800px;
+    max-width: 950px;
     margin: 20px auto; /* Reduced the top margin to bring it closer to the top */
     padding: 20px 40px;
     text-align: center;
@@ -161,6 +161,16 @@ body {
     border-color: #3e2a75; /* Optional: Adjust if you want a different border color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
 }
+
+.thirdText{
+    text-align: center;
+    
+
+
+}
+
+
+
 
 h3, div img {
     width: 150px; /* Adjust this value as needed */
