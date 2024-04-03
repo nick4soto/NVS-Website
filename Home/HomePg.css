@@ -9,11 +9,25 @@ html {
     height: 100%;
 }
 
+
+
+
+
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0; /* Remove the large top margin */
-    color: #333; /* Improved text visibility */
+    margin: 0;
+    padding: 0;
+    background-image: url('./path/to/your-subtle-texture.png');
+    background-repeat: repeat;
+    color: #333333;
 }
+
+
+
+
+
+
 
 .header {
     display: flex; /* Establish flex container */
@@ -25,7 +39,7 @@ body {
 }
 
 .nvsLogo img {
-    width: 150px; /* Adjust size as necessary */
+    width: 175px; /* Adjust size as necessary */
     height: auto;
 }
 
@@ -38,6 +52,7 @@ body {
 }
 
 .navBar a {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px; /* Consistent and readable size */
     color: white;
     text-decoration: none;
@@ -84,33 +99,75 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
 }
 
-.frontText{
-    color: white;
-    margin-top: 20%;
-    font-family: Arial, sans-serif;
-    font-size: xx-large;
-    padding-left: 2%;
+.frontText {
+    font-family: adonis-webs;
+    padding: 50px 20px; /* Adds padding around the text */
+    margin-top: 20vh; /* Pushes the section towards the bottom, adjust as needed */
+    color: white; /* Primary text color */
 }
 
-.frontText h3{
-    font-size: 40px;
-    font-weight: bold;
+.frontText h3 {
+    font-size: 2.5rem; /* Large font size for the header */
+    margin-bottom: 0.5rem; /* Reduces space between the h3 and h4 */
+    font-weight: 700; /* Bold font weight */
+    text-transform: uppercase; /* CAPITALIZES THE TEXT */
+    letter-spacing: 1.5px; /* Increases spacing between letters for a modern look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
 }
 
-.frontText h4{
-    font-size: 25px;
+.frontText h4 {
+    font-size: 1.8rem; /* Slightly smaller font size for the subheader */
+    font-weight: 400; /* Normal font weight */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Lighter text shadow for distinction */
 }
 
-.secondText{
-    color: black;
-    font-family: Arial, sans-serif;
-    font-size: large;
-    padding-left: 2%;
+.secondText {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 20px auto; /* Reduced the top margin to bring it closer to the top */
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-section{
-    margin-bottom: 50%;
+.secondText h2 {
+    color: #3e2a75; /* Primary color for the header */
+    font-size: 2.5em; /* Larger font size for primary header */
+    margin-bottom: 20px; /* Space between the h3 and h4 */
 }
+
+.secondText p {
+    color: black; /* Accent color for the subheader */
+    font-size: 1.5em; /* Substantial size but smaller than the h3 */
+}
+
+.secondText button {
+    background-color: transparent;
+    color: #3e2a75; /* Consider a vibrant or contrasting color for visibility */
+    border-radius: 20px; /* More pronounced rounded corners for a modern look */
+    border: 2px solid #3e2a75; /* Ensure the border is visible */
+    margin-top: 4%;
+    padding: 15px 30px; /* Adjust padding for a larger, more clickable area */
+    font-size: 16px; /* Adjust based on your design */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer;
+    right: 20px; /* Adjust based on desired spacing from the right edge */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-transform: uppercase; /* Optional: Makes the button text uppercase for emphasis */
+    letter-spacing: 1px; /* Increases spacing between letters for readability */
+}
+
+.secondText button:hover, .secondText button:focus {
+    background-color: #3e2a75; /* Button fills with color on hover/focus */
+    color: #fff; /* Text color changes to maintain contrast */
+    border-color: #3e2a75; /* Optional: Adjust if you want a different border color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+
 
 h3, div img {
     width: 150px; /* Adjust this value as needed */
