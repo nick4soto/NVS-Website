@@ -7,108 +7,100 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    z-index: 0;
 }
 
 body {
     background-image: url(./Images/bg_squares.svg);
     margin: 0;
     padding: 0;
-    color: #333333; /* Dark text for contrast and readability */
-    z-index: 0; /* Ensures the body is behind other elements */
+    color: #333333; 
 }
 
 .header {
-    display: flex; /* Establish flex container */
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Align items to the start */
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
     color: white;
-    padding: 1rem; /* Adjusted padding */
+    padding: 1rem; 
     position: relative;
 }
 
 .nvsLogo img {
-    width: 175px; /* Adjust size as necessary */
+    width: 175px; 
     height: auto;
 }
 
 .navBar {
     display: flex;
-    align-items: center; /* Vertically center items */
+    align-items: center; 
     padding: 0;
-    margin-left: 20px; /* Adjust as needed for spacing */
-    list-style: none; /* Remove if your navBar is within a <ul> */
+    margin-left: 20px; 
 }
 
 .navBar a {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px; /* Consistent and readable size */
+    font-size: 15px;
     color: white;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 20px; /* Adjust as needed for spacing between links */
-    padding: 10px; /* Padding for a larger clickable area */
-    border-radius: 5px; /* Slightly rounded corners for a modern look */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+    margin-right: 20px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .navBar a:hover, .navBar a:focus {
-    color: #ffffff; /* Maintain text color or change as preferred */
-    background-color: #ff7c1a; /* Background color on hover/focus for visual feedback */
-    text-decoration: none; /* Ensures no underline appears on hover/focus */
+    color: #ffffff; 
+    background-color: #ff7c1a; 
+    text-decoration: none; 
 }
-
-/* Optional: Add a slight shadow to the active navigation item */
-.navBar a.active {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
 
 .requestQuote {
     background-color: transparent;
-    color: #3e2a75; /* Consider a vibrant or contrasting color for visibility */
-    border-radius: 20px; /* More pronounced rounded corners for a modern look */
-    border: 2px solid #3e2a75; /* Ensure the border is visible */
-    padding: 15px 30px; /* Adjust padding for a larger, more clickable area */
-    font-size: 16px; /* Adjust based on your design */
-    font-weight: bold; /* Make the text bold */
+    color: #3e2a75;
+    border-radius: 20px; 
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px; 
+    font-size: 16px; 
+    font-weight: bold; 
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Adjust based on desired spacing from the right edge */
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    text-transform: uppercase; /* Optional: Makes the button text uppercase for emphasis */
-    letter-spacing: 1px; /* Increases spacing between letters for readability */
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
 }
 
 .requestQuote:hover, .requestQuote:focus {
-    background-color: #3e2a75; /* Button fills with color on hover/focus */
-    color: #fff; /* Text color changes to maintain contrast */
-    border-color: #3e2a75; /* Optional: Adjust if you want a different border color on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    background-color: #3e2a75; 
+    color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .frontText {
-    font-family: adonis-webs;
-    padding: 50px 20px; /* Adds padding around the text */
-    margin-top: 20vh; /* Pushes the section towards the bottom, adjust as needed */
-    color: white; /* Primary text color */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 20px; 
+    margin-top: 20vh; 
+    color: white; 
 }
 
 .frontText h3 {
-    font-size: 2.5rem; /* Large font size for the header */
+    max-width: 150px;
+    font-size: 2.5rem; 
     margin-bottom: 0.5rem; /* Reduces space between the h3 and h4 */
-    font-weight: 700; /* Bold font weight */
-    text-transform: uppercase; /* CAPITALIZES THE TEXT */
-    letter-spacing: 1.5px; /* Increases spacing between letters for a modern look */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .frontText h4 {
-    font-size: 1.8rem; /* Slightly smaller font size for the subheader */
-    font-weight: 400; /* Normal font weight */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Lighter text shadow for distinction */
+    max-width: auto;
+    font-size: 1.8rem; 
+    font-weight: 400; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
 .secondText {
@@ -162,17 +154,48 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
 }
 
-.thirdText{
+.thirdText {
+    max-width: 1000px; /* Adjusts width as needed */
+    margin: 40px auto; /* Centers the section horizontally and adds vertical margin */
+    padding: 20px; /* Adds padding around the content */
+}
+
+.thirdText h3 {
     text-align: center;
-    
+    font-size: 2.5rem; /* Large font size for the header */
+    font-weight: 700; /* Bold font weight for emphasis */
+    letter-spacing: 1.5px; /* Increases spacing between letters for a modern look */
+    color: #3e2a75; /* Maintains your primary color choice */
+    margin: 0 auto 20px; /* Centers the heading and adds space below */
+    padding: 0; /* Resets any padding */
+    padding-top: 8%;
+    padding-bottom: 10%;
+}
 
+.janImg, .dryWallImg{
+    padding: 40px; /* Adds space around the images */
+    width: 450px;
+    height: auto;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adds space above and below the images */
+}
 
+.hvacGuyImg{
+    padding: 40px; /* Adds space around the images */
+    width: 450px;
+    height: auto;
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Adds space above and below the images */
 }
 
 
-
-
-h3, div img {
+div img {
     width: 150px; /* Adjust this value as needed */
     height: auto; /* This will maintain the aspect ratio of the images */
 }
