@@ -172,26 +172,38 @@ body {
     padding-bottom: 2%;
 }
 
-.janImg, .dryWallImg{
-    padding: 40px; /* Adds space around the images */
-    width: 450px;
-    height: auto;
-    display: flex;
-    float: left;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0; /* Adds space above and below the images */
+/* Styles for Janitorial and Drywall images (aligned to the left) */
+.janImg{
+    width: 450px; /* Fixed width for consistency */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures images cover the box area nicely, cropping if necessary */
+    border: 4px solid #3e2a75; /* Visible border with color #3e2a75 and 4px width */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 20px 20px 0; /* Space around the images, more margin to the right */
+    float: left; /* Keep alignment to the left */
 }
 
-.hvacGuyImg{
-    padding: 40px; /* Adds space around the images */
+.hvacGuyImg {
     width: 450px;
     height: auto;
-    display: flex;
-    float: right;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0; /* Adds space above and below the images */
+    object-fit: cover;
+    border: 4px solid darkgreen; /* Visible border with color #3e2a75 and 4px width */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0 20px 20px; /* Space around the image, more margin to the left */
+    float: right; /* Aligns the image to the right */
+}
+
+.dryWallImg{
+    width: 450px; /* Fixed width for consistency */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures images cover the box area nicely, cropping if necessary */
+    border: 4px solid #ff7c1a; /* Visible border with color #3e2a75 and 4px width */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 20px 20px 0; /* Space around the images, more margin to the right */
+    float: left; /* Keep alignment to the left */
 }
 
 .janGrnd, .mechBuild, .repRenCon{
@@ -243,12 +255,30 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-
-
-div img {
-    width: 150px; /* Adjust this value as needed */
-    height: auto; /* This will maintain the aspect ratio of the images */
+#imageScroller {
+    overflow: hidden; /* Hide the overflow to only show one image at a time */
+    white-space: nowrap; /* Display images in a line */
+    width: 150px; /* Set the viewport width */
+    height: auto; /* Adjust based on content */
 }
+
+#imageScroller div {
+    display: inline-block; /* Display images inline */
+    width: 150px; /* Image container width to match the image */
+    height: auto;
+    margin-right: 20px; /* Space between images */
+}
+
+#imageScroller div img {
+    width: 100%; /* Ensure images fill their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+div img{
+    width: 100px;
+    height: auto;
+}
+
 
 footer {
     display: flex; /* Use flexbox for layout */

@@ -62,12 +62,16 @@
     </section>
 
     <h3>Certifications & Associations</h3>
-    <div><img src="./Images/CIMS-Certified-1536x852.webp" alt="CIMS Certified"></div>
-    <div><img src="./Images/CIMS-GB-Honors-RGB-UP.jpg" alt="CIM GB Honors"></div>
-    <div><img src="./Images/gsa_contract_holder.webp" alt="gsa contract"></div>
-    <div><img src="./Images/bscai_member.webp" alt="bscai Member"></div>
-    <div><img src="./Images/sba-small-disadvantaged-business-logo-300x253-1.jpg" alt="sba Logo"></div>
-    <div><img src="./Images/Hubzone.jpg" alt="Hub zone Logo"></div>
+    <div class="centerContainer">
+    <div id="imageScroller">
+        <div><img src="./Images/CIMS-Certified-1536x852.webp" alt="CIMS Certified"></div>
+        <div><img src="./Images/CIMS-GB-Honors-RGB-UP.jpg" alt="CIM GB Honors"></div>
+        <div><img src="./Images/gsa_contract_holder.webp" alt="gsa contract"></div>
+        <div><img src="./Images/bscai_member.webp" alt="bscai Member"></div>
+        <div><img src="./Images/sba-small-disadvantaged-business-logo-300x253-1.jpg" alt="sba Logo"></div>
+        <div><img src="./Images/Hubzone.jpg" alt="Hub zone Logo"></div>
+    </div>
+    </div>
 
   <h2>WHO WE ARE
     About NVS Corporate Services</h2>
@@ -107,6 +111,22 @@
         <p>© Copyright 2024, Website Design & Development by Nick and friends</p>
     </div>
 </footer>
+
+<script>
+    const scroller = document.getElementById('imageScroller');
+    let scrollAmount = 0;
+
+    function scrollImages() {
+        if (scrollAmount < scroller.scrollWidth - scroller.clientWidth) {
+            scrollAmount += 1; // Increment the scroll
+            scroller.scrollLeft = scrollAmount;
+        } else {
+            scrollAmount = 0; // Reset the scroll
+        }
+    }
+
+    setInterval(scrollImages, 20); // Adjust speed as necessary
+</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
