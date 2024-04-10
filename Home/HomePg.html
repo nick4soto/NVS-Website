@@ -58,20 +58,49 @@
                 <p>NVS provides commercial and institutional building construction services. From conceptualization through project completion, NVS utilizes innovative engineering, skilled labor and proven project management to build cost effectiveness into each project and produce world-class results for their clients.</p>
                 <button>More</button>
                 </div>
-        
     </section>
 
-    <h3>Certifications & Associations</h3>
-    <div class="centerContainer">
-    <div id="imageScroller">
-        <div><img src="./Images/CIMS-Certified-1536x852.webp" alt="CIMS Certified"></div>
-        <div><img src="./Images/CIMS-GB-Honors-RGB-UP.jpg" alt="CIM GB Honors"></div>
-        <div><img src="./Images/gsa_contract_holder.webp" alt="gsa contract"></div>
-        <div><img src="./Images/bscai_member.webp" alt="bscai Member"></div>
-        <div><img src="./Images/sba-small-disadvantaged-business-logo-300x253-1.jpg" alt="sba Logo"></div>
-        <div><img src="./Images/Hubzone.jpg" alt="Hub zone Logo"></div>
+    <section class="logoCarousel">
+    <h3 class="head1">Certifications & Associations:</h3>
+    <div class="logos1">
+    <div class="logos-slide">
+        <img src="./Images/CIMS-Certified-1536x852.webp" alt="CIMS Certified">
+        <img src="./Images/CIMS-GB-Honors-RGB-UP.jpg" alt="CIM GB Honors">
+        <img src="./Images/gsa_contract_holder.webp" alt="gsa contract">
+        <img src="./Images/bscai_member.webp" alt="bscai Member">
+        <img src="./Images/sba-small-disadvantaged-business-logo-300x253-1.jpg" alt="sba Logo">
+        <img src="./Images/Hubzone.jpg" alt="Hub zone Logo">
+    </div>
+    <div class="logos-slide">
+        <img src="./Images/CIMS-Certified-1536x852.webp" alt="CIMS Certified">
+        <img src="./Images/CIMS-GB-Honors-RGB-UP.jpg" alt="CIM GB Honors">
+        <img src="./Images/gsa_contract_holder.webp" alt="gsa contract">
+        <img src="./Images/bscai_member.webp" alt="bscai Member">
+        <img src="./Images/sba-small-disadvantaged-business-logo-300x253-1.jpg" alt="sba Logo">
+        <img src="./Images/Hubzone.jpg" alt="Hub zone Logo">
     </div>
     </div>
+
+    <h3 class="head2">Our Clients Include:</h3>
+    <div class="logos2">
+        <div class="logos-slide">
+        <img src="./Images/GSA.webp" alt="GSA Web">
+        <img src="./Images/DOJ.webp" alt="DOJ Web">
+        <img src="./Images/va.jpg" alt="VA seal">
+        <img src="./Images/US_DHS.webp" alt="US DHS">
+        <img src="./Images/us-army-corps-of-engineers.webp" alt="US Army Web">
+        <img src="./Images/Navy.webp" alt="Navy Web">
+    </div>
+    <div class="logos-slide">
+        <img src="./Images/GSA.webp" alt="GSA Web">
+        <img src="./Images/DOJ.webp" alt="DOJ Web">
+        <img src="./Images/va.jpg" alt="VA seal">
+        <img src="./Images/US_DHS.webp" alt="US DHS">
+        <img src="./Images/us-army-corps-of-engineers.webp" alt="US Army Web">
+        <img src="./Images/Navy.webp" alt="Navy Web">
+    </div>
+    </div>
+</section>
 
   <h2>WHO WE ARE
     About NVS Corporate Services</h2>
@@ -82,15 +111,6 @@
 
       <button>Capability Statement</button>
 
-    </ul>
-
-    <h3>Our Clients Include</h3>
-    <div><img src="./Images/GSA.webp" alt="GSA Web"></div>
-    <div><img src="./Images/DOJ.webp" alt="DOJ Web"></div>
-    <div><img src="./Images/va.jpg" alt="VA seal"></div>
-    <div><img src="./Images/US_DHS.webp" alt="US DHS"></div>
-    <div><img src="./Images/us-army-corps-of-engineers.webp" alt="US Army Web"></div>
-    <div><img src="./Images/Navy.webp" alt="Navy Web"></div>
 </main>
 
 <footer class="footer">
@@ -112,21 +132,7 @@
     </div>
 </footer>
 
-<script>
-    const scroller = document.getElementById('imageScroller');
-    let scrollAmount = 0;
 
-    function scrollImages() {
-        if (scrollAmount < scroller.scrollWidth - scroller.clientWidth) {
-            scrollAmount += 1; // Increment the scroll
-            scroller.scrollLeft = scrollAmount;
-        } else {
-            scrollAmount = 0; // Reset the scroll
-        }
-    }
-
-    setInterval(scrollImages, 20); // Adjust speed as necessary
-</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {

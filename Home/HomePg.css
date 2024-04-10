@@ -16,6 +16,9 @@ body {
     color: #333333; 
 }
 
+
+/* --------------------------------------Styles for the header---------------------------------------------- */
+
 .header {
     display: flex;
     align-items: center; 
@@ -79,6 +82,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+/* --------------------------------------Styles for the main content---------------------------------------------- */
+
 .frontText {
     font-family: Arial, Helvetica, sans-serif;
     padding: 50px 20px; 
@@ -103,6 +108,9 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
+
+/* --------------------------------------Styles for the second section---------------------------------------------- */
+
 .secondText {
     max-width: 950px;
     margin: 20px auto; /* Reduced the top margin to bring it closer to the top */
@@ -119,68 +127,70 @@ body {
 }
 
 .secondText h2 {
-    color: #3e2a75; /* Primary color for the header */
-    font-size: 2.5em; /* Larger font size for primary header */
-    margin-bottom: 20px; /* Space between the h3 and h4 */
+    color: #3e2a75; 
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
 }
 
 .secondText p {
-    color: black; /* Accent color for the subheader */
-    font-size: 1.5em; /* Substantial size but smaller than the h3 */
+    color: black; 
+    font-size: 1.5em; 
 }
 
 .secondText button {
     background-color: transparent;
-    color: #3e2a75; /* Consider a vibrant or contrasting color for visibility */
-    border-radius: 20px; /* More pronounced rounded corners for a modern look */
-    border: 2px solid #3e2a75; /* Ensure the border is visible */
+    color: #3e2a75;
+    border-radius: 20px; 
+    border: 2px solid #3e2a75; 
     margin-top: 5%;
-    padding: 15px 30px; /* Adjust padding for a larger, more clickable area */
-    font-size: 16px; /* Adjust based on your design */
-    font-weight: bold; /* Make the text bold */
+    padding: 15px 30px; 
+    font-size: 16px; 
+    font-weight: bold;
     cursor: pointer;
-    right: 20px; /* Adjust based on desired spacing from the right edge */
+    right: 20px; 
     top: 50%;
     transform: translateY(-50%);
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    text-transform: uppercase; /* Optional: Makes the button text uppercase for emphasis */
-    letter-spacing: 1px; /* Increases spacing between letters for readability */
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
 }
 
 .secondText button:hover, .secondText button:focus {
-    background-color: #3e2a75; /* Button fills with color on hover/focus */
-    color: #fff; /* Text color changes to maintain contrast */
-    border-color: #3e2a75; /* Optional: Adjust if you want a different border color on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    background-color: #3e2a75; 
+    color: #fff; 
+    border-color: #3e2a75; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+/* --------------------------------------Styles for the third section---------------------------------------------- */
+
 .thirdText {
-    max-width: 1000px; /* Adjusts width as needed */
-    margin: 10px auto; /* Centers the section horizontally and adds vertical margin */
-    padding: 10px; /* Adds padding around the content */
+    max-width: 1000px; 
+    margin: 10px auto; 
+    padding: 10px;
 }
 
 .thirdText h3 {
     text-align: center;
-    font-size: 2.5rem; /* Large font size for the header */
-    font-weight: 700; /* Bold font weight for emphasis */
-    letter-spacing: 1.5px; /* Increases spacing between letters for a modern look */
-    color: #ff7c1a; /* Maintains your primary color choice */
-    margin: 0 auto 20px; /* Centers the heading and adds space below */
-    padding: 0; /* Resets any padding */
+    font-size: 2.5rem; 
+    font-weight: 700;
+    letter-spacing: 1.5px; 
+    color: #ff7c1a; 
+    margin: 0 auto 20px; 
+    padding: 0; 
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
 /* Styles for Janitorial and Drywall images (aligned to the left) */
 .janImg{
-    width: 450px; /* Fixed width for consistency */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures images cover the box area nicely, cropping if necessary */
-    border-radius: 15px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 0px 20px 0px 0; /* Space around the images, more margin to the right */
-    float: left; /* Keep alignment to the left */
+    width: 450px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0px 20px 0px 0; 
+    float: left; 
 }
 
 .hvacGuyImg {
@@ -189,18 +199,18 @@ body {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0px 0 0px 20px; /* Space around the image, more margin to the left */
-    float: right; /* Aligns the image to the right */
+    margin: 0px 0 0px 20px; 
+    float: right;
 }
 
 .dryWallImg{
-    width: 450px; /* Fixed width for consistency */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures images cover the box area nicely, cropping if necessary */
-    border-radius: 15px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 0px 20px 0px 0; /* Space around the images, more margin to the right */
-    float: left; /* Keep alignment to the left */
+    width: 450px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0px 20px 0px 0; 
+    float: left; 
 }
 
 .janGrnd{
@@ -273,39 +283,91 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-#imageScroller {
-    overflow: hidden; /* Hide the overflow to only show one image at a time */
-    white-space: nowrap; /* Display images in a line */
-    width: 150px; /* Set the viewport width */
-    height: auto; /* Adjust based on content */
+
+
+/* ------------------------------------------Styles for the carousel section-------------------------------------- */
+
+.head1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: black;
+    margin: 0 auto 20px;
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 6px solid #3e2a75; 
 }
 
-#imageScroller div {
-    display: inline-block; /* Display images inline */
-    width: 150px; /* Image container width to match the image */
-    height: auto;
-    margin-right: 20px; /* Space between images */
+.head2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: black;
+    margin: 0 auto 20px;
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 6px solid #ff7c1a; 
 }
 
-#imageScroller div img {
-    width: 100%; /* Ensure images fill their container */
-    height: auto; /* Maintain aspect ratio */
+.logos1{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    padding-top: 0%;
+    padding-bottom: 3%;
 }
 
-div img{
-    width: 100px;
-    height: auto;
+.logos2{
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    padding-top: 0%;
+    padding-bottom: 3%;
+    border-bottom: 6px solid darkgreen;
 }
 
+.logos-slide{
+    display: inline-block;
+    animation: slide 18s linear infinite;
+}
+
+.logos-slide img {
+    height: 125px; 
+    margin: 0 50px; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+.logos-slide img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-radius: 5%;
+    filter: brightness(1) saturate(1.5); /* Brightens and increases saturation for a vivid effect */
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
 footer {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content */
-    align-items: center; /* Vertically align items */
-    flex-direction: column; /* Stack items vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
     background-color: #231f20;
     color: white;
-    padding: 20px 0; /* Add padding for spacing */
+    padding: 20px 0; 
     text-align: center;
 }
 
