@@ -310,7 +310,7 @@ body {
     padding: 0;
     padding-top: 4%;
     padding-bottom: 2%;
-    border-top: 6px solid #ff7c1a; 
+    border-top: 6px solid darkgreen; 
 }
 
 .logos1{
@@ -319,6 +319,29 @@ body {
     white-space: nowrap;
     padding-top: 0%;
     padding-bottom: 3%;
+    position: relative;
+}
+
+.logos1:before{
+    position : absolute;
+    top: 0%;
+    left: 0%;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+    content: "";
+    z-index: 2;
+}
+
+.logos1::after{
+    position : absolute;
+    top: 0%;
+    right: 0%;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+    content: "";
+    z-index: 2;
 }
 
 .logos2{
@@ -327,7 +350,30 @@ body {
     white-space: nowrap;
     padding-top: 0%;
     padding-bottom: 3%;
-    border-bottom: 6px solid darkgreen;
+    position: relative;
+    border-bottom: 6px solid #ff7c1a;
+}
+
+.logos2:before{
+    position : absolute;
+    top: 0%;
+    left: 0%;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+    content: "";
+    z-index: 2;
+}
+
+.logos2::after{
+    position : absolute;
+    top: 0%;
+    right: 0%;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+    content: "";
+    z-index: 2;
 }
 
 .logos-slide{
@@ -349,6 +395,14 @@ body {
     filter: brightness(1) saturate(1.5); /* Brightens and increases saturation for a vivid effect */
 }
 
+.logos1:hover .logos-slide{
+    animation-play-state: paused;
+}
+
+.logos2:hover .logos-slide{
+    animation-play-state: paused;
+}
+
 @keyframes slide {
     from {
         transform: translateX(0);
@@ -358,25 +412,132 @@ body {
     }
 }
 
+/* --------------------------------------Styles for the Video section---------------------------------------------- */
+
+.hoo-wii-r {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hoo-wii-r h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #3e2a75; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.hoo-wii-r iframe {
+    width: 560px; 
+    height: 315px; 
+    border-radius: 15px; 
+    margin: 0 auto 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.hoo-wii-r p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #666; 
+    padding: 1%;
+    margin-bottom: 20px; 
+}
+
+.hoo-wii-r button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.hoo-wii-r button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
 footer {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
+    display: flex;
     background-color: #231f20;
     color: white;
-    padding: 20px 0; 
-    text-align: center;
+    width: 100%;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .nvsLogo img, .requestQuote {
-        width: auto; /* Adjust logo and button size on smaller screens */
-    }
-    .header, footer {
-        flex-direction: column; /* Stack header/footer items on smaller screens */
-    }
+.footerLogo{
+    width: 200px;
+    height: auto;
+    display: flex;
+    margin-bottom: 2%;  
+    margin-top: 2%;
+    float: left;
+    padding-left: 2%;
+    padding-right: 1%;
+    border-right: #666 1px solid;
 }
+
+.footerLogo img{
+    width: 100%;
+    height: auto;
+}
+
+.footerContact {
+    margin: 5px 0; 
+    flex-direction: column;
+    float: left; 
+    padding-left: 1%;
+}
+
+.rightSec{
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+.footerNav {
+    width: 700px;
+    flex-wrap: wrap;  
+    text-align: right;
+    margin-top: 2%;
+}
+
+.footerNav a {
+    padding: 5px 10px; 
+    text-decoration: none;
+    color: white;
+}
+
+.footerNav a:hover {
+    color: #ff7c1a;
+}
+
+.footerSocial {
+    text-align: right;
+}
+
+.copyrightSec {
+    font-size: 0.75em;
+    text-align: right;
+    margin-top: 15%;
+}
+
+
