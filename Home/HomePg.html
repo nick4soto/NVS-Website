@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NVS Corporate Services</title>
     <link rel="stylesheet" type="text/css" href="HomePg.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 
 <header class="header">
-    <div class="nvsLogo"><img src="./Images/nvs_logo.svg" alt="NVS Logo"></div>
+    <a href="HomePg.html"><div class="nvsLogo"><img src="./Images/nvs_logo.svg" alt="NVS Logo"></div></a>
     <nav class="navBar">
         <a href="HomePg.html">Home</a>
         <a href="ServicesPg.html">Services</a>
@@ -19,7 +21,7 @@
         <a href="ContactUsPg.html">Contact Us</a>
         <a href="ApplyNowPg.html">Apply Now</a>
     </nav>
-    <button class="requestQuote">Request a Quote</button>
+    <a href="ContactUsPg.html"><button class="requestQuote">Request a Quote</button></a>
 </header>
 
 <main>
@@ -27,12 +29,16 @@
         <h3>COMPREHENSIVE FACILITY SERVICES</h3>
         <h4>We Excel At Our Job So You Can Excel At Yours</h4>
         
+        <div class="downArrow">
+            <i class="fas fa-chevron-down"></i> <!-- Chevron icon for down arrow -->
+        </div>
+        
     </section>
 
     <section class="secondText">
     <h2>Our Strategy</h2>
       <p>NVS Corporate Services, Inc. provides building services to businesses of all sizes in the private and public sector. Our highly proficient and dedicated group of employees, and solutions-oriented experts, are ready to fulfill your facility needs and help your organization succeed. With nearly 20 years of experience, we provide exceptional facility services throughout the United States.</p>
-      <button>Learn More</button>
+      <a href="AboutUsPg.html"><button>Learn More</button></a>
     </section>
 
     <section class="thirdText">
@@ -42,21 +48,21 @@
                 <img src="./Images/man_on_a_riding_lawnmower.jpg" alt="Guy mowing lawn" class="janImg">
                 <h4>Janitorial & Groudskeeping</h4>
                 <p>In today’s climate, a clean, disinfected and well maintained facility is essential to operations. From sparkling floors and sanitized surfaces to well-manicured grounds, NVS provides effective and sustainable custodial and groundskeeping services. We can develop a cost-effective program that is tailored to the unique needs of your facility.</p>
-                <button>More</button>
+                <a href="Jan&GrndPg.html"><button>More</button></a>
                 </div>
             
                 <div class="mechBuild">
                 <img src="./Images/hvac_technician.jpg" alt="Hvac guy" class="hvacGuyImg">
                 <h4>Mechanical & Building Maintenance</h4>
                 <p>Protect your facility’s assets with planned preventative mechanical and building maintenance. We have extensive experience in maintaining systems that are critical to your operations. From HVAC systems to boilers, domestic hot water, hot water circulation, lighting and emergency response systems, NVS Corporate Services has your facility covered.</p>
-                <button>More</button>
+                <a href="Mech&BldPg.html"><button>More</button></a>
                 </div>
             
                 <div class="repRenCon">
                 <img src="./Images/drywall_tape_and_float.jpg" alt="Some dry wall" class="dryWallImg">
                 <h4>Repairs, Renovations & Construction</h4>
                 <p>NVS provides commercial and institutional building construction services. From conceptualization through project completion, NVS utilizes innovative engineering, skilled labor and proven project management to build cost effectiveness into each project and produce world-class results for their clients.</p>
-                <button>More</button>
+                <a href="RepRen&ConPg.html"><button>More</button></a>
                 </div>
     </section>
 
@@ -113,20 +119,21 @@
 
       NVS Corporate Services, Inc. was established in December of 2002 in Brownsville, Texas. The company’s President Nick Soto and CFO Oscar Loredo have over 40 years of combined experience in facilities maintenance.</p>
 
-      <button>Capability Statement</button>
+      <a href="./Images/NVS-Qualification-Statement.pdf"><button>Capability Statement</button></a>
 
 </section>
 
 </main>
 
 <footer class="footer">
-    <div class="footerLogo"><img src="./Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div>
+    
+    <div class="footerLogo"><a href="HomePg.html"><img src="./Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
 
     <div class="footerContact">
-        <p>NVS Corporate Services, Inc.</p>
-        <p>800 Wildrose Ln., Brownsville, TX 78520</p>
-        <a href="tel:+18445534017"><p>1-844-553-4017</p></a>
-        <p>Email:info@nvscsi.com</p>
+        <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>
+        <a href="https://www.google.com/maps/place/800+Wild+Rose+Ln,+Brownsville,+TX+78520/@25.9384021,-97.5112075,16.75z/data=!4m6!3m5!1s0x866f941dd2e0afe3:0x94802186facf9221!8m2!3d25.9385078!4d-97.5090305!16s%2Fg%2F11cphdf24g?entry=ttu"><p>800 Wildrose Ln., Brownsville, TX 78520</p></a>
+        <a href="tel:+18445534017"><p>Phone: 1-844-553-4017</p></a>
+        <a href= "mailto: info@nvscsi.com"><p>Email: info@nvscsi.com</p></a>
     </div>
 
     <div class="rightSec">
@@ -140,8 +147,13 @@
     </nav>
 
     <div class="footerSocial">
-        <a href="https://www.facebook.com/nvscsi1" target="_blank"><img src="./Images/facebook.svg" alt="Facebook"></a>
-        <a href="https://www.linkedin.com/company/nvs-corporate-services-inc-/mycompany/" target="_blank"><img src="./Images/linkedin.svg" alt="Linkedin"></a>
+        <a href="https://www.facebook.com/nvscsi1" target="_blank">
+            <i class="fab fa-facebook-f"></i>  
+        </a>
+        <a href="https://www.linkedin.com/company/nvs-corporate-services-inc-/mycompany/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>  
+        </a>
+    </div>
 
     <div class="copyrightSec">
     <p>© Copyright 2024, <a href="OurWorkPg.html">Website Design & Development by Nick and friends</a></p>
