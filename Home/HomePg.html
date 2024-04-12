@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NVS Corporate Services</title>
     <link rel="stylesheet" type="text/css" href="HomePg.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!--Use this for Visibility Transitions-->
 
 </head>
 <body>
@@ -30,43 +30,53 @@
         <h4>We Excel At Our Job So You Can Excel At Yours</h4>
         
         <div class="downArrow">
-            <i class="fas fa-chevron-down"></i> <!-- Chevron icon for down arrow -->
+            <i class="fas fa-chevron-down"></i> <!-- icon for down arrow -->
         </div>
         
     </section>
 
     <section class="secondText">
+    
+    <div class="observeMe"> <!--Use this for Visibility Transitions-->
     <h2>Our Strategy</h2>
       <p>NVS Corporate Services, Inc. provides building services to businesses of all sizes in the private and public sector. Our highly proficient and dedicated group of employees, and solutions-oriented experts, are ready to fulfill your facility needs and help your organization succeed. With nearly 20 years of experience, we provide exceptional facility services throughout the United States.</p>
       <a href="AboutUsPg.html"><button>Learn More</button></a>
+    </div>
     </section>
 
     <section class="thirdText">
       <h3>Our Facility Services Include:</h3>
         
+                <div class="observeMe"> <!--Use this for Visibility Transitions-->
                 <div class="janGrnd">
                 <img src="./Images/man_on_a_riding_lawnmower.jpg" alt="Guy mowing lawn" class="janImg">
                 <h4>Janitorial & Groudskeeping</h4>
                 <p>In today’s climate, a clean, disinfected and well maintained facility is essential to operations. From sparkling floors and sanitized surfaces to well-manicured grounds, NVS provides effective and sustainable custodial and groundskeeping services. We can develop a cost-effective program that is tailored to the unique needs of your facility.</p>
                 <a href="Jan&GrndPg.html"><button>More</button></a>
                 </div>
+                </div>
             
+                <div class="observeMe"> <!--Use this for Visibility Transitions-->
                 <div class="mechBuild">
                 <img src="./Images/hvac_technician.jpg" alt="Hvac guy" class="hvacGuyImg">
                 <h4>Mechanical & Building Maintenance</h4>
                 <p>Protect your facility’s assets with planned preventative mechanical and building maintenance. We have extensive experience in maintaining systems that are critical to your operations. From HVAC systems to boilers, domestic hot water, hot water circulation, lighting and emergency response systems, NVS Corporate Services has your facility covered.</p>
                 <a href="Mech&BldPg.html"><button>More</button></a>
                 </div>
+                </div>
             
+                <div class="observeMe"> <!--Use this for Visibility Transitions-->
                 <div class="repRenCon">
                 <img src="./Images/drywall_tape_and_float.jpg" alt="Some dry wall" class="dryWallImg">
                 <h4>Repairs, Renovations & Construction</h4>
                 <p>NVS provides commercial and institutional building construction services. From conceptualization through project completion, NVS utilizes innovative engineering, skilled labor and proven project management to build cost effectiveness into each project and produce world-class results for their clients.</p>
                 <a href="RepRen&ConPg.html"><button>More</button></a>
                 </div>
+                </div>
     </section>
 
     <section class="logoCarousel">
+    <div class="observeMe"> <!--Use this for Visibility Transitions-->
     <h3 class="head1">Certifications & Associations:</h3>
     <div class="logos1">
     <div class="logos-slide">
@@ -86,6 +96,7 @@
         <img src="./Images/Hubzone.jpg" alt="Hub zone Logo">
     </div>
     </div>
+    
 
     <h3 class="head2">Our Clients Include:</h3>
     <div class="logos2">
@@ -106,10 +117,13 @@
         <img src="./Images/Navy.webp" alt="Navy Web">
     </div>
     </div>
+    </div>
+
 </section>
 
 
 <section class="hoo-wii-r">
+<div class="observeMe"> <!--Use this for Visibility Transitions-->
   <h2>WHO WE ARE
     About NVS Corporate Services</h2>
 
@@ -120,6 +134,7 @@
       NVS Corporate Services, Inc. was established in December of 2002 in Brownsville, Texas. The company’s President Nick Soto and CFO Oscar Loredo have over 40 years of combined experience in facilities maintenance.</p>
 
       <a href="./Images/NVS-Qualification-Statement.pdf"><button>Capability Statement</button></a>
+    </div>
 
 </section>
 
@@ -165,20 +180,27 @@
 </footer>
 
 
-
-<script>
+<!--Use this for Visibility Transitions-->
+<script> 
     document.addEventListener("DOMContentLoaded", function() {
+        var targets = document.querySelectorAll('.observeMe');
+        
         var observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("isVisible");
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 }); // Adjust the threshold as needed
+        }, { threshold: 0.1 }); 
     
-        var target = document.querySelector('.secondText');
-        observer.observe(target);
+       
+        targets.forEach(function(target) {
+            observer.observe(target);
+        });
     });
     </script>
+<!--Use this for Visibility Transitions-->
+    
 </body>
 </html>

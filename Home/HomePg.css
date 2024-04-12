@@ -16,6 +16,18 @@ body {
     color: #333333; 
 }
 
+<!--Use this for Visibility Transitions-->
+.observeMe {
+    opacity: 0;  
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(20px);  
+}
+
+<!--Use this for Visibility Transitions-->
+.isVisible {
+    opacity: 1;  
+    transform: translateY(0);  
+}
 
 /* --------------------------------------Styles for the header---------------------------------------------- */
 
@@ -141,14 +153,6 @@ body {
     margin: 20px auto; /* Reduced the top margin to bring it closer to the top */
     padding: 20px 40px;
     text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.secondText.isVisible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .secondText h2 {
