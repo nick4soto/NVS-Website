@@ -10,6 +10,16 @@
 
 
 </head>
+
+<script>
+    function scrollDown() {
+        const nextSection = document.getElementById('nextSection');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the next section
+        }
+    }
+    </script>
+
 <body>
 
     <header class="header">
@@ -38,12 +48,13 @@
         <h3>COMPREHENSIVE FACILITY SERVICES</h3>
         <h4>We Excel At Our Job So You Can Excel At Yours</h4>
         
-        <div class="downArrow">
+        <button class="downArrow" onclick="scrollDown()"> 
             <i class="fas fa-chevron-down"></i> <!-- icon for down arrow -->
-        </div>
+        </button>
         
     </section>
 
+    <section id="nextSection">
     <section class="secondText">
     
     <h2>Our Strategy</h2>
@@ -51,6 +62,7 @@
       <a href="../AboutUs/AboutUsPg.html"><button>Learn More</button></a>
       
     </section>
+</section>
 
     <section class="thirdText">
       <h3>Our Facility Services Include:</h3>
@@ -178,6 +190,6 @@
 </div>
 
 </footer>
-    
+
 </body>
 </html>

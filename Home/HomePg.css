@@ -39,7 +39,7 @@ body {
     margin-left: 20px;
 }
 
-.navBar a {
+.navBar a, .dropbtn {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: white;
@@ -59,7 +59,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
-    padding-right: 10px;
+    width: auto; 
 }
 
 .dropdown-content {
@@ -69,6 +69,7 @@ body {
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width: auto; 
 }
 
 .dropdown-content a {
@@ -80,30 +81,32 @@ body {
     border-radius: 5px;
 }
 
-.dropdown-content .jan{
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    margin-right: 0px;
-}
-
-.dropdown-content .mec, .dropdown-content .rep{
-    border-radius: 0%;
-    margin-right: 0px;
-}
-
-.dropdown-content .oth{
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    margin-right: 0px;
-}
-
 .dropdown-content a:hover {
     background-color: #fff;
     color: #ff7c1a;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown .dropbtn:hover + .dropdown-content,
+.dropdown-content:hover {
     display: block;
+}
+
+
+.dropdown-content .jan{ 
+    border-bottom-left-radius: 0%; 
+    border-bottom-right-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.dropdown-content .mec, .dropdown-content .rep{ 
+    border-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.dropdown-content .oth{ 
+    border-top-left-radius: 0%; 
+    border-top-right-radius: 0%; 
+    margin-right: 0px; 
 }
 
 .requestQuote {
@@ -129,6 +132,7 @@ body {
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
@@ -157,17 +161,19 @@ body {
 }
 
 .downArrow {
-    position: relative;  
-    left: 50%;        
-    bottom: 20px;     
-    display: flex;    
-    justify-content: center; 
-    align-items: center; 
-    transform: translateX(-50%); 
-    font-size: 40px;  
-    color: white;    
-    z-index: 100;     
-    animation: bounce 2s infinite; 
+    position: relative;
+    left: 50%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: white;
+    z-index: 100;
+    animation: bounce 2s infinite;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 @keyframes bounce {
