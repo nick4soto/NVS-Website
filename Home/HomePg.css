@@ -1,6 +1,6 @@
 html {
     background-color: white;
-    background-image: url("./Images/man_mopping_the_floor-scaled.jpg");
+    background-image: url("../Images/man_mopping_the_floor-scaled.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-image: url(./Images/bg_squares.svg);
+    background-image: url(../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     color: #333333; 
