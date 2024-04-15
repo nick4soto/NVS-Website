@@ -384,104 +384,41 @@ body {
     border-top: 6px solid darkgreen; 
 }
 
-.logos1{
-    overflow: hidden;
-    padding: 60px 0;
-    white-space: nowrap;
-    padding-top: 0%;
-    padding-bottom: 3%;
-    position: relative;
-}
-
-.logos1:before{
-    position : absolute;
-    top: 0%;
-    left: 0%;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255,255,255,0), white);
-    content: "";
-    z-index: 2;
-}
-
-.logos1::after{
-    position : absolute;
-    top: 0%;
-    right: 0%;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0), white);
-    content: "";
-    z-index: 2;
-}
-
 .logos2{
-    overflow: hidden;
-    padding: 60px 0;
-    white-space: nowrap;
-    padding-top: 0%;
-    padding-bottom: 3%;
-    position: relative;
     border-bottom: 6px solid #ff7c1a;
 }
 
-.logos2:before{
-    position : absolute;
-    top: 0%;
-    left: 0%;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255,255,255,0), white);
-    content: "";
-    z-index: 2;
+.logos1,
+.logos2 {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    padding-top: 0%;
+    padding-bottom: 3%;
+    position: relative;
 }
 
-.logos2::after{
-    position : absolute;
-    top: 0%;
-    right: 0%;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0), white);
-    content: "";
-    z-index: 2;
-}
-
-.logos-slide{
+.logos-slide {
     display: inline-block;
-    animation: slide 18s linear infinite;
+}
+
+.logos-slide a {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.logos-slide a:hover {
+    transform: translateY(-5px);
 }
 
 .logos-slide img {
-    height: 125px; 
-    margin: 0 50px; 
-    transition: transform 0.2s ease-in-out; 
+    height: 100px;
+    margin: 0 50px;
+    padding: 12.5px 0;
+    transition: transform 0.3s;
+    box-shadow: none;
 }
 
-.logos-slide img:hover {
-    transform: scale(1.05);
-    opacity: 1;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    border-radius: 5%;
-    filter: brightness(1) saturate(1.5); /* Brightens and increases saturation for a vivid effect */
-}
-
-.logos1:hover .logos-slide{
-    animation-play-state: paused;
-}
-
-.logos2:hover .logos-slide{
-    animation-play-state: paused;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
 
 /* --------------------------------------Styles for the Video section---------------------------------------------- */
 
