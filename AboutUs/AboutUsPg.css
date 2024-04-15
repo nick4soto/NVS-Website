@@ -10,7 +10,6 @@ html {
 }
 
 body {
-    background-image: url(../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     color: #333333; 
@@ -136,6 +135,67 @@ body {
 
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
+
+/* --------------------------------------Styles for the Video section---------------------------------------------- */
+
+.hoo-wii-r {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.hoo-wii-r h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #3e2a75; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.hoo-wii-r iframe {
+    width: 560px; 
+    height: 315px; 
+    border-radius: 15px; 
+    margin: 0 auto 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.hoo-wii-r p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #666; 
+    padding: 1%;
+    margin-bottom: 20px; 
+}
+
+.hoo-wii-r button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.hoo-wii-r button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
