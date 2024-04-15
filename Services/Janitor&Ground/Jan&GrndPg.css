@@ -3,14 +3,13 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../Images/bg_squares.svg);
+    background-image: url(../../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 body {
-    background-image: url(../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     color: #333333; 
@@ -25,7 +24,7 @@ body {
     color: white;
     padding: 1rem;
     position: relative;
-    background-image: url(../Images/brownsville1910.png);
+    background-image: url(../../Images/brownsville1910.png);
 }
 
 .nvsLogo img {
@@ -43,7 +42,7 @@ body {
 .navBar a, .dropbtn {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    color: white;
+    color: #3e2a75;
     font-weight: bold;
     text-decoration: none;
     margin-right: 20px;
