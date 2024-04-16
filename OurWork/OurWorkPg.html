@@ -9,25 +9,60 @@
 </head>
 <body>
 
-    <header class="header">
-      <a href="../Home/HomePg.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
-      <nav class="navBar">
-          <a href="../Home/HomePg.html">Home</a>
-          <div class="dropdown">
-              <a class="dropbtn">Services</a>
-              <div class="dropdown-content">
-                  <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groudskeeping</a>
-                  <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
-                  <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
-                  <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
-              </div>
-          </div>
-          <a href="../AboutUs/AboutUsPg.html">About Us</a>
-          <a href="../OurWork/OurWorkPg.html">Our Work</a>
-          <a href="../Contact/ContactPg.html">Contact Us</a>
-          <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
-      </nav>
-      <a href="../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+        <a href="../Home/HomePg.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
+        <nav class="navBar">
+            <a href="../Home/HomePg.html">Home</a>
+            <div class="dropdown">
+                <a class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groudskeeping</a>
+                    <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
+                    <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
+                    <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
+                </div>
+            </div>
+            <a href="../AboutUs/AboutUsPg.html">About Us</a>
+            <a href="../OurWork/OurWorkPg.html">Our Work</a>
+            <a href="../Contact/ContactPg.html">Contact Us</a>
+            <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
+        </nav>
+        <a href="../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-top">
+            <a href="../Home/HomePg.html">
+                <div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div>
+            </a>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <nav class="mobile-navBar">
+            <ul class="nav-links">
+                <li><a href="../Home/HomePg.html">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Services</a>
+                    <span class="dropdown-toggle">+</span>
+                    <div class="dropdown-content">
+                        <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groudskeeping</a>
+                        <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
+                        <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
+                        <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
+                    </div>
+                </li>
+                <li><a href="../AboutUs/AboutUsPg.html">About Us</a></li>
+                <li><a href="../OurWork/OurWorkPg.html">Our Work</a></li>
+                <li><a href="../Contact/ContactPg.html">Contact Us</a></li>
+                <li><a href="../ApplyNow/ApplyNowPg.html">Apply Now</a></li>
+            </ul>
+        </nav>
+        <script src="../methods/burger.js"></script>
     </header>
 
     <main>
@@ -42,7 +77,7 @@
         </section>
 
         <section class="logoCarousel">
-            <h3 class="head1">Certifications & Associations:</h3>
+            <h2 class="head1">Certifications & Associations:</h2>
             <div class="logos1">
                 <div class="logos-slide">
                     <a href="#"><img src="../Images/Logos/CIMS-Certified-1536x852.png" alt="CIMS Certified"></a>
@@ -54,7 +89,7 @@
                 </div>
             </div>
             
-            <h3 class="head2">Our Clients Include:</h3>
+            <h2 class="head2">Our Clients Include:</h2>
             <div class="logos2">
                 <div class="logos-slide">
                     <a href="#"><img src="../Images/Logos/GSA.png" alt="GSA Web"></a>
@@ -68,6 +103,28 @@
 
             <script src="../methods/carousel.js"></script>
         </section>
+
+        <section class="projectGallery">
+
+            <h2 class="head3">Project Gallery</h2>
+            
+            <div class="galleryControls">
+                <button class="prevButton">❮</button>
+                <button class="nextButton">❯</button>
+            </div>
+    
+            <div class="galleryWindow">
+                <div class="galleryWrapper">
+                    <!-- The images will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="pagination">
+                <!-- Pagination buttons will be inserted here by JavaScript -->
+            </div>
+        
+            <script src="pagination.js"></script>
+        </section>
+
     </main>
 
     <footer class="footer">
