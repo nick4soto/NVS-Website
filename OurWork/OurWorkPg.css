@@ -3,16 +3,19 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
 body {
+    background-image: url(../Images/bg_squares.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     color: #333333; 
+    width: 100%;
 }
 
 /* --------------------------------------Styles for the header---------------------------------------------- */
@@ -20,15 +23,16 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     color: white;
-    padding: 1rem;
+    padding: 1em;
     position: relative;
     background-image: url(../Images/brownsville1910.png);
+    background-position: center; 
 }
 
 .nvsLogo img {
-    width: 175px;
+    width: 9vw;
     height: auto;
 }
 
@@ -36,18 +40,17 @@ body {
     display: flex;
     align-items: center;
     padding: 0;
-    margin-left: 20px;
+    margin-left: 2vw;
 }
 
 .navBar a, .dropbtn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #3e2a75;
+    font-size: 1em; 
+    color: white;
     font-weight: bold;
     text-decoration: none;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    margin-right: 1em;
+    padding: 0.5em;
+    border-radius: 0.3125em;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -59,26 +62,23 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
-    width: auto; 
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #ff7c1a;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 0.3125em;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
     z-index: 1;
-    width: auto; 
 }
 
 .dropdown-content a {
     color: white;
-    padding: 12px 10px;
+    padding: 0.75em 0.5em;
     text-decoration: none;
     display: block;
     text-align: left;
-    border-radius: 5px;
 }
 
 .dropdown-content a:hover {
@@ -112,19 +112,15 @@ body {
 .requestQuote {
     background-color: transparent;
     color: #3e2a75;
-    border-radius: 20px;
+    border-radius: 1.25em;
     border: 2px solid #3e2a75;
-    padding: 15px 30px;
-    font-size: 16px;
+    padding: 0.9375em 1.875em;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
     transition: all 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
 }
 
 .requestQuote:hover, .requestQuote:focus {
@@ -136,6 +132,86 @@ body {
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
+.firstText {
+    max-width: 950px;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+.firstText h2 {
+    color: #3e2a75; 
+    font-size: 2.5em; 
+}
+
+.firstText p {
+    color: black; 
+    font-size: 1.5em; 
+}
+
+/* ------------------------------------------Styles for the carousel section-------------------------------------- */
+
+.head1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: black;
+    margin: 0 auto 20px;
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 6px solid #3e2a75; 
+}
+
+.head2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: black;
+    margin: 0 auto 20px;
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 6px solid darkgreen; 
+}
+
+.logos2{
+    border-bottom: 6px solid #ff7c1a;
+}
+
+.logos1,
+.logos2 {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    padding-top: 0%;
+    padding-bottom: 3%;
+    position: relative;
+}
+
+.logos-slide {
+    display: inline-block;
+}
+
+.logos-slide a {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.logos-slide a:hover {
+    transform: translateY(-5px);
+}
+
+.logos-slide img {
+    height: 100px;
+    margin: 0 50px;
+    padding: 12.5px 0;
+    transition: transform 0.3s;
+    box-shadow: none;
+}
+
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
 footer {
@@ -143,21 +219,17 @@ footer {
     background-color: #231f20;
     color: white;
     width: 100%;
+    padding: 1em 0;
 }
 
-.footerLogo{
-    width: 200px;
-    height: auto;
+.footerLogo {
+    flex-basis: 20%;
     display: flex;
-    margin-bottom: 2%;  
-    margin-top: 2%;
-    float: left;
-    padding-left: 2%;
-    padding-right: 1%;
-    border-right: #666 1px solid;
+    justify-content: center;
+    border-right: 1px solid #666;
 }
 
-.footerLogo img{
+.footerLogo img {
     width: 100%;
     height: auto;
 }
@@ -182,11 +254,11 @@ footer {
     color: #ff7c1a;
 }
 
-.rightSec{
+.footerContact, .rightSec {
+    flex: 1;
+    padding: 0 2vw;
     display: flex;
     flex-direction: column;
-    float: right;
-    margin-left: 8%;
 }
 
 .footerNav {
@@ -198,7 +270,7 @@ footer {
 }
 
 .footerNav a {
-    padding: 5px 10px; 
+    padding: 0.3125em 0.625em;
     text-decoration: none;
     color: white;
 }
@@ -215,22 +287,21 @@ footer {
     display: inline-flex;  
     justify-content: center; 
     align-items: center;  
-    width: 40px;  
-    height: 40px; 
-    margin: 0 10px;
-    font-size: 24px; 
+    width: 1.6em;
+    height: 1.6em;
+    margin: 0 0.3em;
+    font-size: 1.5em; 
     color: white;
     border: 2px solid white; 
     border-radius: 50%;  
     background-color: #231f20;  
-    transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
+    transition: border-color 0.3s ease, color 0.3s ease; 
+    text-decoration: none;
 }
 
-.footerSocial a:hover {
+.footerSocial a:hover, .footerSocial a:focus {
     color: #ff7c1a;
     border-color: #ff7c1a;
-    transition: color 0.3s ease;  
 }
 
 .copyrightSec {
@@ -246,4 +317,8 @@ footer {
 
 .copyrightSec a:hover{
     color: #ff7c1a;
+}
+
+.footerNav, .footerSocial, .copyrightSec {
+    margin-top: 1em;
 }
