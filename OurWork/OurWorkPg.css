@@ -22,7 +22,7 @@
     color: white;
     padding: 1rem;
     position: relative;
-    background-color: #ddd;
+    background-image: url(../Images/mainHeader.png);
   }
   
   .nvsLogo img {
@@ -130,7 +130,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    background-color: #ddd;
+    background-image: url(../Images/mainHeader.png);
     color: #3e2a75;
 }
 
