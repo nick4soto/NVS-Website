@@ -158,7 +158,19 @@ body {
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
+.mainText p{
+    font-size: 1.2rem;
+    margin: 0 auto 20px;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5em; 
+    max-width: 75rem;
+}
 
+.mainText a{
+    color: #3e2a75;
+    text-decoration: none;
+}
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
