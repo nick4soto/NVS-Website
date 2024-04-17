@@ -429,7 +429,7 @@ body {
     text-align: center;
     background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
     margin-top: 7%;
     margin-bottom: 7%;
 }

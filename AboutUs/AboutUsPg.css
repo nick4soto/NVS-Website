@@ -134,50 +134,314 @@ body {
 }
 
 
-/* --------------------------------------Styles for the main content---------------------------------------------- */
+/* --------------------------------------Styles for the Title Text---------------------------------------------- */
 
-/* --------------------------------------Styles for the Video section---------------------------------------------- */
-
-.hoo-wii-r {
-    max-width: 1000px;
-    margin: 10px auto;
-    padding: 10px;
+.aboutUs {
+    max-width: 100%;
+    background-image: url(../Images/about_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 7%;
-    margin-bottom: 7%;
 }
 
-.hoo-wii-r h2 {
+.aboutUs h2 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.5px;
-    color: #3e2a75; 
+    color: white; 
     margin: 0 auto 20px;
     padding-top: 2%;
     padding-bottom: 2%;
+    text-align: center;
 }
 
-.hoo-wii-r iframe {
-    width: 560px; 
-    height: 315px; 
-    border-radius: 15px; 
-    margin: 0 auto 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+/* --------------------------------------Styles for Our Company section---------------------------------------------- */
+
+.rComp {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto; 
 }
 
-.hoo-wii-r p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #666; 
-    padding: 1%;
+.rComp img {
+    width: 80%; 
+    height: auto;
+    margin: 20px 0; 
+    border-radius: 5%; 
+    border: #666 3px solid;
+}
+
+.rComp h2 {
+    width: 80%; 
+    color: #3e2a75;
+    font-size: 2.5em; 
+    text-align: center; 
     margin-bottom: 20px; 
 }
 
-.hoo-wii-r button {
-    background-color: transparent;
+.rComp p {
+    width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8; 
+    color: black;
+    text-align: justify; 
+    text-indent: 20px; 
+    column-count: 2; 
+    column-gap: 40px; 
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .rComp {
+        flex-direction: column;
+    }
+
+    .rComp img {
+        width: 100%; 
+    }
+
+    .rComp h2, .rComp p {
+        width: 90%; 
+    }
+
+    .rComp p {
+        column-count: 1; 
+    }
+}
+
+/* --------------------------------------Styles for the Video section---------------------------------------------- */
+
+.cert{
+    background-image: url(../Images/brownsville1910.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 6px solid #3e2a75;
+}
+
+.certifExcell {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.certifExcell .videoContainer {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.videoWrapper iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; 
+    margin: 0 auto 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: #666 3px solid;
+}
+
+.certifExcell .textContainer {
+    padding: 10px;
+}
+
+.contentWrapper {
+    background-color: #ccc; 
+    border: #666 3px solid; 
+    border-radius: 10px; 
+    padding: 20px;
+    width: 90%; 
+}
+
+.certifExcell h2 {
+    color: black; 
+    font-size: 2em; 
+    margin-bottom: 15px; 
+}
+
+.certifExcell p {
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    color: #333333; 
+    text-align: justify; 
+}
+
+@media (max-width: 768px) {
+    .certifExcell {
+        grid-template-columns: 1fr; /* Stack on small screens */
+    }
+    .certifExcell .textContainer {
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+}
+/* ------------------------------------------Styles for the carousel section-------------------------------------- */
+
+.head1{
+  font-size: 3rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: black;
+}
+
+.head1 {
+  border-top: 6px solid #3e2a75;
+  margin-bottom: 2rem;
+}
+
+.logos1{
+  overflow: hidden;
+  padding: 2rem 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slide {
+  display: inline-block;
+}
+
+.logos-slide a {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.logos-slide a:hover {
+  transform: translateY(-5px);
+}
+
+.logos-slide img {
+  height: 100px;
+  margin: 0 2rem;
+  padding: 0.5rem 0;
+  transition: transform 0.3s;
+  box-shadow: none;
+}
+
+
+
+/* --------------------------------------Styles for the bottom two sections---------------------------------------------- */
+
+.sections-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.communityImpact, .EnvironSteward {
+    flex: 1; 
+    margin-top: 5%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.communityImpact h2, .EnvironSteward h2 {
+    margin: auto; 
+    width: 100%; 
+    color: #3e2a75;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.communityImpact p, .EnvironSteward p {
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column;
+    }
+
+    .communityImpact, .EnvironSteward {
+        flex-basis: 100%; 
+    }
+}
+
+
+/*----------------------------------------------Styles for We Serve section--------------------------------------- */
+
+.sectionContainer2 {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.weServe{
+    flex: 1; 
+    margin-top: 5%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.weServe h2{
+    margin: auto; 
+    width: 100%; 
+    color: #3e2a75;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weServe p{
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.ourTeam{
+    flex: 1; 
+    margin-top: 5%;
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #3e2a75;
+    text-align: center;
+    height: 20em;
+    border: #1e123f 3px solid;
+    border-radius: 10px;
+    height: 10%;
+}
+
+.ourTeam h3{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ourTeam p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.ourTeam button {
+    background-color: white;
     color: #3e2a75; 
     border-radius: 20px;
     border: 2px solid #3e2a75; 
@@ -187,91 +451,24 @@ body {
     cursor: pointer;
     transition: all 0.3s ease; 
     letter-spacing: 1px;
-    text-transform: uppercase; 
-    margin-top: 5%; 
+    text-transform: uppercase;  
 }
 
-.hoo-wii-r button:hover {
+.ourTeam button:hover {
     background-color: #3e2a75; 
     color: white;
+    border-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* ------------------------------------------Styles for the carousel section-------------------------------------- */
 
-.head1{
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: black;
-    margin: 0 auto 20px;
-    padding: 0;
-    padding-top: 4%;
-    padding-bottom: 2%;
-    border-top: 6px solid #3e2a75; 
-}
-
-.logos1{
-    overflow: hidden;
-    padding: 60px 0;
-    white-space: nowrap;
-    padding-top: 0%;
-    padding-bottom: 3%;
-    position: relative;
-}
-
-.logos1:before{
-    position : absolute;
-    top: 0%;
-    left: 0%;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to left, rgba(255,255,255,0), white);
-    content: "";
-    z-index: 2;
-}
-
-.logos1::after{
-    position : absolute;
-    top: 0%;
-    right: 0%;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0), white);
-    content: "";
-    z-index: 2;
-}
-
-.logos-slide{
-    display: inline-block;
-    animation: slide 18s linear infinite;
-}
-
-.logos-slide img {
-    height: 125px; 
-    margin: 0 50px; 
-    transition: transform 0.2s ease-in-out; 
-}
-
-.logos-slide img:hover {
-    transform: scale(1.05);
-    opacity: 1;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    border-radius: 5%;
-    filter: brightness(1) saturate(1.5); /* Brightens and increases saturation for a vivid effect */
-}
-
-.logos1:hover .logos-slide{
-    animation-play-state: paused;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
+@media (max-width: 768px) {
+    .sectionContainer2 {
+        flex-direction: column;
     }
-    to {
-        transform: translateX(-100%);
+
+    .weServe, .ourTeam {
+        flex-basis: 100%; 
     }
 }
 
