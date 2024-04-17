@@ -133,6 +133,35 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.titleCard {
+    max-width: 100%;
+    background-image: url(../../Images/hvac_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.titleCard h5 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    color: #ff7c1a; 
+    margin: 0 auto;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.titleCard h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white; 
+    margin: 0 auto 20px;
+    padding-bottom: 2%;
+    text-align: center;
+}
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
