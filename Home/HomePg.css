@@ -1,5 +1,597 @@
-h1{
-    color: red;
-    font-size: 20px;
+html {
+    background-color: white;
+    background-image: url("../Images/man_mopping_the_floor-scaled.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url(../Images/bg_squares.svg);
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+}
+
+/* --------------------------------------Styles for the header---------------------------------------------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 1rem;
+    position: relative;
+}
+
+.nvsLogo img {
+    width: 175px;
+    height: auto;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.navBar a, .dropbtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
     font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
+    background-color: #ff7c1a;
+    color: #ffffff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ff7c1a;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: auto; 
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+    background-color: #fff;
+    color: #ff7c1a;
+}
+
+.dropdown .dropbtn:hover + .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+
+.dropdown-content .jan{ 
+    border-bottom-left-radius: 0%; 
+    border-bottom-right-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.dropdown-content .mec, .dropdown-content .rep{ 
+    border-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.dropdown-content .oth{ 
+    border-top-left-radius: 0%; 
+    border-top-right-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.requestQuote {
+    background-color: transparent;
+    color: #3e2a75;
+    border-radius: 20px;
+    border: 2px solid #3e2a75;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.requestQuote:hover, .requestQuote:focus {
+    background-color: #3e2a75;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --------------------------------------Styles for the main content---------------------------------------------- */
+
+.frontText {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 20px; 
+    margin-top: 20vh; 
+    color: white; 
+}
+
+.frontText h3 {
+    max-width: 150px;
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem; /* Reduces space between the h3 and h4 */
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.frontText h4 {
+    max-width: auto;
+    font-size: 1.8rem; 
+    font-weight: 400; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.downArrow {
+    position: relative;
+    left: 50%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: white;
+    z-index: 100;
+    animation: bounce 2s infinite;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* --------------------------------------Styles for the second section---------------------------------------------- */
+
+.secondText {
+    max-width: 950px;
+    margin: 20px auto; /* Reduced the top margin to bring it closer to the top */
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.secondText h2 {
+    color: #3e2a75; 
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+}
+
+.secondText p {
+    color: black; 
+    font-size: 1.5em; 
+}
+
+.secondText button {
+    background-color: transparent;
+    color: #3e2a75;
+    border-radius: 20px; 
+    border: 2px solid #3e2a75; 
+    margin-top: 5%;
+    padding: 15px 30px; 
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.secondText button:hover, .secondText button:focus {
+    background-color: #3e2a75; 
+    color: #fff; 
+    border-color: #3e2a75; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* --------------------------------------Styles for the third section---------------------------------------------- */
+
+.thirdText {
+    max-width: 1000px; 
+    margin: 10px auto; 
+    padding: 10px;
+}
+
+.thirdText h3 {
+    text-align: center;
+    font-size: 2.5rem; 
+    font-weight: 700;
+    letter-spacing: 1.5px; 
+    color: #ff7c1a; 
+    margin: 0 auto 20px; 
+    padding: 0; 
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Styles for Janitorial and Drywall images (aligned to the left) */
+.janImg{
+    width: 450px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0px 20px 0px 0; 
+    float: left; 
+}
+
+.hvacGuyImg {
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0px 0 0px 20px; 
+    float: right;
+}
+
+.dryWallImg{
+    width: 450px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0px 20px 0px 0; 
+    float: left; 
+}
+
+.janGrnd{
+    background-color: #3e2a7550;
+    border: 6px solid #3e2a75; 
+}
+
+.mechBuild{
+    background-color: rgba(0, 100, 0, 0.315);
+    border: 6px solid darkgreen; 
+}
+
+.repRenCon{
+    background-color: #ff7d1a46;
+    border: 6px solid #ff7c1a; 
+}
+
+.janGrnd, .mechBuild, .repRenCon{
+    color: black;
+    margin: 10px;
+    margin-bottom: 4%;
+    border-radius: 20px;  
+    width: 100%;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    text-align: center;
+}
+
+.janGrnd h4, .mechBuild h4, .repRenCon h4{
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    letter-spacing: 1.5px; 
+    color: #3e2a75; 
+    margin: 0 auto 20px; 
+    padding: 0; 
+    padding-top: 8%;
+    padding-bottom: 1vh;
+    padding-right: 1%;
+}
+
+.janGrnd p, .mechBuild p, .repRenCon p{
+    font-size: 1.5rem; 
+    font-weight: 400; 
+    text-align: center;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.janGrnd button, .mechBuild button, .repRenCon button{
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px; 
+    border: 2px solid #3e2a75; 
+    margin-top: 5%;
+    padding: 15px 30px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+.janGrnd button:hover, .mechBuild button:hover, .repRenCon button:hover, .janGrnd button:focus, .mechBuild button:focus, .repRenCon button:focus{
+    background-color: #3e2a75; 
+    color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+/* ------------------------------------------Styles for the carousel section-------------------------------------- */
+
+.head1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: black;
+    margin: 0 auto 20px;
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 6px solid #3e2a75; 
+}
+
+.head2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: black;
+    margin: 0 auto 20px;
+    padding: 0;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    border-top: 6px solid darkgreen; 
+}
+
+.logos2{
+    border-bottom: 6px solid #ff7c1a;
+}
+
+.logos1,
+.logos2 {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    padding-top: 0%;
+    padding-bottom: 3%;
+    position: relative;
+}
+
+.logos-slide {
+    display: inline-block;
+}
+
+.logos-slide a {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.logos-slide a:hover {
+    transform: translateY(-5px);
+}
+
+.logos-slide img {
+    height: 100px;
+    margin: 0 50px;
+    padding: 12.5px 0;
+    transition: transform 0.3s;
+    box-shadow: none;
+}
+
+
+/* --------------------------------------Styles for the Video section---------------------------------------------- */
+
+.hoo-wii-r {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.hoo-wii-r h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #3e2a75; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.hoo-wii-r iframe {
+    width: 560px; 
+    height: 315px; 
+    border-radius: 15px; 
+    margin: 0 auto 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.hoo-wii-r p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #666; 
+    padding: 1%;
+    margin-bottom: 20px; 
+}
+
+.hoo-wii-r button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.hoo-wii-r button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
+
+footer {
+    display: flex;
+    background-color: #231f20;
+    color: white;
+    width: 100%;
+}
+
+.footerLogo{
+    width: 200px;
+    height: auto;
+    display: flex;
+    margin-bottom: 2%;  
+    margin-top: 2%;
+    float: left;
+    padding-left: 2%;
+    padding-right: 1%;
+    border-right: #666 1px solid;
+}
+
+.footerLogo img{
+    width: 100%;
+    height: auto;
+}
+
+.footerLogo img:hover{
+    opacity: 0.8;
+}
+
+.footerContact {
+    margin: 5px 0; 
+    flex-direction: column;
+    float: left; 
+    padding-left: 1%;
+}
+
+.footerContact a{
+    color: white;
+    text-decoration: none;
+}
+
+.footerContact a:hover{
+    color: #ff7c1a;
+}
+
+.rightSec{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-left: 8%;
+}
+
+.footerNav {
+    width: 700px;
+    flex-wrap: wrap;  
+    text-align: right;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.footerNav a {
+    padding: 5px 10px; 
+    text-decoration: none;
+    color: white;
+}
+
+.footerNav a:hover {
+    color: #ff7c1a;
+}
+
+.footerSocial {
+    text-align: right;
+}
+
+.footerSocial a {
+    display: inline-flex;  
+    justify-content: center; 
+    align-items: center;  
+    width: 40px;  
+    height: 40px; 
+    margin: 0 10px;
+    font-size: 24px; 
+    color: white;
+    border: 2px solid white; 
+    border-radius: 50%;  
+    background-color: #231f20;  
+    transition: all 0.3s ease; 
+    text-decoration: none;  /* Removes underline from the link */
+}
+
+.footerSocial a:hover {
+    color: #ff7c1a;
+    border-color: #ff7c1a;
+    transition: color 0.3s ease;  
+}
+
+.copyrightSec {
+    font-size: 0.75em;
+    text-align: right;
+    margin-top: 3%;
+}
+
+.copyrightSec a{
+    color: white;
+    text-decoration: none;
+}
+
+.copyrightSec a:hover{
+    color: #ff7c1a;
 }
