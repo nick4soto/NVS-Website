@@ -3,7 +3,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../../Images/bg_squares.svg);
+    background-image: url(../../../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -24,7 +24,7 @@ body {
     color: white;
     padding: 1rem;
     position: relative;
-    background-image: url(../../Images/mainHeader.png);
+    background-image: url(../../../Images/mainHeader.png);
 }
 
 .nvsLogo img {
@@ -137,148 +137,28 @@ body {
 
 .titleCard {
     max-width: 100%;
-    background-image: url(../../Images/janitorial_header-scaled.jpg);
+    background-image: url(../../../Images/Other-Services-Header-scaled.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-}
-
-.titleCard h5 {
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
-    color: #ff7c1a; 
-    margin: 0 auto;
-    padding-top: 2%;
-    text-align: center;
-}
-
-.titleCard h2 {
+  }
+  
+  .titleCard h2 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     color: white; 
     margin: 0 auto 20px;
+    padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-}
+  }
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
-.topSection {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between; /* Layout the text and images side by side */
-}
-
-.topSectionContent {
-    width: 60%; /* Allocates 60% width to the content */
-    padding-right: 20px; /* Spacing between text and images */
-}
-
-.topSectionImgs {
-    width: 35%; /* Allocates 35% width to the images */
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between images */
-}
-
-.topSectionImgs img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-}
-
-.topSectionButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    font-weight: bold;
-}
-
-.learnMoreBtn {
-    background-color: #3e2a75;
-    color: white;
-}
-
-.learnMoreBtn:hover {
-    background-color: #2c2155;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.capabilityBtn {
-    background-color: white;
-    color: #3e2a75;
-    border: 2px solid #3e2a75;
-}
-
-.capabilityBtn:hover {
-    background-color: #3e2a75;
-    color: white;
-}
-
-
-/* --------------------------------------Styles for the second section---------------------------------------------- */
-
-.SVGimgs {
-    background-color: black;
-    width: 10%;
-    height: auto;
-    color: teal;
-}
-
-/* --------------------------------------Styles for the third section---------------------------------------------- */
-
-.bottomSection img {
-    width: 10%;
-    height: auto;
-}
-
-/*----------------------------------------------Styles for We Serve section--------------------------------------- */
-
-.ourTeam{
-    flex: 1; 
-    margin-top: 5%;
-    padding: 20px;
-    box-sizing: border-box; 
-    background-color: #3e2a75;
-    text-align: center;
-    height: 20em;
-    width: 50%;
-    border: #1e123f 3px solid;
-    border-radius: 10px;
-    height: 10%;
-}
-
-.ourTeam h3{
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.ourTeam p{
-    color: white;
-    font-size: 1.5rem;
-    line-height: 1.8;
-}
-
-.ourTeam button {
-    background-color: white;
+.topSection button {
+    background-color: transparent;
     color: #3e2a75; 
     border-radius: 20px;
     border: 2px solid #3e2a75; 
@@ -288,21 +168,14 @@ body {
     cursor: pointer;
     transition: all 0.3s ease; 
     letter-spacing: 1px;
-    text-transform: uppercase;  
+    text-transform: uppercase; 
+    margin-top: 5%; 
 }
 
-.ourTeam button:hover {
+.topSection button:hover {
     background-color: #3e2a75; 
     color: white;
-    border-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-
-@media (max-width: 768px) {
-    .ourTeam {
-        flex-basis: 100%; 
-    }
 }
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
