@@ -52,8 +52,7 @@ body {
 }
 
 .navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #ff7c1a;
-    color: #ffffff;
+    background-color: #fff;
 }
 
 .dropdown {
@@ -65,7 +64,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ff7c1a;
+    background-color: #3e2a75;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -83,7 +82,7 @@ body {
 
 .dropdown-content a:hover {
     background-color: #fff;
-    color: #ff7c1a;
+    color: #3e2a75;
 }
 
 .dropdown .dropbtn:hover + .dropdown-content,
