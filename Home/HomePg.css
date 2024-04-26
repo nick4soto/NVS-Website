@@ -286,17 +286,17 @@ body {
 
 .janGrnd{
     background-color: #3e2a7550;
-    border: 6px solid #3e2a75; 
+    border: .3cap solid #3e2a75; 
 }
 
 .mechBuild{
     background-color: rgba(0, 100, 0, 0.315);
-    border: 6px solid darkgreen; 
+    border: .3cap solid darkgreen; 
 }
 
 .repRenCon{
     background-color: #ff7d1a46;
-    border: 6px solid #ff7c1a; 
+    border: .3cap solid #ff7c1a; 
 }
 
 .janGrnd, .mechBuild, .repRenCon{

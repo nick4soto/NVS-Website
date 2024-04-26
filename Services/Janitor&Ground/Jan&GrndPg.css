@@ -162,93 +162,171 @@ body {
     text-align: center;
 }
 
-/* --------------------------------------Styles for the main content---------------------------------------------- */
+/* --------------------------------------Styles for the top content---------------------------------------------- */
 
 .topSection {
-    max-width: 800px;
+    max-width: 70%;
+    height: auto;
     margin: 40px auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between; /* Layout the text and images side by side */
+    justify-content: space-between; 
 }
 
 .topSectionContent {
-    width: 60%; /* Allocates 60% width to the content */
-    padding-right: 20px; /* Spacing between text and images */
+    width: 60%; 
+    padding-right: 20px;  
+    font-size: 1.2rem;
+    line-height: 1.8; 
+    color: black;
 }
 
 .topSectionImgs {
-    width: 35%; /* Allocates 35% width to the images */
+    width: 27%; 
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Space between images */
+    gap: 10px;
 }
 
 .topSectionImgs img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
-.topSectionButtons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s, box-shadow 0.3s;
+.imgOne a {
+    text-decoration: none;
+    color: #ff7c1a; 
+    font-size: .95rem;
     font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase; 
 }
 
-.learnMoreBtn {
-    background-color: #3e2a75;
+.imgTwo button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.imgTwo button:hover {
+    background-color: #3e2a75; 
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
-
-.learnMoreBtn:hover {
-    background-color: #2c2155;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.capabilityBtn {
-    background-color: white;
-    color: #3e2a75;
-    border: 2px solid #3e2a75;
-}
-
-.capabilityBtn:hover {
-    background-color: #3e2a75;
-    color: white;
-}
-
 
 /* --------------------------------------Styles for the second section---------------------------------------------- */
 
-.SVGimgs {
-    background-color: black;
-    width: 10%;
-    height: auto;
-    color: teal;
+.serviceSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    padding: 50px;
+    background: transparent;
+    justify-content: center;
+    align-items: stretch; 
+    grid-auto-rows: minmax(100px, auto); 
 }
 
-/* --------------------------------------Styles for the third section---------------------------------------------- */
+.serviceCard {
+    background: #3e2a7549;
+    border-radius: 8px;
+    border: .2cap solid #3e2a75; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
 
-.bottomSection img {
-    width: 10%;
-    height: auto;
+.serviceIconEnhancClean {
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.serviceIcon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.serviceCard h3 {
+    color: #3e2a75;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.serviceCard p {
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+@media screen and (max-width: 768px) {
+    .serviceSection {
+        grid-template-columns: 1fr; 
+        padding: 30px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .serviceCard {
+        padding: 15px;
+        margin-bottom: 20px; 
+    }
+
+    .serviceIcon {
+        width: 80px;
+    }
 }
 
 /*----------------------------------------------Styles for We Serve section--------------------------------------- */
+
+.sectionContainer2 {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.bottomLeft{
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.bottomLeft img{
+    width: 35%; 
+    height: auto;
+    margin: 0 auto;
+    -ms-flex-align: center;
+    margin-left: 10%;
+}
+
+.bottomLeft p{
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
 
 .ourTeam{
     flex: 1; 
@@ -258,7 +336,6 @@ body {
     background-color: #3e2a75;
     text-align: center;
     height: 20em;
-    width: 50%;
     border: #1e123f 3px solid;
     border-radius: 10px;
     height: 10%;
@@ -299,10 +376,15 @@ body {
 
 
 @media (max-width: 768px) {
-    .ourTeam {
+    .sectionContainer2 {
+        flex-direction: column;
+    }
+
+    .bottomLeft, .ourTeam {
         flex-basis: 100%; 
     }
 }
+
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 

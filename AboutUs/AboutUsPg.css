@@ -215,10 +215,7 @@ body {
 /* --------------------------------------Styles for the Video section---------------------------------------------- */
 
 .cert{
-    background-image: url(../Images/brownsville1910.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #3e2a7549;
     border-bottom: 6px solid #3e2a75;
 }
 
@@ -243,7 +240,7 @@ body {
     border-radius: 15px; 
     margin: 0 auto 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border: #666 3px solid;
+    border: #3e2a75 3px solid;
 }
 
 .certifExcell .textContainer {
@@ -251,8 +248,8 @@ body {
 }
 
 .contentWrapper {
-    background-color: #ccc; 
-    border: #666 3px solid; 
+    background-color: transparent; 
+    border: #3e2a75 3px solid; 
     border-radius: 10px; 
     padding: 20px;
     width: 90%; 
@@ -286,7 +283,7 @@ body {
   font-size: 3rem;
   margin: 0 auto;
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   text-align: center;
   font-weight: 700;
   color: black;
@@ -294,7 +291,7 @@ body {
 
 .head1 {
   border-top: 6px solid #3e2a75;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
 }
 
 .logos1{
