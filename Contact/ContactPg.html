@@ -8,35 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
 </head>
 
-<!-- Include EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){
-        emailjs.init("m2w39wWi8o0u8ipth"); // Replace 'your-user-id' with your EmailJS user ID
+        emailjs.init("m2w39wWi8o0u8ipth");  // Use your actual public key here
     })();
-</script>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Generate the template parameters based on the form's inputs
-    var templateParams = {
-        from_name: document.getElementById('from_name').value,
-        email_id: document.getElementById('email_id').value,
-        message: document.getElementById('message').value
-    };
-
-    emailjs.send('service_jv813sd', 'template_vuzt9x4', templateParams)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Your message has been sent!');
-        }, function(error) {
-            console.log('FAILED...', error);
-            alert('Failed to send the message, please try again.');
-        });
-});
 </script>
 
 <body>
@@ -86,8 +62,29 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         
             <button type="submit">Send</button>
         </form>
+    
         
-
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                // Generate the template parameters based on the form's inputs
+                var templateParams = {
+                    from_name: document.getElementById('from_name').value,
+                    email_id: document.getElementById('email_id').value,
+                    message: document.getElementById('message').value
+                };
+    
+                emailjs.send('service_jv813sd', 'template_vuzt9x4', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Your message has been sent!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert('Failed to send the message, please try again.');
+                    });
+            });
+        </script>
 
     </main>
 
