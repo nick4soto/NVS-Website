@@ -8,25 +8,36 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
 </head>
 
+<!-- Include EmailJS SDK -->
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
 <script type="text/javascript">
-  (function(){
-    emailjs.init("m2w39wWi8o0u8ipth"); // Replace "your_user_id" with the user ID from EmailJS
-  })();
+    (function(){
+        emailjs.init("m2w39wWi8o0u8ipth"); // Replace 'your-user-id' with your EmailJS user ID
+    })();
 </script>
 
 <script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-    
-        emailjs.sendForm('service_jv813sd', 'template_vuzt9x4', this)
-            .then(function() {
-                alert('Message sent!');
-            }, function(error) {
-                alert('Failed to send message: ' + error.text);
-            });
-    });
-    </script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Generate the template parameters based on the form's inputs
+    var templateParams = {
+        from_name: document.getElementById('from_name').value,
+        email_id: document.getElementById('email_id').value,
+        message: document.getElementById('message').value
+    };
+
+    emailjs.send('service_jv813sd', 'template_vuzt9x4', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Your message has been sent!');
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Failed to send the message, please try again.');
+        });
+});
+</script>
 
 <body>
 
@@ -61,12 +72,19 @@
           <p>Contact NVS Corporate Services Inc. for all your facility needs. Call us at <a href="tel:(956) 903-4382">(956) 903-4382</a> or fill out the form below. Let us know if you have any questions regarding our services, or if you are interested in receiving a quote. Our professional team will get back in touch with you as promptly as possible during working hours.</p>
         </section>
 
+        <!--m2w39wWi8o0u8ipth service_jv813sd template_vuzt9x4--> 
         <!--hr@nvscsi.com: application | info@nvscsi.com: contact-->
         <form id="contact-form">
-            <input type="text" name="from_name" required placeholder="Your Name">
-            <input type="email" name="from_email" required placeholder="Your Email">
-            <textarea name="message" required placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
+            <label for="from_name">Name:</label>
+            <input type="text" id="from_name" name="from_name" required>
+        
+            <label for="email_id">Email:</label>
+            <input type="email" id="email_id" name="email_id" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <button type="submit">Send</button>
         </form>
         
 
