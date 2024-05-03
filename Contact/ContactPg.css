@@ -171,6 +171,75 @@ body {
     text-decoration: none;
 }
 
+.contactForm {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px; /* Adjust based on preference */
+    margin: 40px auto;
+    border: 1px solid #e1e1e1;
+}
+
+.contactForm .formGroup {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm textarea:focus {
+    border-color: #3e2a75;
+    outline: none;
+}
+
+.contactForm textarea {
+    height: 150px; /* Adjust height based on preference */
+}
+
+.contactForm .submitBtn {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #3e2a75;
+    background-color: transparent;
+    color: #3e2a75;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactForm .submitBtn:hover {
+    background-color: #3e2a75;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contactForm {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
 footer {
