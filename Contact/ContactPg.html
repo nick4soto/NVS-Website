@@ -8,6 +8,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
 </head>
 
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("m2w39wWi8o0u8ipth"); // Replace "your_user_id" with the user ID from EmailJS
+  })();
+</script>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        emailjs.sendForm('service_jv813sd', 'template_vuzt9x4', this)
+            .then(function() {
+                alert('Message sent!');
+            }, function(error) {
+                alert('Failed to send message: ' + error.text);
+            });
+    });
+    </script>
+
 <body>
 
 <header class="header">
@@ -42,6 +62,14 @@
         </section>
 
         <!--hr@nvscsi.com: application | info@nvscsi.com: contact-->
+        <form id="contact-form">
+            <input type="text" name="from_name" required placeholder="Your Name">
+            <input type="email" name="from_email" required placeholder="Your Email">
+            <textarea name="message" required placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+
 
     </main>
 
