@@ -160,62 +160,74 @@ body {
 .rComp {
     display: flex;
     flex-direction: column; 
-    align-items: center; 
+    align-items: center;
     padding: 40px;
     max-width: 1200px;
-    margin: auto; 
+    margin: auto;
+}
+
+.rComp .contentRap {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+    width: 100%;
 }
 
 .rComp img {
-    width: 80%; 
+    width: 45%; 
     height: auto;
-    margin: 20px 0; 
-    border-radius: 5%; 
-    border: #666 3px solid;
+    margin-right: 2%; 
+    flex-shrink: 0; 
+    border-radius: 5%;
+    border: 3px solid #666;
 }
 
-.rComp h2 {
-    width: 80%; 
+.rComp .textContent {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.rComp .textContent h2 {
     color: #3e2a75;
-    font-size: 2.5em; 
-    text-align: center; 
-    margin-bottom: 20px; 
+    font-size: 2.5em;
+    margin-bottom: 15px;
 }
 
-.rComp p {
-    width: 80%; 
+.rComp .textContent p:first-of-type {
     font-size: 1.2rem;
-    line-height: 1.8; 
+    line-height: 1.8;
     color: black;
-    text-align: justify; 
-    text-indent: 20px; 
-    column-count: 2; 
-    column-gap: 40px; 
+    text-align: justify;
+    text-indent: 20px;
     margin-bottom: 20px;
 }
 
+.rComp p:last-of-type {
+    width: 100%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+    text-indent: 20px;
+    margin-top: 20px; 
+}
+
 @media (max-width: 768px) {
-    .rComp {
-        flex-direction: column;
+    .rComp .contentRap {
+        flex-direction: column; 
     }
 
     .rComp img {
-        width: 100%; 
-    }
-
-    .rComp h2, .rComp p {
-        width: 90%; 
-    }
-
-    .rComp p {
-        column-count: 1; 
+        width: 100%;
+        margin-right: 0; 
     }
 }
 
 /* --------------------------------------Styles for the Video section---------------------------------------------- */
 
 .cert{
-    background: #3e2a7549;
+    background: transparent;
     border-bottom: 6px solid #3e2a75;
 }
 
@@ -228,7 +240,7 @@ body {
 
 .certifExcell .videoContainer {
     position: relative;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 56.25%; 
     height: 0;
 }
 
@@ -248,7 +260,7 @@ body {
 }
 
 .contentWrapper {
-    background-color: transparent; 
+    background-color: #3e2a7549; 
     border: #3e2a75 3px solid; 
     border-radius: 10px; 
     padding: 20px;
@@ -270,7 +282,7 @@ body {
 
 @media (max-width: 768px) {
     .certifExcell {
-        grid-template-columns: 1fr; /* Stack on small screens */
+        grid-template-columns: 1fr; 
     }
     .certifExcell .textContainer {
         border-left: none;

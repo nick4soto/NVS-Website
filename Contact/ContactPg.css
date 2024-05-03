@@ -177,7 +177,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 480px; /* Adjust based on preference */
+    max-width: 480px; 
     margin: 40px auto;
     border: 1px solid #e1e1e1;
 }
@@ -212,7 +212,7 @@ body {
 }
 
 .contactForm textarea {
-    height: 150px; /* Adjust height based on preference */
+    height: 150px; 
 }
 
 .contactForm .submitBtn {
@@ -328,7 +328,7 @@ footer {
     border-radius: 50%;  
     background-color: #231f20;  
     transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
+    text-decoration: none; 
 }
 
 .footerSocial a:hover {

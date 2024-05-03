@@ -16,6 +16,13 @@ body {
     color: #333333; 
 }
 
+@media (max-width: 768px) and (max-height: 768px) {
+    html {
+        background-image: none; 
+        background-color: transparent; 
+    }
+}
+
 /* --------------------------------------Styles for the header---------------------------------------------- */
 
 .header {
@@ -188,11 +195,33 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .frontText {
+        padding: 20px 10px; 
+        margin-top: 10vh; 
+    }
+
+    .frontText h3 {
+        max-width: 100%; 
+        font-size: 2rem; 
+        color: #3e2a75;
+    }
+
+    .frontText h4 {
+        font-size: 1.5rem; 
+        color: #3e2a75;
+    }
+
+    .downArrow {
+        font-size: 30px; 
+    }
+}
+
 /* --------------------------------------Styles for the second section---------------------------------------------- */
 
 .secondText {
     max-width: 950px;
-    margin: 20px auto; /* Reduced the top margin to bring it closer to the top */
+    margin: 20px auto; 
     padding: 20px 40px;
     text-align: center;
 }

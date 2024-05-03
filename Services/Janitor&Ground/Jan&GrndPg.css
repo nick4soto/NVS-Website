@@ -474,7 +474,7 @@ footer {
     border-radius: 50%;  
     background-color: #231f20;  
     transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
+    text-decoration: none;  
 }
 
 .footerSocial a:hover {
