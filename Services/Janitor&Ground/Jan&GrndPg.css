@@ -252,18 +252,17 @@ body {
 
 .serviceIconEnhancClean {
     width: 80px;
-    margin-bottom: 5px;
 }
 
 .serviceIcon {
     width: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 0.1em;
 }
 
 .serviceCard h3 {
     color: #3e2a75;
     font-size: 3rem;
-    margin-bottom: 15px;
+    margin-bottom: 1%;
     font-weight: bold;
 }
 
