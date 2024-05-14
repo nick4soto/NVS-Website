@@ -3,7 +3,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../../Images/bg_squares.svg);
+    background-image: url(../../../Images/bg_squares.svg);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -24,7 +24,7 @@ body {
     color: white;
     padding: 1rem;
     position: relative;
-    background-image: url(../../Images/mainHeader.png);
+    background-image: url(../../../Images/mainHeader.png);
 }
 
 .nvsLogo img {
@@ -136,33 +136,46 @@ body {
 
 .titleCard {
     max-width: 100%;
-    background-image: url(../../Images/hvac_header-scaled.jpg);
+    background-image: url(../../../Images/Other-Services-Header-scaled.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-}
-
-.titleCard h5 {
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
-    color: #ff7c1a; 
-    margin: 0 auto;
-    padding-top: 2%;
-    text-align: center;
-}
-
-.titleCard h2 {
+  }
+  
+  .titleCard h2 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     color: white; 
     margin: 0 auto 20px;
+    padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-}
+  }
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
+
+.topSection button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.topSection button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 

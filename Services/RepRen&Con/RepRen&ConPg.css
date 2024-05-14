@@ -24,7 +24,7 @@ body {
     color: white;
     padding: 1rem;
     position: relative;
-    background-image: url(../../Images/brownsville1910.png);
+    background-image: url(../../Images/mainHeader.png);
 }
 
 .nvsLogo img {
@@ -52,8 +52,7 @@ body {
 }
 
 .navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #ff7c1a;
-    color: #ffffff;
+    background-color: #fff;
 }
 
 .dropdown {
@@ -65,7 +64,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ff7c1a;
+    background-color: #3e2a75;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -83,7 +82,7 @@ body {
 
 .dropdown-content a:hover {
     background-color: #fff;
-    color: #ff7c1a;
+    color: #3e2a75;
 }
 
 .dropdown .dropbtn:hover + .dropdown-content,
@@ -133,6 +132,35 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.titleCard {
+    max-width: 100%;
+    background-image: url(../../Images/renovation_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.titleCard h5 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    color: #ff7c1a; 
+    margin: 0 auto;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.titleCard h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white; 
+    margin: 0 auto 20px;
+    padding-bottom: 2%;
+    text-align: center;
+}
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 

@@ -24,7 +24,7 @@ body {
     color: white;
     padding: 1rem;
     position: relative;
-    background-image: url(../Images/brownsville1910.png);
+    background-image: url(../Images/mainHeader.png);
 }
 
 .nvsLogo img {
@@ -52,8 +52,7 @@ body {
 }
 
 .navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #ff7c1a;
-    color: #ffffff;
+    background-color: #fff;
 }
 
 .dropdown {
@@ -65,7 +64,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ff7c1a;
+    background-color: #3e2a75;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -83,7 +82,7 @@ body {
 
 .dropdown-content a:hover {
     background-color: #fff;
-    color: #ff7c1a;
+    color: #3e2a75;
 }
 
 .dropdown .dropbtn:hover + .dropdown-content,
@@ -134,7 +133,112 @@ body {
 }
 
 
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.titleCard {
+    max-width: 100%;
+    background-image: url(../Images/about_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.titleCard h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
 /* --------------------------------------Styles for the main content---------------------------------------------- */
+
+.mainText p{
+    font-size: 1.2rem;
+    margin: 0 auto 20px;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5em; 
+    max-width: 75rem;
+}
+
+.mainText a{
+    color: #3e2a75;
+    text-decoration: none;
+}
+
+.contactForm {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px; 
+    margin: 40px auto;
+    border: 1px solid #e1e1e1;
+}
+
+.contactForm .formGroup {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm textarea:focus {
+    border-color: #3e2a75;
+    outline: none;
+}
+
+.contactForm textarea {
+    height: 150px; 
+}
+
+.contactForm .submitBtn {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #3e2a75;
+    background-color: transparent;
+    color: #3e2a75;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contactForm .submitBtn:hover {
+    background-color: #3e2a75;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contactForm {
+        padding: 20px;
+        margin: 20px;
+    }
+}
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
@@ -224,7 +328,7 @@ footer {
     border-radius: 50%;  
     background-color: #231f20;  
     transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
+    text-decoration: none; 
 }
 
 .footerSocial a:hover {

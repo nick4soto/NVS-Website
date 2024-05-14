@@ -8,12 +8,19 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
 </head>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("m2w39wWi8o0u8ipth");  
+    })();
+</script>
+
 <body>
 
 <header class="header">
-  <a href="../Home/HomePg.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
+  <a href="/index.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
   <nav class="navBar">
-      <a href="../Home/HomePg.html">Home</a>
+      <a href="/index.html">Home</a>
       <div class="dropdown">
           <a class="dropbtn">Services</a>
           <div class="dropdown-content">
@@ -32,13 +39,64 @@
 </header>
 
     <main>
-      <h1>Contact Us</h1>
-      <p></p>
+
+        <section class="titleCard">
+            <h2>Contact Us</h2>
+          </section>
+
+        <section class="mainText">
+          <p>Contact NVS Corporate Services Inc. for all your facility needs. Call us at <a href="tel:(956) 903-4382">(956) 903-4382</a> or fill out the form below. Let us know if you have any questions regarding our services, or if you are interested in receiving a quote. Our professional team will get back in touch with you as promptly as possible during working hours.</p>
+        </section>
+
+        <!--m2w39wWi8o0u8ipth service_jv813sd template_vuzt9x4--> 
+        <!--hr@nvscsi.com: application | info@nvscsi.com: contact-->
+        <!--In case the emails dont work check below-->
+        <form id="contact-form" class="contactForm">
+            <div class="formGroup">
+                <label for="from_name">Name:</label>
+                <input type="text" id="from_name" name="from_name" required>
+            </div>
+            
+            <div class="formGroup">
+                <label for="email_id">Email:</label>
+                <input type="email" id="email_id" name="email_id" required>
+            </div>
+            
+            <div class="formGroup">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submitBtn">Send</button>
+        </form>
+        
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                // Generate the template parameters based on the form's inputs
+                var templateParams = {
+                    from_name: document.getElementById('from_name').value,
+                    email_id: document.getElementById('email_id').value,
+                    message: document.getElementById('message').value
+                };
+    
+                emailjs.send('service_jv813sd', 'template_vuzt9x4', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Your message has been sent!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert('Failed to send the message, please try again.');
+                    });
+            });
+        </script>
+
     </main>
 
     <footer class="footer">
     
-      <div class="footerLogo"><a href="../Home/HomePg.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
+      <div class="footerLogo"><a href="/index.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
   
       <div class="footerContact">
           <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>
@@ -49,7 +107,7 @@
   
       <div class="rightSec">
       <nav class="footerNav">
-          <a href="../Home/HomePg.html">Home</a>
+          <a href="/index.html">Home</a>
           <a href="../Services/Janitor&Ground/Jan&GrndPg.html">Services</a>
           <a href="../AboutUs/AboutUsPg.html">About Us</a>
           <a href="../OurWork/OurWorkPg.html">Our Work</a>

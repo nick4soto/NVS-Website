@@ -1,14 +1,177 @@
+
 <!DOCTYPE html>
-<html lang="en"></html>
-<html>
-    <head> 
-        <meta charset="utf-8">
-        <title>NVS-Website</title>
-        <base href="/" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="../styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <app-root></app-root>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVS Corporate Services</title>
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="HomePg.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
+
+
+</head>
+
+<script>
+    function scrollDown() {
+        const nextSection = document.getElementById('nextSection');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the next section
+        }
+    }
+    </script>
+
+<body>
+
+    <header class="header">
+        <a href="/index.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
+        <nav class="navBar">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <a class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groudskeeping</a>
+                    <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
+                    <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
+                    <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
+                </div>
+            </div>
+            <a href="../AboutUs/AboutUsPg.html">About Us</a>
+            <a href="../OurWork/OurWorkPg.html">Our Work</a>
+            <a href="../Contact/ContactPg.html">Contact Us</a>
+            <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
+        </nav>
+        <a href="../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
+    </header>
+
+<main>
+    <section class="frontText">
+        <h3>COMPREHENSIVE FACILITY SERVICES</h3>
+        <h4>We Excel At Our Job So You Can Excel At Yours</h4>
+        
+        <button class="downArrow" onclick="scrollDown()"> 
+            <i class="fas fa-chevron-down"></i> <!-- icon for down arrow -->
+        </button>
+        
+    </section>
+
+    <section id="nextSection">
+    <section class="secondText">
+    
+    <h2>Our Strategy</h2>
+      <p>NVS Corporate Services, Inc. provides building services to goverment and private businesses of all sizes in the private and public sector. Our highly proficient and dedicated group of employees, and solutions-oriented experts, are ready to fulfill your facility needs and help your organization succeed. With nearly 25 years of experience, we provide exceptional facility services throughout the United States.</p>
+      <a href="../AboutUs/AboutUsPg.html"><button>Learn More</button></a>
+      
+    </section>
+</section>
+
+    <section class="thirdText">
+      <h3>Our Facility Services Include:</h3>
+        
+                <div class="janGrnd">
+                <img src="../Images/man_on_a_riding_lawnmower.jpg" alt="Guy mowing lawn" class="janImg">
+                <h4>Janitorial & Groudskeeping</h4>
+                <p>In today’s climate, a clean, disinfected and well maintained facility is essential to operations. From sparkling floors and sanitized surfaces to well-manicured grounds, NVS provides effective and sustainable custodial and groundskeeping services. We can develop a cost-effective program that is tailored to the unique needs of your facility.</p>
+                <a href="../Services/Janitor&Ground/Jan&GrndPg.html"><button>More</button></a>
+                </div>
+
+            
+                <div class="mechBuild">
+                <img src="../Images/hvac_technician.jpg" alt="Hvac guy" class="hvacGuyImg">
+                <h4>Mechanical & Building Maintenance</h4>
+                <p>Protect your facility’s assets with planned preventative mechanical and building maintenance. We have extensive experience in maintaining systems that are critical to your operations. From HVAC systems to boilers, domestic hot water, hot water circulation, lighting and emergency response systems, NVS Corporate Services has your facility covered.</p>
+                <a href="../Services/Mech&Build/Mech&BldPg.html"><button>More</button></a>
+                </div>
+
+            
+                <div class="repRenCon">
+                <img src="../Images/drywall_tape_and_float.jpg" alt="Some dry wall" class="dryWallImg">
+                <h4>Repairs, Renovations & Construction</h4>
+                <p>NVS provides commercial and institutional building construction services. From conceptualization through project completion, NVS utilizes innovative engineering, skilled labor and proven project management to build cost effectiveness into each project and produce world-class results for their clients.</p>
+                <a href="../Services/RepRen&Con/RepRen&ConPg.html"><button>More</button></a>
+                </div>
+
+    </section>
+
+    <section class="logoCarousel">
+        <h3 class="head1">Certifications & Associations:</h3>
+        <div class="logos1">
+            <div class="logos-slide">
+                <a href="#"><img src="../Images/Logos/CIMS-Certified-1536x852.png" alt="CIMS Certified"></a>
+                <a href="#"><img src="../Images/Logos/CIMS-GB-Honors-RGB-UP.png" alt="CIM GB Honors"></a>
+                <a href="#"><img src="../Images/Logos/gsa_contract_holder.png" alt="gsa contract"></a>
+                <a href="#"><img src="../Images/Logos/bscai_member.png" alt="bscai Member"></a>
+                <a href="#"><img src="../Images/Logos/sba-small-disadvantaged-business-logo-300x253-1.png" alt="sba Logo"></a>
+                <a href="#"><img src="../Images/Logos/Hubzone.png" alt="Hub zone Logo"></a>
+            </div>
+        </div>
+        
+        <h3 class="head2">Our Clients Include:</h3>
+        <div class="logos2">
+            <div class="logos-slide">
+                <a href="#"><img src="../Images/Logos/GSA.png" alt="GSA Web"></a>
+                <a href="#"><img src="../Images/Logos/DOJ.png" alt="DOJ Web"></a>
+                <a href="#"><img src="../Images/Logos/va.png" alt="VA seal"></a>
+                <a href="#"><img src="../Images/Logos/US_DHS.png" alt="US DHS"></a>
+                <a href="#"><img src="../Images/Logos/us-army-corps-of-engineers.png" alt="US Army Web"></a>
+                <a href="#"><img src="../Images/Logos/Navy.png" alt="Navy Web"></a>
+            </div>
+        </div>
+
+        <script src="../methods/carousel.js"></script>
+    </section>
+
+
+<section class="hoo-wii-r">
+  <h2>About NVS Corporate Services</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MHlHdesxoeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>NVS Corporate Services, Inc. was founded on January 1, 2000, in Brownsville, Texas, under the leadership of President & CEO Nick Soto Jr. With an extensive background in property development and facilities maintenance, our leadership brings invaluable expertise to every project. NVS is committed to blending Native American values with modern sustainability practices, making us a leader in both janitorial and facility services.</p>
+
+      <a href="/Images/NVS Capability Statement.pdf"><button>Capability Statement</button></a>
+
+</section>
+
+</main>
+
+<footer class="footer">
+    
+    <div class="footerLogo"><a href="/index.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
+
+    <div class="footerContact">
+        <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>
+        <a href="https://www.google.com/maps/place/800+Wild+Rose+Ln,+Brownsville,+TX+78520/@25.9384021,-97.5112075,16.75z/data=!4m6!3m5!1s0x866f941dd2e0afe3:0x94802186facf9221!8m2!3d25.9385078!4d-97.5090305!16s%2Fg%2F11cphdf24g?entry=ttu"><p>800 Wildrose Ln., Brownsville, TX 78520</p></a>
+        <a href="tel:+18445534017"><p>Phone: 1-844-553-4017</p></a>
+        <a href= "mailto: info@nvscsi.com"><p>Email: info@nvscsi.com</p></a>
+    </div>
+
+    <div class="rightSec">
+    <nav class="footerNav">
+        <a href="/index.html">Home</a>
+        <a href="../Services/Janitor&Ground/Jan&GrndPg.html">Services</a>
+        <a href="../AboutUs/AboutUsPg.html">About Us</a>
+        <a href="../OurWork/OurWorkPg.html">Our Work</a>
+        <a href="../Contact/ContactPg.html">Contact Us</a>
+        <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
+    </nav>
+
+    <div class="footerSocial">
+        <a href="https://www.facebook.com/nvscsi1" target="_blank">
+            <i class="fab fa-facebook-f"></i>  
+        </a>
+        <a href="https://www.linkedin.com/company/nvs-corporate-services-inc-/mycompany/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>  
+        </a>
+    </div>
+
+    <div class="copyrightSec">
+    <p>© Copyright 2024, <a href="../Design&DevTeam/Des&DevTeam.html">Website Design & Development by Nick and friends</a></p>
+    
+    </div>
+</div>
+
+</footer>
+
+</body>
 </html>
