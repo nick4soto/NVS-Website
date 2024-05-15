@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.width = `${containerWidth}px`;
 
         let position = 0;
-        const speed = 1;
+        const speed = 1.5;
         let animationId;
 
         function animate() {
