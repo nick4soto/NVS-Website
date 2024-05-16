@@ -291,6 +291,11 @@ body {
 }
 /* ------------------------------------------Styles for the carousel section-------------------------------------- */
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
 .head1{
   font-size: 3rem;
   margin: 0 auto;
@@ -307,7 +312,6 @@ body {
 }
 
 .logos1{
-  overflow: hidden;
   padding: 2rem 0;
   white-space: nowrap;
   position: relative;
@@ -334,7 +338,34 @@ body {
   box-shadow: none;
 }
 
+.logo-description {
+    display: none; 
+    position: absolute;
+    bottom: auto; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 220px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    text-wrap: wrap;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 1px solid #ccc;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    overflow: visible;
+}
 
+.logos-slide a:hover .logo-description {
+    display: block; 
+    opacity: 1; 
+    visibility: visible;
+}
+
+.logoCarousel {
+    position: relative;
+}
 
 /* --------------------------------------Styles for the bottom two sections---------------------------------------------- */
 
