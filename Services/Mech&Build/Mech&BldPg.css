@@ -164,6 +164,230 @@ body {
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
+.topSection {
+    height: auto;
+    display: flex;
+    justify-content: space-between; 
+    max-width: 950px;
+    margin: 20px auto; 
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.topSectionContent {
+    width: 60%; 
+    font-size: 1.2rem;
+    line-height: 1.8; 
+    color: black;
+    margin-left: 20%;
+
+}
+
+.imgTwo button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.imgTwo button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* --------------------------------------Logos---------------------------------------------- */
+
+.serviceSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    padding: 50px;
+    background: transparent;
+    justify-content: center;
+    align-items: stretch; 
+    grid-auto-rows: minmax(100px, auto); 
+}
+
+.serviceCard {
+    background: #3e2a7549;
+    border-radius: 8px;
+    border: .2cap solid #3e2a75; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+.serviceIconHVAC {
+    width: 140px;
+}
+
+.serviceIcon {
+    width: 100px;
+    margin-bottom: 0.1em;
+}
+
+.serviceCard h3 {
+    color: #3e2a75;
+    font-size: 3rem;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.serviceCard p {
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+@media screen and (max-width: 768px) {
+    .serviceSection {
+        grid-template-columns: 1fr; 
+        padding: 30px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .serviceCard {
+        padding: 15px;
+        margin-bottom: 20px; 
+    }
+
+    .serviceIcon {
+        width: 80px;
+    }
+}
+
+
+
+
+
+
+.sectionContainer2 {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.bottomLeft{
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.bottomLeft img{
+    width: 35%; 
+    height: auto;
+    margin: 0 auto;
+    -ms-flex-align: center;
+    margin-left: 10%;
+}
+
+.bottomLeft p{
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
+
+.ourTeam{
+    flex: 1; 
+    margin-top: 5%;
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #3e2a75;
+    text-align: center;
+    height: 20em;
+    border: #1e123f 3px solid;
+    border-radius: 10px;
+    height: 10%;
+}
+
+.ourTeam h3{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ourTeam p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.ourTeam button {
+    background-color: white;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+}
+
+.ourTeam button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+@media (max-width: 768px) {
+    .sectionContainer2 {
+        flex-direction: column;
+    }
+
+    .bottomLeft, .ourTeam {
+        flex-basis: 100%; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
 footer {
