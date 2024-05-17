@@ -12,6 +12,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Header Styles */
@@ -22,7 +23,7 @@ body {
     color: white;
     padding: 1rem;
     position: relative;
-    background-color: #ddd;
+    background-image: url(../Images/mainHeader.png);
 }
 
 .nvsLogo img {
@@ -40,7 +41,7 @@ body {
 .navBar a, .dropbtn {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-    color: white;
+    color: #3e2a75;
     font-weight: bold;
     text-decoration: none;
     margin-right: 20px;
@@ -50,8 +51,16 @@ body {
 }
 
 .navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #ff7c1a;
-    color: #ffffff;
+    background-color: #fff;
+    color: #3e2a75;
+}
+
+.requestQuoteMobile{
+    display: none;
+}
+
+.plus-icon{
+    display: none;
 }
 
 .dropdown {
@@ -63,7 +72,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ff7c1a;
+    background-color: #3e2a75;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -81,11 +90,10 @@ body {
 
 .dropdown-content a:hover {
     background-color: #fff;
-    color: #ff7c1a;
+    color: #3e2a75;
 }
 
-.dropdown .dropbtn:hover + .dropdown-content,
-.dropdown-content:hover {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -130,165 +138,113 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Mobile Header (optional) */
-.mobile-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    background-color: #ddd;
-    color: #3e2a75;
-}
-
-.mobile-header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.burger {
-    display: block;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #3e2a75;
-    margin: 5px;
-}
-
-.mobile-navBar {
-    width: 100%;
-    background-color: #fff;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    transition: max-height 0.3s ease-out;
-    overflow: hidden;
-}
-
-.nav-active {
-    display: flex;
-    max-width: 100vh;
-}
-
-.nav-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    text-decoration: none;
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links li:last-child {
-    border-bottom: none;
-}
-
-.nav-links a {
-    color: #3e2a75;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.dropdown-content.show {
-    max-height: 1000px;
-}
-
-.dropdown-content a {
-    width: 100%;
-    padding: 1rem;
-    text-decoration: none;
-    display: block;
-    color: #3e2a75;
-    font-size: 1rem;
-}
-
-.dropdown-toggle {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #3e2a75;
-}
-
-.show {
-    display: block;
-}
-
 @media screen and (max-width: 768px) {
-    .desktop-header {
+    .header {
+        justify-content: space-between;
+    }
+
+    .nvsLogo img {
+        width: 4em;
+        height: auto;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 10;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .navBar.active {
+        max-height: 1000px; 
+    }
+
+    .navBar a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .navBar .dropdown {
+        width: 100%;
+    }
+
+    .navBar a:not(.dropbtn) {
+        margin-bottom: 0;
+    }
+
+    .navBar .dropdown-content {
+        display: block;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        transition: max-height 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .navBar .dropdown.active .dropdown-content {
+        max-height: 500px; 
+    }
+
+    .navBar .dropdown-content a {
+        color: #333;
+        background-color: #fff;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #ccc;
+        padding-left: 1rem;
+    }
+
+    .plus-icon {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: transform 0.3s ease-in-out;
+        position: absolute;
+        bottom: 9px; 
+    }
+    .requestQuote {
         display: none;
     }
 
-    .mobile-header {
+    .burger {
         display: block;
+        cursor: pointer;
     }
 
-    .mobile-navBar {
-        max-height: 0;
-        padding-left: 0;
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #3e2a75;
+        margin: 5px;
+        transition: all 0.3s ease;
     }
 
-    .nav-links li {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .nav-links a {
-        padding: 1rem;
-        display: block;
-    }
-
-    .dropdown-content {
-        position: static;
-    }
-
-    .nav-active {
-        max-height: 100vh;
-    }
-
-    .toggle .line1 {
+    .burger.active .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
 
-    .toggle .line2 {
+    .burger.active .line2 {
         opacity: 0;
     }
 
-    .toggle .line3 {
+    .burger.active .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .burger {
-        display: none;
     }
 }
