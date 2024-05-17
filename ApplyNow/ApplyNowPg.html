@@ -351,9 +351,11 @@
                     </div>
                         <br><br>
 
-                        <label>Signature: 
-                            <button type="button">Clear Signature</button>
-                        </label>
+                        <div class="signature-pad">
+                            <label>*Signature:</label>
+                            <canvas id="signatureCanvas"></canvas>
+                            <button type="button" id="clearSignature">Clear Signature</button>
+                        </div>
 
                         <button type="button" class="prev-btn">Previous</button>
                         <button type="button" class="next-btn" onclick="submitForm()">Submit</button>

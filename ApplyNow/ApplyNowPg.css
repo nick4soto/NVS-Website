@@ -280,6 +280,7 @@ button.prev-btn:hover {
     display: flex;
     flex-direction: column; 
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .input-row {
@@ -304,13 +305,55 @@ button.prev-btn:hover {
 }
 
 .removeButton {
-    background-color: #ff6347; /* A red color to signify deletion */
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff7c1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    float: left;
+    width: 10.5%;
 }
 
 
 #namesContainer, #residentialAddressContainer {
     display: flex;
     flex-direction: column;
+}
+
+.signature-pad {
+    text-align: left; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+}
+
+.signature-pad canvas {
+    border: 1px solid #000; 
+    display: block; 
+    margin: 0 auto 10px; 
+    cursor: crosshair;
+    margin-right: 75%;
+}
+
+#clearSignature {
+    display: inline-block; 
+    padding: 8px 16px; 
+    background-color: #3e2a75;
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+#clearSignature:hover {
+    background-color: #291c4f; 
 }
 
 @media (max-width: 768px) {

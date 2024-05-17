@@ -94,58 +94,109 @@ function submitForm() {
     alert('Form submitted!');
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.addButton').forEach(button => {
         button.addEventListener('click', function() {
             const container = document.getElementById(this.getAttribute('data-target'));
-            const newInputGroup = container.querySelector('.input-group').cloneNode(true);
-            newInputGroup.querySelector('.input-row') ? newInputGroup.querySelector('.input-row').innerHTML = '' : null;
-            
-            // Reset input fields in cloned group
-            Array.from(newInputGroup.querySelectorAll('input')).forEach(input => {
-                input.value = '';
-            });
+            const newInputGroup = createInputGroup(container);
 
-            if (container.id === 'namesContainer') {
-                const inputs = [
-                    { name: 'firstName[]', placeholder: 'First' },
-                    { name: 'middleName[]', placeholder: 'Middle' },
-                    { name: 'lastName[]', placeholder: 'Last' }
-                ];
-                
-                inputs.forEach(inputInfo => {
-                    const input = document.createElement('input');
-                    input.type = 'text';
-                    input.name = inputInfo.name;
-                    input.placeholder = inputInfo.placeholder;
-                    newInputGroup.querySelector('.input-row').appendChild(input);
-                });
-            } else if (container.id === 'residentialAddressContainer') {
-                newInputGroup.innerHTML = '';
-                
-                const addressInput = document.createElement('input');
-                addressInput.type = 'text';
-                addressInput.name = 'address[]';
-                addressInput.placeholder = 'Address';
-                newInputGroup.appendChild(addressInput);
-                
-                const fromToInput = document.createElement('input');
-                fromToInput.type = 'text';
-                fromToInput.name = 'fromTo[]';
-                fromToInput.placeholder = 'From/To';
-                newInputGroup.appendChild(fromToInput);
-            }
-
-            newInputGroup.innerHTML += '<button type="button" class="removeButton">Remove</button>';
+            // Append the new input group to the container
             container.appendChild(newInputGroup);
+            updateRemoveButtons(container);
         });
     });
 
-    // Event delegation for remove button
-    const formContainer = document.querySelector('.application-form');
-    formContainer.addEventListener('click', function(e) {
-        if (e.target.classList.contains('removeButton')) {
-            e.target.closest('.input-group').remove();
+    function createInputGroup(container) {
+        const div = document.createElement('div');
+        div.className = 'input-group';
+
+        if (container.id === 'namesContainer') {
+            const inputs = [
+                { name: 'firstName[]', placeholder: 'First' },
+                { name: 'middleName[]', placeholder: 'Middle' },
+                { name: 'lastName[]', placeholder: 'Last' }
+            ];
+            const innerDiv = document.createElement('div');
+            innerDiv.className = 'input-row';
+            inputs.forEach(inputInfo => {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.name = inputInfo.name;
+                input.placeholder = inputInfo.placeholder;
+                innerDiv.appendChild(input);
+            });
+            div.appendChild(innerDiv);
+        } else if (container.id === 'residentialAddressContainer') {
+            const addressInput = document.createElement('input');
+            addressInput.type = 'text';
+            addressInput.name = 'address[]';
+            addressInput.placeholder = 'Address';
+            div.appendChild(addressInput);
+
+            const fromToInput = document.createElement('input');
+            fromToInput.type = 'text';
+            fromToInput.name = 'fromTo[]';
+            fromToInput.placeholder = 'From/To';
+            div.appendChild(fromToInput);
         }
+
+        return div;
+    }
+
+    function updateRemoveButtons(container) {
+        const inputGroups = container.querySelectorAll('.input-group');
+        inputGroups.forEach((group, index) => {
+            // Remove existing remove button if it exists
+            let removeBtn = group.querySelector('.removeButton');
+            if (removeBtn) {
+                removeBtn.remove();
+            }
+
+            // Only add remove button if it's not the first input group
+            if (index > -1) {
+                removeBtn = document.createElement('button');
+                removeBtn.type = 'button';
+                removeBtn.textContent = 'Remove';
+                removeBtn.className = 'removeButton';
+                removeBtn.onclick = () => {
+                    group.remove();
+                    updateRemoveButtons(container); // Update buttons after removal
+                };
+                group.appendChild(removeBtn);
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('signatureCanvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    canvas.addEventListener('mousedown', (e) => {
+        isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
     });
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDrawing) return;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+    const clearButton = document.getElementById('clearSignature');
+    clearButton.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height));
+
+    // Set up the canvas drawing styles
+    ctx.lineWidth = 2;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = '#000000';
 });
