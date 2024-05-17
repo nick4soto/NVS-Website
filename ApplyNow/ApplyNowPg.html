@@ -230,15 +230,45 @@
                     <div class="form-step">
                         <h2>Step 4 of 5: Employment History & References</h2>
 
-                        <h3>Employment History</h3>
-                        <p>Start with your most recent employer.</p>
-                        <button type="button">Add Employment History</button>
-                        <br><br>
+                        <div class="dynamic-fields">
+                            <div class="field-container">
+                                <h3>Employment History</h3>
+                                <p>Start with your most recent employer.</p>
+                                <div id="employmentHistoryContainer" class="input-group">
+                                    <fieldset>
+                                    <label>Company Name: <input type="text" name="companyName[]" placeholder="Company Name"></label>
+                                    <label>Address: <input type="text" name="companyAddress[]" placeholder="Address"></label>
+                                    <label>Phone: <input type="tel" name="companyPhone[]" placeholder="Phone"></label>
+                                    <label>Date Started: <input type="date" name="dateStarted[]"></label>
+                                    <label>Starting Wage: <input type="text" name="startingWage[]" placeholder="Starting Wage"></label>
+                                    <label>Date Ended: <input type="date" name="dateEnded[]"></label>
+                                    <label>Ending Wage: <input type="text" name="endingWage[]" placeholder="Ending Wage"></label>
+                                    <label>Name of Supervisor: <input type="text" name="supervisorName[]" placeholder="Supervisor Name"></label>
+                                    <label>May we contact this employer? <select name="contactEmployer[]">
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select></label>
+                                    <label>Responsibilities: <textarea name="responsibilities[]"></textarea></label>
+                                    <label>Reason for Leaving: <textarea name="reasonForLeaving[]"></textarea></label>
+                                </div></fieldset>
+                                <button type="button" class="addButton" data-target="employmentHistoryContainer">Add Employment History</button>
+                            </div>
+                        </div>
 
-                        <h3>Professional References</h3>
-                        <p>List three professional references, not related to you, who have known you for more than one year.</p>
-                        <button type="button">Add Professional Reference</button>
-                        <br><br>
+                        <div class="dynamic-fields">
+                            <div class="field-container">
+                                <h3>Professional References</h3>
+                                <p>List three professional references, not related to you, who have known you for more than one year.</p>
+                                <div id="referenceContainer" class="input-group">
+                                    <label>Name: <input type="text" name="refName[]" placeholder="Name"></label>
+                                    <label>Phone: <input type="tel" name="refPhone[]" placeholder="Phone"></label>
+                                    <label>Address: <input type="text" name="refAddress[]" placeholder="Address"></label>
+                                    <label>Years Known: <input type="number" name="refYearsKnown[]" placeholder="Years Known"></label>
+                                    <label>Position: <input type="text" name="refPosition[]" placeholder="Position"></label>
+                                </div>
+                                <button type="button" class="addButton" data-target="referenceContainer">Add Professional Reference</button>
+                            </div>
+                        </div>
 
                         <h3>Emergency Contact</h3>
                         <fieldset>

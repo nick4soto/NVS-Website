@@ -111,48 +111,87 @@ document.addEventListener('DOMContentLoaded', function() {
         div.className = 'input-group';
 
         if (container.id === 'namesContainer') {
-            const inputs = [
-                { name: 'firstName[]', placeholder: 'First' },
-                { name: 'middleName[]', placeholder: 'Middle' },
-                { name: 'lastName[]', placeholder: 'Last' }
-            ];
             const innerDiv = document.createElement('div');
             innerDiv.className = 'input-row';
-            inputs.forEach(inputInfo => {
+            ['firstName', 'middleName', 'lastName'].forEach(name => {
                 const input = document.createElement('input');
                 input.type = 'text';
-                input.name = inputInfo.name;
-                input.placeholder = inputInfo.placeholder;
+                input.name = `${name}[]`;
+                input.placeholder = name.charAt(0).toUpperCase() + name.slice(1);
                 innerDiv.appendChild(input);
             });
             div.appendChild(innerDiv);
+        } else if (container.id === 'employmentHistoryContainer') {
+            const fields = [
+                { name: 'companyName[]', placeholder: 'Company Name' },
+                { name: 'companyAddress[]', placeholder: 'Address' },
+                { name: 'companyPhone[]', placeholder: 'Phone' },
+                { name: 'dateStarted[]', placeholder: 'Date Started', type: 'date' },
+                { name: 'startingWage[]', placeholder: 'Starting Wage' },
+                { name: 'dateEnded[]', placeholder: 'Date Ended', type: 'date' },
+                { name: 'endingWage[]', placeholder: 'Ending Wage' },
+                { name: 'supervisorName[]', placeholder: 'Supervisor Name' },
+                { name: 'contactEmployer[]', placeholder: 'May we contact this employer?', type: 'select', options: ['Yes', 'No'] },
+                { name: 'responsibilities[]', placeholder: 'Responsibilities', type: 'textarea' },
+                { name: 'reasonForLeaving[]', placeholder: 'Reason for Leaving', type: 'textarea' }
+            ];
+            addFields(div, fields);
+        } else if (container.id === 'referenceContainer') {
+            const fields = [
+                { name: 'refName[]', placeholder: 'Name' },
+                { name: 'refPhone[]', placeholder: 'Phone' },
+                { name: 'refAddress[]', placeholder: 'Address' },
+                { name: 'refYearsKnown[]', placeholder: 'Years Known' },
+                { name: 'refPosition[]', placeholder: 'Position' }
+            ];
+            addFields(div, fields);
         } else if (container.id === 'residentialAddressContainer') {
-            const addressInput = document.createElement('input');
-            addressInput.type = 'text';
-            addressInput.name = 'address[]';
-            addressInput.placeholder = 'Address';
-            div.appendChild(addressInput);
-
-            const fromToInput = document.createElement('input');
-            fromToInput.type = 'text';
-            fromToInput.name = 'fromTo[]';
-            fromToInput.placeholder = 'From/To';
-            div.appendChild(fromToInput);
+            const fields = [
+                { name: 'address[]', placeholder: 'Address' },
+                { name: 'fromTo[]', placeholder: 'From/To' }
+            ];
+            addFields(div, fields);
         }
 
         return div;
     }
 
+    function addFields(div, fields) {
+        fields.forEach(field => {
+            const label = document.createElement('label');
+            label.textContent = field.placeholder + ': ';
+            if (field.type === 'select') {
+                const select = document.createElement('select');
+                select.name = field.name;
+                field.options.forEach(option => {
+                    const optionElement = document.createElement('option');
+                    optionElement.value = option.toLowerCase();
+                    optionElement.textContent = option;
+                    select.appendChild(optionElement);
+                });
+                label.appendChild(select);
+            } else if (field.type === 'textarea') {
+                const textarea = document.createElement('textarea');
+                textarea.name = field.name;
+                textarea.placeholder = field.placeholder;
+                label.appendChild(textarea);
+            } else {
+                const input = document.createElement('input');
+                input.type = field.type || 'text';
+                input.name = field.name;
+                input.placeholder = field.placeholder;
+                label.appendChild(input);
+            }
+            div.appendChild(label);
+        });
+    }
+
     function updateRemoveButtons(container) {
         const inputGroups = container.querySelectorAll('.input-group');
         inputGroups.forEach((group, index) => {
-            // Remove existing remove button if it exists
             let removeBtn = group.querySelector('.removeButton');
-            if (removeBtn) {
-                removeBtn.remove();
-            }
+            if (removeBtn) removeBtn.remove();
 
-            // Only add remove button if it's not the first input group
             if (index > -1) {
                 removeBtn = document.createElement('button');
                 removeBtn.type = 'button';
@@ -160,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 removeBtn.className = 'removeButton';
                 removeBtn.onclick = () => {
                     group.remove();
-                    updateRemoveButtons(container); // Update buttons after removal
+                    updateRemoveButtons(container);
                 };
                 group.appendChild(removeBtn);
             }
@@ -200,3 +239,4 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.lineCap = 'round';
     ctx.strokeStyle = '#000000';
 });
+
