@@ -33,12 +33,335 @@
 
     <main>
 
-
         <section class="titleCard">
             <h2>Application for Employment</h2>
           </section>
-
             <!--hr@nvscsi.com: application | info@nvscsi.com: contact-->
+
+
+            <div class="application-form">
+                <div class="progress-bar">
+                    <div class="progress"><div class="progress-percentage">20%</div></div>
+                </div>
+                <form id="multiStepForm">
+                    <!-- Step 1 -->
+                    <div class="form-step active">
+                        "*" indicates required fields
+                        <h2>Step 1 of 5: Personal Information</h2>
+                        <label for="position">Position Applied For:* <input type="text" id="position" name="position" required></label>
+                        <fieldset>
+                            <legend>Name*</legend>
+                            <label>First: <input type="text" name="firstName" required></label>
+                            <label>Middle: <input type="text" name="middleName"></label>
+                            <label>Last: <input type="text" name="lastName" required></label>
+                        </fieldset>
+                        <br><br>
+                        <label for="email">Email:* <input type="email" id="email" name="email" required></label>
+                        <fieldset>
+                            <legend>Address</legend>
+                            <label>Street Address: <input type="text" name="streetAddress"></label>
+                            <label>Address Line 2: <input type="text" name="addressLine2"></label>
+                            <label>City: <input type="text" name="city"></label>
+                            <label>State / Province / Region: <input type="text" name="state"></label>
+                            <label>ZIP / Postal Code: <input type="text" name="zip"></label>
+                            <label>Country: <input type="text" name="country"></label>
+                        </fieldset>
+                        <br><br>
+                        <label for="ssn">Social Security Number:* <input type="text" id="ssn" name="ssn" required></label>
+                        <label>Home Phone: <input type="tel" name="homePhone"></label>
+                        <label>Mobile Phone: <input type="tel" name="mobilePhone"></label>
+                        <label>Work Phone: <input type="tel" name="workPhone"></label>
+                        <br><br>
+                        <label>Are you a U.S. citizen or authorized to work in the U.S.?* <br>
+                            <input type="radio" name="citizenship" value="yes" required> Yes
+                            <input type="radio" name="citizenship" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>What employment level are you looking for?* (check all that apply)<br>
+                            <input type="checkbox" name="employmentType" value="fullTime"> Full-Time
+                            <input type="checkbox" name="employmentType" value="partTime"> Part-Time
+                            <input type="checkbox" name="employmentType" value="temporary"> Temporary
+                        </label>
+                        <br><br>
+                        <label>What hours are you available to work?* <input type="text" name="availableHours" required></label>
+                        <br><br>
+                        <label>Are you willing to work (check all that apply):*<br>
+                            <input type="checkbox" name="workDays" value="monday"> Monday
+                            <input type="checkbox" name="workDays" value="tuesday"> Tuesday
+                            <input type="checkbox" name="workDays" value="wednesday"> Wednesday
+                            <input type="checkbox" name="workDays" value="thursday"> Thursday
+                            <input type="checkbox" name="workDays" value="friday"> Friday
+                            <input type="checkbox" name="workDays" value="saturday"> Saturday
+                            <input type="checkbox" name="workDays" value="sunday"> Sunday
+                        </label>
+                        <br><br>
+                        <label>Preferred shifts (check all that apply):*<br>
+                            <input type="checkbox" name="shifts" value="day"> Day
+                            <input type="checkbox" name="shifts" value="evening"> Evening
+                        </label>
+                        <br><br>
+                        <label>Are you willing to take a drug screen/physical exam?* <br>
+                            <input type="radio" name="drugTest" value="yes" required> Yes
+                            <input type="radio" name="drugTest" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>Have you ever been convicted of a felony?* <br>
+                            <input type="radio" name="felony" value="yes" required> Yes
+                            <input type="radio" name="felony" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>If yes, please describe conditions: <textarea name="felonyDescription"></textarea></label>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="form-step">
+                        <h2>Step 2 of 5: Employment Details</h2>
+
+                        <label for="source">How did you hear of this opening? <input type="text" id="source" name="source"></label>
+                        <br><br>
+                        <label>Have you ever applied for employment here?* <br>
+                            <input type="radio" name="appliedBefore" value="yes" required> Yes
+                            <input type="radio" name="appliedBefore" value="no"> No
+                        </label>
+
+                        <label if="appliedWhen">If yes, when? <input type="text" id="appliedWhen" name="appliedWhen"></label>
+                        <br><br>
+                        <label>Have you ever been employed by this company?* <br>
+                            <input type="radio" name="employedBefore" value="yes" required> Yes
+                            <input type="radio" name="employedBefore" value="no"> No
+                        </label>
+
+                        <label if="employedWhen">If yes, when? <input type="text" id="employedWhen" name="employedWhen"></label>
+                        <br><br>
+                        <label>Are you presently employed?* <br>
+                            <input type="radio" name="currentlyEmployed" value="yes" required> Yes
+                            <input type="radio" name="currentlyEmployed" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>May we contact your present employer?* <br>
+                            <input type="radio" name="contactEmployer" value="yes" required> Yes
+                            <input type="radio" name="contactEmployer" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>Will you continue with your present employer if offered a position with this company?* <br>
+                            <input type="radio" name="continueEmployment" value="yes" required> Yes
+                            <input type="radio" name="continueEmployment" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>Are you willing to travel?* <br>
+                            <input type="radio" name="willingToTravel" value="yes" required> Yes
+                            <input type="radio" name="willingToTravel" value="no"> No
+                        </label>
+                        <br><br>
+                        <label>What percent?* <input type="text" name="travelPercent" required></label>
+                        <br><br>
+                        <label>Date you can start* <input type="date" name="startDate" required></label>
+                        <br><br>
+                        <label>Desired starting salary* <input type="text" name="desiredSalary" required></label>
+                        <br><br>
+                        <label>Please list applicable skills* <textarea name="skills" required></textarea></label>
+                    
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="form-step">
+                     <h2>Step 3 of 5: Education Details</h2>
+    
+                    <!-- High School -->
+                    <fieldset>
+                        <legend>High School</legend>
+                        <label>Year(s): <input type="text" name="highSchoolYears"></label>
+                        <label>Major: <input type="text" name="highSchoolMajor"></label>
+                        <label>Degree: <input type="text" name="highSchoolDegree"></label>
+                    </fieldset>
+                    <br><br>
+
+                    <!-- College -->
+                    <fieldset>
+                        <legend>College</legend>
+                        <label>Year(s): <input type="text" name="collegeYears"></label>
+                        <label>Major: <input type="text" name="collegeMajor"></label>
+                        <label>Degree: <input type="text" name="collegeDegree"></label>
+                    </fieldset>
+                    <br><br>
+
+                    <!-- Additional College -->
+                    <fieldset>
+                        <legend>Additional College</legend>
+                        <label>Year(s): <input type="text" name="additionalCollegeYears"></label>
+                        <label>Major: <input type="text" name="additionalCollegeMajor"></label>
+                        <label>Degree: <input type="text" name="additionalCollegeDegree"></label>
+                    </fieldset>
+                    <br><br>
+
+                    <!-- Post-College -->
+                        <fieldset>
+                        <legend>Post-College</legend>
+                        <label>Year(s): <input type="text" name="postCollegeYears"></label>
+                        <label>Major: <input type="text" name="postCollegeMajor"></label>
+                        <label>Degree: <input type="text" name="postCollegeDegree"></label>
+                    </fieldset>
+                    <br><br>
+
+                    <!-- Other Training -->
+                        <fieldset>
+                        <legend>Other Training</legend>
+                        <label>Year(s): <input type="text" name="otherTrainingYears"></label>
+                        <label>Major: <input type="text" name="otherTrainingMajor"></label>
+                        <label>Degree: <input type="text" name="otherTrainingDegree"></label>
+                    </fieldset>
+                    <br><br>
+
+                    <label>In addition to your work history, are there any other skills, qualifications, or experience that we should consider?* <textarea name="additionalSkills" required></textarea></label>
+                    <br><br>
+                    <label>Please list any scholastic honors received and offices held in school or employers:* <textarea name="scholasticHonors" required></textarea></label>
+                    <br><br>
+
+                    <label>Are you planning to continue your studies?* <br>
+                        <input type="radio" name="continueStudies" value="yes" required> Yes
+                        <input type="radio" name="continueStudies" value="no"> No
+                    </label>
+
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+                    <!-- Step 4 -->
+                    <div class="form-step">
+                        <h2>Step 4 of 5: Employment History & References</h2>
+
+                        <h3>Employment History</h3>
+                        <p>Start with your most recent employer.</p>
+                        <button type="button">Add Employment History</button>
+                        <br><br>
+
+                        <h3>Professional References</h3>
+                        <p>List three professional references, not related to you, who have known you for more than one year.</p>
+                        <button type="button">Add Professional Reference</button>
+                        <br><br>
+
+                        <h3>Emergency Contact</h3>
+                        <fieldset>
+                            <legend>In case of emergency, please notify:</legend>
+                            <label>First Name: <input type="text" name="emergencyFirstName"></label>
+                            <label>Last Name: <input type="text" name="emergencyLastName"></label>
+                            <label>Phone: <input type="tel" name="emergencyPhone"></label>
+                            <label>Address: <input type="text" name="emergencyAddress"></label>
+                        </fieldset>
+                        <br><br>
+
+                        <h3>Consent*</h3>
+                        <label class="consent">
+                            I certify that all information provided by me on this application is true and complete to the best of my knowledge and that I have withheld nothing that, if disclosed, would alter the integrity of this application.
+                            <br><br>
+                            I authorize my previous employers, schools, or persons listed as references to give any information regarding employment or educational record. I agree that this company and my previous employers will not be held liable in any respect if a job offer is not extended, or is withdrawn, or employment is terminated because of false statements, omissions, or answers made by myself on this application. In the event of any employment with this company, I will comply with all rules and regulations as set by the company in any communication distributed to the employees.
+                            <br><br>
+                            In compliance with the Immigration Reform and Control Act of 1986, I understand that I am required to provide approved documentation to the company that verifies my right to work in the United States on the first day of employment. I have received from the company a list of the approved documents that are required.
+                            <br><br>
+                            I understand that employment at this company is “at will,” which means that either I or this company can terminate the employment relationship at any time, with or without prior notice, and for any reason not prohibited by statute. All employment is continued on that basis.
+                            <br><br>
+                            <input type="checkbox" name="consent" required>I have read and understand the above statements.
+                        </label>
+
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="form-step">
+                        <h2>Step 5 of 5: Background Check Authorization</h2>
+
+                        <fieldset>
+                        <legend><h3>Notice And Acknowledgment</h3></legend>
+                
+                        <p class="important-notice">
+                            <strong>Important -- Please Read Carefully Before Signing Acknowledgment</strong>
+                        </p>
+                        <p>
+                            Notice Regarding Background Investigation* NVS Corporate Services, Inc. may obtain information about you from a consumer reporting agency for employment purposes. Thus, you may be the subject of a “consumer report” and/or an “investigative consumer report” which may include, but is not limited to: employment and education verifications; social security number verification; criminal and civil court records; personal interviews; driving records; and/or any other public records or any other information bearing on your character, general reputation, personal characteristics and trustworthiness. These reports may be obtained at any time after receipt of your authorization and, if you are selected, throughout your affiliation with the Company. You have the right, upon written request made within a reasonable time after receipt of this notice, to request disclosure of the nature and scope of any investigative consumer report. The report will be generated by BSCAIbackgroundchecks.com (1200 South Outer Road, Blue Springs, MO 64015/816-228-5255) or another outside organization. The scope of this notice and authorization is all-encompassing, however, allowing the Company to obtain from any outside organization all manner of consumer reports and investigative consumer reports now and, if you are selected, throughout your affiliation with the Company to the extent permitted by law. As a result, you should carefully consider whether to exercise your right to request disclosure of the nature and scope of any investigative consumer report.
+                        </p>
+                        <label for="acknowledge">
+                            I acknowledge receipt of the NOTICE REGARDING BACKGROUND INVESTIGATION (above) and A SUMMARY OF YOUR RIGHTS UNDER THE FAIR CREDIT REPORTING ACT (separate document) and certify that I have read and understand both of those documents. I hereby authorize the obtaining of “consumer reports” and/or “investigative consumer reports” at any time after receipt of this authorization and, if I am selected, throughout my affiliation with the Company. To this end, I hereby authorize, without reservation, any law enforcement agency, administrator, state or federal agency, institution, school or university (public or private), information service bureau, employer, or insurance company to furnish any and all background information requested by BSCAIbackgroundchecks.com, another outside organization acting on behalf of the Company, and/or the Company itself. I agree that a facsimile (“fax”) or photographic copy of this Authorization shall be as valid as the original.
+                        </label>
+                    </fieldset>
+                        <input type="checkbox" id="acknowledge" name="acknowledge" required>I have read the above
+                        <br><br>
+                        <br><br>
+
+                        <fieldset>
+                            <legend>Acknowledgement and Authorization</legend>
+                            <input type="checkbox" name="reportCopyMNOK"> Minnesota and Oklahoma applicants only: Check here if you would like to receive a copy of a consumer report if one is obtained by the Company.
+                            <br><br>
+                            <input type="checkbox"> New York applicants only: By signing, you acknowledge receipt of Article 23-A of the New York Correction Law.
+                            <br><br>
+                            <input type="checkbox" name="reportCopyCA"> California applicants only: Check here if you would like to receive a copy of an investigative consumer report or consumer credit report if one is obtained by the Company.
+                            </fieldset>
+                            <br><br>
+    
+                        <label>* Full Name: 
+                            <input type="text" name="fullName" required>
+                        </label>
+                        <br><br>
+                        <div class="dynamic-fields">
+                            <div class="field-container">
+                                <label>*Maiden Name, Previous Names, or Aliases Used:</label>
+                                <div id="namesContainer" class="input-group">
+                                    <input type="text" name="firstName[]" placeholder="First" />
+                                    <input type="text" name="middleName[]" placeholder="Middle" />
+                                    <input type="text" name="lastName[]" placeholder="Last" />
+                                </div>
+                                <button type="button" class="addButton" data-target="namesContainer">Add Name</button>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <label>* Social Security Number:
+                            <input type="text" name="ssn" required>
+                        </label>
+                        <br><br>
+    
+                        <label>* Date of Birth:
+                            <input type="date" name="dob" required>
+                        </label>
+                        <br><br>
+
+                        <label>* Driver's License/ID State:
+                            <input type="text" name="licenseState" required>
+                        </label>
+                        <br><br>
+    
+                        <label>* Driver's License/ID Number:
+                            <input type="text" name="licenseNumber" required>
+                        </label>
+                        <br><br>
+
+                        <label>* Contact Phone Number:
+                            <input type="tel" name="contactPhone" required>
+                        </label>
+                        <br><br>
+
+                        <div class="dynamic-fields">
+                            <div class="field-container">
+                                <label>*Please provide ALL residential addresses for the past seven (7) years, starting with current residence:</label>
+                                <div id="residentialAddressContainer" class="input-group">
+                                    <input type="text" name="address[]" placeholder="Address" />
+                                    <input type="text" name="fromTo[]" placeholder="From/To" />
+                                </div>
+                                <button type="button" class="addButton" data-target="residentialAddressContainer">Add Address</button>
+                            </div>
+                    </div>
+                        <br><br>
+
+                        <label>Signature: 
+                            <button type="button">Clear Signature</button>
+                        </label>
+
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn" onclick="submitForm()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        
+            <script src="ApplyNowPg.js"></script>
 
     </main>
 
