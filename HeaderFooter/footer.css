@@ -1,11 +1,13 @@
 /* Footer styles */
 footer {
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-wrap: wrap;
     background-color: #231f20;
     color: white;
     padding: 1rem;
     font-size: 0.875rem;
+    width: 100%;
 }
 
 .footerLogo {
@@ -16,7 +18,8 @@ footer {
 }
 
 .footerLogo img {
-    width: 150px;
+    width: 200px;
+    height: auto;
 }
 
 .footerLogo img:hover {
@@ -27,6 +30,8 @@ footer {
     flex-basis: 100%;
     text-align: center;
     margin-bottom: 1rem;
+    
+    
 }
 
 .footerContact a {
