@@ -15,108 +15,9 @@ body {
     color: #333333; 
 }
 
-/* --------------------------------------Styles for the header---------------------------------------------- */
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    background-image: url(../Images/mainHeader.png);
-}
-
-.nvsLogo img {
-    width: 175px;
-    height: auto;
-}
-
-.navBar {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin-left: 20px;
-}
-
-.navBar a, .dropbtn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #3e2a75;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #fff;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto; 
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3e2a75;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: auto; 
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-radius: 5px;
-}
-
-.dropdown-content a:hover {
-    background-color: #fff;
-    color: #3e2a75;
-}
-
-.dropdown .dropbtn:hover + .dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
-.requestQuote {
-    background-color: transparent;
-    color: #3e2a75;
-    border-radius: 20px;
-    border: 2px solid #3e2a75;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.requestQuote:hover, .requestQuote:focus {
-    background-color: #3e2a75;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* --------------------------------------Styles for the Title Card---------------------------------------------- */
 
-.titleCard {
+.mainContent .titleCard {
     max-width: 100%;
     background-image: url(../Images/lawn_car_header-scaled.jpg);
     background-size: cover;
@@ -125,7 +26,7 @@ body {
     text-align: center;
 }
 
-.titleCard h2 {
+.mainContent .titleCard h2 {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -136,10 +37,9 @@ body {
     text-align: center;
 }
 
-
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
-.application-form {
+.mainContent .application-form {
     background: #f9f9f9;
     padding: 30px;
     border-radius: 8px;
@@ -152,7 +52,7 @@ body {
     text-align: center;
 }
 
-.progress-bar {
+.mainContent .progress-bar {
     width: 100%;
     height: 20px;
     background-color: #ddd;
@@ -162,7 +62,7 @@ body {
     overflow: hidden; 
 }
 
-.progress {
+.mainContent .progress {
     height: 100%;
     background-color: #3e2a75;
     border-radius: 10px;
@@ -170,7 +70,7 @@ body {
     position: relative;
 }
 
-.progress-percentage {
+.mainContent .progress-percentage {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -183,130 +83,18 @@ body {
     transition: transform 0.3s ease;
 }
 
-.form-step.active {
+.mainContent .form-step.active {
     display: block; 
 }
 
-h2 {
+.mainContent h2 {
     color: #3e2a75;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-p {
+.mainContent p {
     color: #333333;
     font-size: 1.1rem;
     margin-bottom: 20px;
-}
-
-/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
-
-footer {
-    display: flex;
-    background-color: #231f20;
-    color: white;
-    width: 100%;
-}
-
-.footerLogo{
-    width: 200px;
-    height: auto;
-    display: flex;
-    margin-bottom: 2%;  
-    margin-top: 2%;
-    float: left;
-    padding-left: 2%;
-    padding-right: 1%;
-    border-right: #666 1px solid;
-}
-
-.footerLogo img{
-    width: 100%;
-    height: auto;
-}
-
-.footerLogo img:hover{
-    opacity: 0.8;
-}
-
-.footerContact {
-    margin: 5px 0; 
-    flex-direction: column;
-    float: left; 
-    padding-left: 1%;
-}
-
-.footerContact a{
-    color: white;
-    text-decoration: none;
-}
-
-.footerContact a:hover{
-    color: #ff7c1a;
-}
-
-.rightSec{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    margin-left: 8%;
-}
-
-.footerNav {
-    width: 700px;
-    flex-wrap: wrap;  
-    text-align: right;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-.footerNav a {
-    padding: 5px 10px; 
-    text-decoration: none;
-    color: white;
-}
-
-.footerNav a:hover {
-    color: #ff7c1a;
-}
-
-.footerSocial {
-    text-align: right;
-}
-
-.footerSocial a {
-    display: inline-flex;  
-    justify-content: center; 
-    align-items: center;  
-    width: 40px;  
-    height: 40px; 
-    margin: 0 10px;
-    font-size: 24px; 
-    color: white;
-    border: 2px solid white; 
-    border-radius: 50%;  
-    background-color: #231f20;  
-    transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
-}
-
-.footerSocial a:hover {
-    color: #ff7c1a;
-    border-color: #ff7c1a;
-    transition: color 0.3s ease;  
-}
-
-.copyrightSec {
-    font-size: 0.75em;
-    text-align: right;
-    margin-top: 3%;
-}
-
-.copyrightSec a{
-    color: white;
-    text-decoration: none;
-}
-
-.copyrightSec a:hover{
-    color: #ff7c1a;
 }

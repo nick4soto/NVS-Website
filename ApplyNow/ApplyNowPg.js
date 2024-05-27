@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(response => response.text())
                 .then(result => {
                     console.log('Server response:', result);
-                    window.location.href = 'submission_success.html';
+                    window.location.href = 'submission.html';
                 })
                 .catch(error => {
                     console.error('Error:', error);
