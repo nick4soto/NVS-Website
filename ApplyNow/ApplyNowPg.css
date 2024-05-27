@@ -167,6 +167,7 @@ body {
     max-width: 800px;
     margin: 40px auto;
     border: 1px solid #e1e1e1;
+    min-height: 300px;
 }
 
 .progress-bar {
@@ -189,7 +190,7 @@ body {
 
 .progress-percentage {
     position: absolute;
-    right: 5px; 
+    transform: translateX(-50%);
     top: 0;
     color: white; 
     font-size: 0.8em;
@@ -197,6 +198,9 @@ body {
     font-weight: bold;
     pointer-events: none; 
     transition: transform 0.3s ease;
+    display: block;
+    width: 100%;  
+    text-align: end; 
 }
 
 .form-step {
@@ -214,28 +218,62 @@ h2 {
 }
 
 label {
-    margin-bottom: 15px;
+    margin: 5px 0;
+}
+
+.form-group {
+    margin: 5px 0;
+}
+
+.form-group select.full-width {
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.question {
+    margin-bottom: 5px;
+}
+
+.form-control {
     display: block;
-    font-size: 1rem;
-    color: #333;
-    width: 96%;
+    width: 97%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.radio-group input[type="radio"] {
+    vertical-align: middle;
+    transform: translateY(-20%);
+}
+
+.checkbox-group input[type="checkbox"] {
+    vertical-align: middle;
+    transform: translateY(-10%);
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 10px;
-}
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -272,6 +310,10 @@ button.prev-btn:hover {
     background-color: #bbb;
 }
 
+.error-message{ 
+    margin-top: 10px; 
+}
+
 .field-container {
     margin-bottom: 20px;
 }
@@ -296,6 +338,7 @@ button.prev-btn:hover {
 
 .addButton, .removeButton {
     margin-left: 10px;
+    margin-bottom: 15px;
     padding: 8px 12px;
     background-color: #3e2a75;
     color: white;
@@ -307,14 +350,14 @@ button.prev-btn:hover {
 .removeButton {
     margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 0;
     padding: 8px 12px;
     background-color: #ff7c1a;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    float: left;
-    width: 10.5%;
+
 }
 
 
