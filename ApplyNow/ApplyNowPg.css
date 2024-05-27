@@ -15,123 +15,6 @@ body {
     color: #333333; 
 }
 
-/* --------------------------------------Styles for the header---------------------------------------------- */
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    background-image: url(../Images/mainHeader.png);
-}
-
-.nvsLogo img {
-    width: 175px;
-    height: auto;
-}
-
-.navBar {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin-left: 20px;
-}
-
-.navBar a, .dropbtn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #3e2a75;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #fff;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto; 
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3e2a75;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: auto; 
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-radius: 5px;
-}
-
-.dropdown-content a:hover {
-    background-color: #fff;
-    color: #3e2a75;
-}
-
-.dropdown .dropbtn:hover + .dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
-
-.dropdown-content .jan{ 
-    border-bottom-left-radius: 0%; 
-    border-bottom-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .mec, .dropdown-content .rep{ 
-    border-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .oth{ 
-    border-top-left-radius: 0%; 
-    border-top-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.requestQuote {
-    background-color: transparent;
-    color: #3e2a75;
-    border-radius: 20px;
-    border: 2px solid #3e2a75;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.requestQuote:hover, .requestQuote:focus {
-    background-color: #3e2a75;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* --------------------------------------Styles for the Title Card---------------------------------------------- */
 
 .titleCard {
@@ -167,6 +50,7 @@ body {
     max-width: 800px;
     margin: 40px auto;
     border: 1px solid #e1e1e1;
+    min-height: 300px;
 }
 
 .progress-bar {
@@ -189,7 +73,7 @@ body {
 
 .progress-percentage {
     position: absolute;
-    right: 5px; 
+    transform: translateX(-50%);
     top: 0;
     color: white; 
     font-size: 0.8em;
@@ -197,6 +81,9 @@ body {
     font-weight: bold;
     pointer-events: none; 
     transition: transform 0.3s ease;
+    display: block;
+    width: 100%;  
+    text-align: end; 
 }
 
 .form-step {
@@ -214,28 +101,62 @@ h2 {
 }
 
 label {
-    margin-bottom: 15px;
+    margin: 5px 0;
+}
+
+.form-group {
+    margin: 5px 0;
+}
+
+.form-group select.full-width {
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.question {
+    margin-bottom: 5px;
+}
+
+.form-control {
     display: block;
-    font-size: 1rem;
-    color: #333;
-    width: 96%;
+    width: 97%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.radio-group input[type="radio"] {
+    vertical-align: middle;
+    transform: translateY(-20%);
+}
+
+.checkbox-group input[type="checkbox"] {
+    vertical-align: middle;
+    transform: translateY(-10%);
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 10px;
-}
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -272,6 +193,10 @@ button.prev-btn:hover {
     background-color: #bbb;
 }
 
+.error-message{ 
+    margin-top: 10px; 
+}
+
 .field-container {
     margin-bottom: 20px;
 }
@@ -296,6 +221,7 @@ button.prev-btn:hover {
 
 .addButton, .removeButton {
     margin-left: 10px;
+    margin-bottom: 15px;
     padding: 8px 12px;
     background-color: #3e2a75;
     color: white;
@@ -307,14 +233,14 @@ button.prev-btn:hover {
 .removeButton {
     margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 0;
     padding: 8px 12px;
     background-color: #ff7c1a;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    float: left;
-    width: 10.5%;
+
 }
 
 
@@ -361,116 +287,4 @@ button.prev-btn:hover {
         padding: 20px;
         margin: 20px;
     }
-}
-
-/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
-
-footer {
-    display: flex;
-    background-color: #231f20;
-    color: white;
-    width: 100%;
-}
-
-.footerLogo{
-    width: 200px;
-    height: auto;
-    display: flex;
-    margin-bottom: 2%;  
-    margin-top: 2%;
-    float: left;
-    padding-left: 2%;
-    padding-right: 1%;
-    border-right: #666 1px solid;
-}
-
-.footerLogo img{
-    width: 100%;
-    height: auto;
-}
-
-.footerLogo img:hover{
-    opacity: 0.8;
-}
-
-.footerContact {
-    margin: 5px 0; 
-    flex-direction: column;
-    float: left; 
-    padding-left: 1%;
-}
-
-.footerContact a{
-    color: white;
-    text-decoration: none;
-}
-
-.footerContact a:hover{
-    color: #ff7c1a;
-}
-
-.rightSec{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    margin-left: 8%;
-}
-
-.footerNav {
-    width: 700px;
-    flex-wrap: wrap;  
-    text-align: right;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-.footerNav a {
-    padding: 5px 10px; 
-    text-decoration: none;
-    color: white;
-}
-
-.footerNav a:hover {
-    color: #ff7c1a;
-}
-
-.footerSocial {
-    text-align: right;
-}
-
-.footerSocial a {
-    display: inline-flex;  
-    justify-content: center; 
-    align-items: center;  
-    width: 40px;  
-    height: 40px; 
-    margin: 0 10px;
-    font-size: 24px; 
-    color: white;
-    border: 2px solid white; 
-    border-radius: 50%;  
-    background-color: #231f20;  
-    transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
-}
-
-.footerSocial a:hover {
-    color: #ff7c1a;
-    border-color: #ff7c1a;
-    transition: color 0.3s ease;  
-}
-
-.copyrightSec {
-    font-size: 0.75em;
-    text-align: right;
-    margin-top: 3%;
-}
-
-.copyrightSec a{
-    color: white;
-    text-decoration: none;
-}
-
-.copyrightSec a:hover{
-    color: #ff7c1a;
 }
