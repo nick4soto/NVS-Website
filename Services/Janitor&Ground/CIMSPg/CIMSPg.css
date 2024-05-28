@@ -15,123 +15,6 @@ body {
     color: #333333; 
 }
 
-/* --------------------------------------Styles for the header---------------------------------------------- */
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    background-image: url(../../../Images/mainHeader.png);
-}
-
-.nvsLogo img {
-    width: 175px;
-    height: auto;
-}
-
-.navBar {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin-left: 20px;
-}
-
-.navBar a, .dropbtn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #3e2a75;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #fff;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto; 
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3e2a75;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: auto; 
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-radius: 5px;
-}
-
-.dropdown-content a:hover {
-    background-color: #fff;
-    color: #3e2a75;
-}
-
-.dropdown .dropbtn:hover + .dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
-
-.dropdown-content .jan{ 
-    border-bottom-left-radius: 0%; 
-    border-bottom-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .mec, .dropdown-content .rep{ 
-    border-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .oth{ 
-    border-top-left-radius: 0%; 
-    border-top-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.requestQuote {
-    background-color: transparent;
-    color: #3e2a75;
-    border-radius: 20px;
-    border: 2px solid #3e2a75;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.requestQuote:hover, .requestQuote:focus {
-    background-color: #3e2a75;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* --------------------------------------Styles for the Title Card---------------------------------------------- */
 
 .titleCard {
@@ -156,6 +39,127 @@ body {
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
+.topSection {
+    max-width: 70%;
+    height: auto;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.topSectionContent {
+    width: 60%; 
+    padding-right: 20px;  
+    font-size: 1.2rem;
+    line-height: 1.8; 
+    color: black;
+}
+
+.topSectionImgs {
+    width: 27%; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.topSectionImgs img {
+    width: 100%;
+    height: auto;
+}
+
+.imgOne a {
+    text-decoration: none;
+    color: #ff7c1a; 
+    font-size: .95rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase; 
+}
+
+.imgTwo button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.imgTwo button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+.serviceCard {
+    background: #3e2a7549;
+    border-radius: 8px;
+    border: .2cap solid #3e2a75; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+.serviceIconEnhancClean {
+    width: 80px;
+}
+
+.serviceIcon {
+    width: 100px;
+    margin-bottom: 0.1em;
+}
+
+.serviceCard h3 {
+    color: #3e2a75;
+    font-size: 3rem;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.serviceCard p {
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+@media screen and (max-width: 768px) {
+    .serviceSection {
+        grid-template-columns: 1fr; 
+        padding: 30px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .serviceCard {
+        padding: 15px;
+        margin-bottom: 20px; 
+    }
+
+    .serviceIcon {
+        width: 80px;
+    }
+}
+
+
+
+
+
 .topSection button {
     background-color: transparent;
     color: #3e2a75; 
@@ -176,6 +180,109 @@ body {
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
+
+<<<<<<< HEAD
+
+.bottomLeft{
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.bottomLeft img{
+    width: 35%; 
+    height: auto;
+    margin: 0 auto;
+    -ms-flex-align: center;
+    margin-left: 10%;
+}
+
+.bottomLeft p{
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
+
+.ourTeam{
+    flex: 1; 
+    margin-top: 5%;
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #3e2a75;
+    text-align: center;
+    height: 20em;
+    border: #1e123f 3px solid;
+    border-radius: 10px;
+    height: 10%;
+}
+
+.ourTeam h3{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ourTeam p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.ourTeam button {
+    background-color: white;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+}
+
+.ourTeam button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+@media (max-width: 768px) {
+    .sectionContainer2 {
+        flex-direction: column;
+    }
+
+    .bottomLeft, .ourTeam {
+        flex-basis: 100%; 
+    }
+}
+
+.boxes{
+    margin: 5%;
+    display: flexbox;
+
+}
+h2{
+    color: #3e2a75;
+}
+
+.topSectionImgs{
+    float: right;
+}
+
+p,li{
+    font-size: 1.2rem;
+}
+
+
+
 
 /*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
@@ -288,3 +395,5 @@ footer {
 .copyrightSec a:hover{
     color: #ff7c1a;
 }
+=======
+>>>>>>> refs/remotes/origin/dev
