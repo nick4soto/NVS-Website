@@ -215,25 +215,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "</body>
     </html>";
 
-    $logFile = 'C:/xampp/htdocs/NVS-Website/ApplyNow/application_log.txt';  // Specify the path and filename of your log file
+    $logFile = 'C:/xampp/htdocs/NVS-Website/ApplyNow/application_log.txt';
 
     $mail = new PHPMailer(true);
     try {
         //Server settings
-        $mail->SMTPDebug = 2;  // Enable verbose debug output
+        $mail->SMTPDebug = 2; 
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'oddphyscomiko@gmail.com';   // Your Gmail address
-        $mail->Password = 'ugpr vbhi snyw zwrs';       // Your Gmail app password
+        $mail->Username = 'nvscsiapply@gmail.com';  
+        $mail->Password = 'mffg fhgq jcvz gapu';     
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
         //Recipients
         $firstName = $data['firstName'] ?? '';
         $lastName = $data['lastName'] ?? '';
-        $mail->setFrom('oddphyscomiko@gmail.com', 'NVS Corporate Services');  // Set the "From" address to your Gmail address
-        $mail->addAddress('mad3566@outlook.com');       // Recipient email address
+        $mail->setFrom('nvscsiapply@gmail.com', 'NVS Corporate Services Application');  
+        $mail->addAddress('hr@nvscsi.com');       
 
         //Content
         $mail->isHTML(true);
