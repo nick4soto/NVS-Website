@@ -84,6 +84,7 @@ body {
     display: block;
     width: 100%;  
     text-align: end; 
+    margin-left: 45%;
 }
 
 .form-step {
