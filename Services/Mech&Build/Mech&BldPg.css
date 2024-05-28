@@ -46,25 +46,24 @@ body {
 }
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
-<<<<<<< HEAD
 
 .topSection {
     height: auto;
     display: flex;
     justify-content: space-between; 
-    max-width: 950px;
     margin: 20px auto; 
     padding: 20px 40px;
     text-align: center;
 }
 
-.topSectionContent {
-    width: 60%; 
-    font-size: 1.2rem;
-    line-height: 1.8; 
-    color: black;
-    margin-left: 20%;
-
+.topSection p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    margin: 0 auto 20px;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5em; 
+    max-width: 75rem;
 }
 
 .imgTwo button {
@@ -79,7 +78,6 @@ body {
     transition: all 0.3s ease; 
     letter-spacing: 1px;
     text-transform: uppercase; 
-    margin-top: 5%; 
 }
 
 .imgTwo button:hover {
@@ -156,11 +154,6 @@ body {
     }
 }
 
-
-
-
-
-
 .sectionContainer2 {
     display: flex;
     justify-content: center; 
@@ -195,50 +188,73 @@ body {
     text-align: justify;
 }
 
-.ourTeam{
-    flex: 1; 
-    margin-top: 5%;
-    padding: 20px;
-    box-sizing: border-box; 
+.ourTeam {
+    max-width: 1200px;
     background-color: #3e2a75;
     text-align: center;
-    height: 20em;
     border: #1e123f 3px solid;
     border-radius: 10px;
-    height: 10%;
+    box-sizing: border-box; /* Ensures padding does not affect the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 452px;
 }
 
-.ourTeam h3{
+.ourTeam h3 {
     color: white;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Controlled margin for spacing */
 }
 
-.ourTeam p{
+.ourTeam p {
     color: white;
     font-size: 1.5rem;
     line-height: 1.8;
+    max-width: 80%;  
 }
 
 .ourTeam button {
     background-color: white;
-    color: #3e2a75; 
+    color: #3e2a75;
     border-radius: 20px;
-    border: 2px solid #3e2a75; 
+    border: 2px solid #3e2a75;
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     letter-spacing: 1px;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
 
 .ourTeam button:hover {
-    background-color: #3e2a75; 
+    background-color: #3e2a75;
     color: white;
     border-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .ourTeam {
+        padding: 20px;
+    }
+
+    .ourTeam h3 {
+        font-size: 2rem;
+    }
+
+    .ourTeam p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .ourTeam button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
 
 
@@ -251,137 +267,3 @@ body {
         flex-basis: 100%; 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
-
-footer {
-    display: flex;
-    background-color: #231f20;
-    color: white;
-    width: 100%;
-}
-
-.footerLogo{
-    width: 200px;
-    height: auto;
-    display: flex;
-    margin-bottom: 2%;  
-    margin-top: 2%;
-    float: left;
-    padding-left: 2%;
-    padding-right: 1%;
-    border-right: #666 1px solid;
-}
-
-.footerLogo img{
-    width: 100%;
-    height: auto;
-}
-
-.footerLogo img:hover{
-    opacity: 0.8;
-}
-
-.footerContact {
-    margin: 5px 0; 
-    flex-direction: column;
-    float: left; 
-    padding-left: 1%;
-}
-
-.footerContact a{
-    color: white;
-    text-decoration: none;
-}
-
-.footerContact a:hover{
-    color: #ff7c1a;
-}
-
-.rightSec{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    margin-left: 8%;
-}
-
-.footerNav {
-    width: 700px;
-    flex-wrap: wrap;  
-    text-align: right;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-.footerNav a {
-    padding: 5px 10px; 
-    text-decoration: none;
-    color: white;
-}
-
-.footerNav a:hover {
-    color: #ff7c1a;
-}
-
-.footerSocial {
-    text-align: right;
-}
-
-.footerSocial a {
-    display: inline-flex;  
-    justify-content: center; 
-    align-items: center;  
-    width: 40px;  
-    height: 40px; 
-    margin: 0 10px;
-    font-size: 24px; 
-    color: white;
-    border: 2px solid white; 
-    border-radius: 50%;  
-    background-color: #231f20;  
-    transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
-}
-
-.footerSocial a:hover {
-    color: #ff7c1a;
-    border-color: #ff7c1a;
-    transition: color 0.3s ease;  
-}
-
-.copyrightSec {
-    font-size: 0.75em;
-    text-align: right;
-    margin-top: 3%;
-}
-
-.copyrightSec a{
-    color: white;
-    text-decoration: none;
-}
-
-.copyrightSec a:hover{
-    color: #ff7c1a;
-}
-=======
->>>>>>> refs/remotes/origin/dev

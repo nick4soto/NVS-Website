@@ -181,8 +181,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-<<<<<<< HEAD
-
 .bottomLeft{
     flex: 1; 
     padding: 20px;
@@ -269,131 +267,17 @@ body {
     display: flexbox;
 
 }
-h2{
+.boxes h2{
     color: #3e2a75;
+}
+
+.boxes p, .boxes li{
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 80%;
 }
 
 .topSectionImgs{
     float: right;
 }
-
-p,li{
-    font-size: 1.2rem;
-}
-
-
-
-
-/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
-
-footer {
-    display: flex;
-    background-color: #231f20;
-    color: white;
-    width: 100%;
-}
-
-.footerLogo{
-    width: 200px;
-    height: auto;
-    display: flex;
-    margin-bottom: 2%;  
-    margin-top: 2%;
-    float: left;
-    padding-left: 2%;
-    padding-right: 1%;
-    border-right: #666 1px solid;
-}
-
-.footerLogo img{
-    width: 100%;
-    height: auto;
-}
-
-.footerLogo img:hover{
-    opacity: 0.8;
-}
-
-.footerContact {
-    margin: 5px 0; 
-    flex-direction: column;
-    float: left; 
-    padding-left: 1%;
-}
-
-.footerContact a{
-    color: white;
-    text-decoration: none;
-}
-
-.footerContact a:hover{
-    color: #ff7c1a;
-}
-
-.rightSec{
-    display: flex;
-    flex-direction: column;
-    float: right;
-    margin-left: 8%;
-}
-
-.footerNav {
-    width: 700px;
-    flex-wrap: wrap;  
-    text-align: right;
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-.footerNav a {
-    padding: 5px 10px; 
-    text-decoration: none;
-    color: white;
-}
-
-.footerNav a:hover {
-    color: #ff7c1a;
-}
-
-.footerSocial {
-    text-align: right;
-}
-
-.footerSocial a {
-    display: inline-flex;  
-    justify-content: center; 
-    align-items: center;  
-    width: 40px;  
-    height: 40px; 
-    margin: 0 10px;
-    font-size: 24px; 
-    color: white;
-    border: 2px solid white; 
-    border-radius: 50%;  
-    background-color: #231f20;  
-    transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
-}
-
-.footerSocial a:hover {
-    color: #ff7c1a;
-    border-color: #ff7c1a;
-    transition: color 0.3s ease;  
-}
-
-.copyrightSec {
-    font-size: 0.75em;
-    text-align: right;
-    margin-top: 3%;
-}
-
-.copyrightSec a{
-    color: white;
-    text-decoration: none;
-}
-
-.copyrightSec a:hover{
-    color: #ff7c1a;
-}
-=======
->>>>>>> refs/remotes/origin/dev
