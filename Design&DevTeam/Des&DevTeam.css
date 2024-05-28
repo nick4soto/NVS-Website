@@ -38,3 +38,73 @@ body {
 }
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: #fff; 
+    border-radius: 8px;
+    overflow: hidden;
+    width: 250px; 
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    box-shadow: 0px 12px 24px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1; /* Makes image square */
+}
+
+.team-member h3,
+.team-member p {
+    padding: 10px;
+    margin: 0;
+    color: #333;
+    background-color: #fff; 
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #666;
+    opacity: 0.8;
+}
+
+.team-member a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.75rem; 
+    height: 1.75rem;
+    margin: 0 0.5rem;
+    font-size: 1.125rem; 
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #0077B5;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 5%;
+}
+
+.team-member a:hover,
+.team-member a:focus {
+    color: #0077B5;
+    background-color: white;
+    border-color: #0077B5;
+}
