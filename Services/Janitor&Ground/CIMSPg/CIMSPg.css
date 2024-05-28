@@ -15,123 +15,6 @@ body {
     color: #333333; 
 }
 
-/* --------------------------------------Styles for the header---------------------------------------------- */
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    background-image: url(../../../Images/mainHeader.png);
-}
-
-.nvsLogo img {
-    width: 175px;
-    height: auto;
-}
-
-.navBar {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    margin-left: 20px;
-}
-
-.navBar a, .dropbtn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #3e2a75;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #fff;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto; 
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3e2a75;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: auto; 
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-radius: 5px;
-}
-
-.dropdown-content a:hover {
-    background-color: #fff;
-    color: #3e2a75;
-}
-
-.dropdown .dropbtn:hover + .dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
-
-.dropdown-content .jan{ 
-    border-bottom-left-radius: 0%; 
-    border-bottom-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .mec, .dropdown-content .rep{ 
-    border-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .oth{ 
-    border-top-left-radius: 0%; 
-    border-top-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.requestQuote {
-    background-color: transparent;
-    color: #3e2a75;
-    border-radius: 20px;
-    border: 2px solid #3e2a75;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.requestQuote:hover, .requestQuote:focus {
-    background-color: #3e2a75;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 /* --------------------------------------Styles for the Title Card---------------------------------------------- */
 
 .titleCard {
@@ -298,6 +181,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+<<<<<<< HEAD
 
 .bottomLeft{
     flex: 1; 
@@ -511,3 +395,5 @@ footer {
 .copyrightSec a:hover{
     color: #ff7c1a;
 }
+=======
+>>>>>>> refs/remotes/origin/dev

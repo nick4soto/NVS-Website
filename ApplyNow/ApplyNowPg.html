@@ -4,406 +4,619 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NVS Corporate Services</title>
+    <link rel="stylesheet" type="text/css" href="/HeaderFooter/footer.css">
+    <link rel="stylesheet" type="text/css" href="/HeaderFooter/header.css">
     <link rel="stylesheet" type="text/css" href="ApplyNowPg.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="header">
-  <a href="/index.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
-  <nav class="navBar">
-      <a href="/index.html">Home</a>
-      <div class="dropdown">
-          <a class="dropbtn">Services</a>
-          <div class="dropdown-content">
-              <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groudskeeping</a>
-              <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
-              <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
-              <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
-          </div>
-      </div>
-      <a href="../AboutUs/AboutUsPg.html">About Us</a>
-      <a href="../OurWork/OurWorkPg.html">Our Work</a>
-      <a href="../Contact/ContactPg.html">Contact Us</a>
-      <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
-  </nav>
-  <a href="../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
-</header>
-
-    <main>
-
-        <section class="titleCard">
-            <h2>Application for Employment</h2>
-          </section>
-            <!--hr@nvscsi.com: application | info@nvscsi.com: contact-->
-
-
-            <div class="application-form">
-                <div class="progress-bar">
-                    <div class="progress"><div class="progress-percentage">20%</div></div>
+    <!-- Header Start -->
+    <header class="header">
+        <a href="/index.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
+        <nav class="navBar">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <a class="dropbtn">Services <span class="plus-icon">+</span></a>
+                <div class="dropdown-content">
+                    <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groundskeeping</a>
+                    <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
+                    <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
+                    <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
                 </div>
-                <form id="multiStepForm">
-                    <!-- Step 1 -->
-                    <div class="form-step active">
-                        "*" indicates required fields
-                        <h2>Step 1 of 5: Personal Information</h2>
-                        <label for="position">Position Applied For:* <input type="text" id="position" name="position" required></label>
-                        <fieldset>
-                            <legend>Name*</legend>
-                            <label>First: <input type="text" name="firstName" required></label>
-                            <label>Middle: <input type="text" name="middleName"></label>
-                            <label>Last: <input type="text" name="lastName" required></label>
-                        </fieldset>
-                        <br><br>
-                        <label for="email">Email:* <input type="email" id="email" name="email" required></label>
-                        <fieldset>
-                            <legend>Address</legend>
-                            <label>Street Address: <input type="text" name="streetAddress"></label>
-                            <label>Address Line 2: <input type="text" name="addressLine2"></label>
-                            <label>City: <input type="text" name="city"></label>
-                            <label>State / Province / Region: <input type="text" name="state"></label>
-                            <label>ZIP / Postal Code: <input type="text" name="zip"></label>
-                            <label>Country: <input type="text" name="country"></label>
-                        </fieldset>
-                        <br><br>
-                        <label for="ssn">Social Security Number:* <input type="text" id="ssn" name="ssn" required></label>
-                        <label>Home Phone: <input type="tel" name="homePhone"></label>
-                        <label>Mobile Phone: <input type="tel" name="mobilePhone"></label>
-                        <label>Work Phone: <input type="tel" name="workPhone"></label>
-                        <br><br>
-                        <label>Are you a U.S. citizen or authorized to work in the U.S.?* <br>
-                            <input type="radio" name="citizenship" value="yes" required> Yes
-                            <input type="radio" name="citizenship" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>What employment level are you looking for?* (check all that apply)<br>
-                            <input type="checkbox" name="employmentType" value="fullTime"> Full-Time
-                            <input type="checkbox" name="employmentType" value="partTime"> Part-Time
-                            <input type="checkbox" name="employmentType" value="temporary"> Temporary
-                        </label>
-                        <br><br>
-                        <label>What hours are you available to work?* <input type="text" name="availableHours" required></label>
-                        <br><br>
-                        <label>Are you willing to work (check all that apply):*<br>
-                            <input type="checkbox" name="workDays" value="monday"> Monday
-                            <input type="checkbox" name="workDays" value="tuesday"> Tuesday
-                            <input type="checkbox" name="workDays" value="wednesday"> Wednesday
-                            <input type="checkbox" name="workDays" value="thursday"> Thursday
-                            <input type="checkbox" name="workDays" value="friday"> Friday
-                            <input type="checkbox" name="workDays" value="saturday"> Saturday
-                            <input type="checkbox" name="workDays" value="sunday"> Sunday
-                        </label>
-                        <br><br>
-                        <label>Preferred shifts (check all that apply):*<br>
-                            <input type="checkbox" name="shifts" value="day"> Day
-                            <input type="checkbox" name="shifts" value="evening"> Evening
-                        </label>
-                        <br><br>
-                        <label>Are you willing to take a drug screen/physical exam?* <br>
-                            <input type="radio" name="drugTest" value="yes" required> Yes
-                            <input type="radio" name="drugTest" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>Have you ever been convicted of a felony?* <br>
-                            <input type="radio" name="felony" value="yes" required> Yes
-                            <input type="radio" name="felony" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>If yes, please describe conditions: <textarea name="felonyDescription"></textarea></label>
-                        <button type="button" class="next-btn">Next</button>
+            </div>
+            <a href="../AboutUs/AboutUsPg.html">About Us</a>
+            <a href="../OurWork/OurWorkPg.html">Our Work</a>
+            <a href="../Contact/ContactPg.html">Contact Us</a>
+            <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
+            <a href="../Contact/ContactPg.html" class="requestQuoteMobile">Request a Quote</a>
+        </nav>
+        <a href="../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <script src="../methods/burger.js"></script>
+        </div>
+    </header>
+    <!-- Header End -->
+
+<main>
+
+    <section class="titleCard">
+        <h2>Application for Employment</h2>
+    </section>
+
+    <div class="application-form">
+        <div class="progress-bar">
+            <div class="progress"><div class="progress-percentage">0%</div></div>
+        </div>
+        <form id="multiStepForm">
+            <!-- Step 1 -->
+            <div class="form-step active">
+                "*" indicates required fields
+                <h2>Step 1 of 5: Personal Information</h2>
+
+                <div class="form-group">
+                    <label for="position" class="question">* Position Applied For:</label>
+                    <input type="text" class="form-control" id="position" name="position" required>
+                </div>
+
+                <fieldset>
+                    <legend>* Name</legend>
+                    <div class="form-group">
+                        <label class="question">First:</label>
+                        <input type="text" class="form-control" name="firstName" required>
                     </div>
-                    <!-- Step 2 -->
-                    <div class="form-step">
-                        <h2>Step 2 of 5: Employment Details</h2>
-
-                        <label for="source">How did you hear of this opening? <input type="text" id="source" name="source"></label>
-                        <br><br>
-                        <label>Have you ever applied for employment here?* <br>
-                            <input type="radio" name="appliedBefore" value="yes" required> Yes
-                            <input type="radio" name="appliedBefore" value="no"> No
-                        </label>
-
-                        <label if="appliedWhen">If yes, when? <input type="text" id="appliedWhen" name="appliedWhen"></label>
-                        <br><br>
-                        <label>Have you ever been employed by this company?* <br>
-                            <input type="radio" name="employedBefore" value="yes" required> Yes
-                            <input type="radio" name="employedBefore" value="no"> No
-                        </label>
-
-                        <label if="employedWhen">If yes, when? <input type="text" id="employedWhen" name="employedWhen"></label>
-                        <br><br>
-                        <label>Are you presently employed?* <br>
-                            <input type="radio" name="currentlyEmployed" value="yes" required> Yes
-                            <input type="radio" name="currentlyEmployed" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>May we contact your present employer?* <br>
-                            <input type="radio" name="contactEmployer" value="yes" required> Yes
-                            <input type="radio" name="contactEmployer" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>Will you continue with your present employer if offered a position with this company?* <br>
-                            <input type="radio" name="continueEmployment" value="yes" required> Yes
-                            <input type="radio" name="continueEmployment" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>Are you willing to travel?* <br>
-                            <input type="radio" name="willingToTravel" value="yes" required> Yes
-                            <input type="radio" name="willingToTravel" value="no"> No
-                        </label>
-                        <br><br>
-                        <label>What percent?* <input type="text" name="travelPercent" required></label>
-                        <br><br>
-                        <label>Date you can start* <input type="date" name="startDate" required></label>
-                        <br><br>
-                        <label>Desired starting salary* <input type="text" name="desiredSalary" required></label>
-                        <br><br>
-                        <label>Please list applicable skills* <textarea name="skills" required></textarea></label>
-                    
-                        <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button>
+                    <div class="form-group">
+                        <label class="question">Middle:</label>
+                        <input type="text" class="form-control" name="middleName">
                     </div>
-                    <!-- Step 3 -->
-                    <div class="form-step">
-                     <h2>Step 3 of 5: Education Details</h2>
-    
-                    <!-- High School -->
-                    <fieldset>
-                        <legend>High School</legend>
-                        <label>Year(s): <input type="text" name="highSchoolYears"></label>
-                        <label>Major: <input type="text" name="highSchoolMajor"></label>
-                        <label>Degree: <input type="text" name="highSchoolDegree"></label>
-                    </fieldset>
-                    <br><br>
+                    <div class="form-group">
+                        <label class="question">Last:</label>
+                        <input type="text" class="form-control" name="lastName" required>
+                    </div>
+                </fieldset>
 
-                    <!-- College -->
-                    <fieldset>
-                        <legend>College</legend>
-                        <label>Year(s): <input type="text" name="collegeYears"></label>
-                        <label>Major: <input type="text" name="collegeMajor"></label>
-                        <label>Degree: <input type="text" name="collegeDegree"></label>
-                    </fieldset>
-                    <br><br>
+                <div class="form-group">
+                    <label for="email" class="question">* Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
 
-                    <!-- Additional College -->
-                    <fieldset>
-                        <legend>Additional College</legend>
-                        <label>Year(s): <input type="text" name="additionalCollegeYears"></label>
-                        <label>Major: <input type="text" name="additionalCollegeMajor"></label>
-                        <label>Degree: <input type="text" name="additionalCollegeDegree"></label>
-                    </fieldset>
-                    <br><br>
+                <fieldset>
+                    <legend>Address</legend>
+                    <div class="form-group">
+                        <label class="question">Street Address:</label>
+                        <input type="text" class="form-control" name="streetAddress">
+                    </div>
+                    <div class="form-group">
+                        <label class="question">Address Line 2:</label>
+                        <input type="text" class="form-control" name="addressLine2">
+                    </div>
+                    <div class="form-group">
+                        <label class="question">City:</label>
+                        <input type="text" class="form-control" name="city">
+                    </div>
+                    <div class="form-group">
+                        <label class="question">State / Province / Region:</label>
+                        <input type="text" class="form-control" name="state">
+                    </div>
+                    <div class="form-group">
+                        <label class="question">ZIP / Postal Code:</label>
+                        <input type="text" class="form-control" name="zip">
+                    </div>
+                    <div class="form-group">
+                        <label class="question">Country:</label>
+                        <input type="text" class="form-control" name="country">
+                    </div>
+                </fieldset>
 
-                    <!-- Post-College -->
-                        <fieldset>
-                        <legend>Post-College</legend>
-                        <label>Year(s): <input type="text" name="postCollegeYears"></label>
-                        <label>Major: <input type="text" name="postCollegeMajor"></label>
-                        <label>Degree: <input type="text" name="postCollegeDegree"></label>
-                    </fieldset>
-                    <br><br>
+                <div class="form-group">
+                    <label class="question">Home Phone:</label>
+                    <input type="tel" class="form-control" name="homePhone">
+                </div>
 
-                    <!-- Other Training -->
-                        <fieldset>
-                        <legend>Other Training</legend>
-                        <label>Year(s): <input type="text" name="otherTrainingYears"></label>
-                        <label>Major: <input type="text" name="otherTrainingMajor"></label>
-                        <label>Degree: <input type="text" name="otherTrainingDegree"></label>
-                    </fieldset>
-                    <br><br>
+                <div class="form-group">
+                    <label class="question">Mobile Phone:</label>
+                    <input type="tel" class="form-control" name="mobilePhone">
+                </div>
 
-                    <label>In addition to your work history, are there any other skills, qualifications, or experience that we should consider?* <textarea name="additionalSkills" required></textarea></label>
-                    <br><br>
-                    <label>Please list any scholastic honors received and offices held in school or employers:* <textarea name="scholasticHonors" required></textarea></label>
-                    <br><br>
+                <div class="form-group">
+                    <label class="question">Work Phone:</label>
+                    <input type="tel" class="form-control" name="workPhone">
+                </div>
 
-                    <label>Are you planning to continue your studies?* <br>
-                        <input type="radio" name="continueStudies" value="yes" required> Yes
-                        <input type="radio" name="continueStudies" value="no"> No
-                    </label>
+                <div class="form-group">
+                    <label class="question">* Are you a U.S. citizen or authorized to work in the U.S.?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="citizenship" value="yes" required>Yes</label>
+                        <label><input type="radio" name="citizenship" value="no">No</label>
+                    </div>
+                </div>
 
+                <div class="form-group">
+                    <label class="question">* What employment level are you looking for? (check all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="employmentType" value="fullTime">Full-Time</label>
+                        <label><input type="checkbox" name="employmentType" value="partTime">Part-Time</label>
+                        <label><input type="checkbox" name="employmentType" value="temporary">Temporary</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="availableHours" class="question">* What hours are you available to work?</label>
+                    <input type="text" class="form-control" id="availableHours" name="availableHours" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Are you willing to work (check all that apply):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="workDays" value="monday">Monday</label>
+                        <label><input type="checkbox" name="workDays" value="tuesday">Tuesday</label>
+                        <label><input type="checkbox" name="workDays" value="wednesday">Wednesday</label>
+                        <label><input type="checkbox" name="workDays" value="thursday">Thursday</label>
+                        <label><input type="checkbox" name="workDays" value="friday">Friday</label>
+                        <label><input type="checkbox" name="workDays" value="saturday">Saturday</label>
+                        <label><input type="checkbox" name="workDays" value="sunday">Sunday</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Preferred shifts (check all that apply):</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="shifts" value="day">Day</label>
+                        <label><input type="checkbox" name="shifts" value="evening">Evening</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Are you willing to take a drug screen/physical exam?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="drugTest" value="yes" required>Yes</label>
+                        <label><input type="radio" name="drugTest" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Have you ever been convicted of a felony?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="felony" value="yes" required>Yes</label>
+                        <label><input type="radio" name="felony" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">If yes, please describe conditions:</label>
+                    <textarea class="form-control" name="felonyDescription"></textarea>
+                </div>
+
+                <button type="button" class="next-btn">Next</button>
+                <div class="error-message" style="color:red;"></div>
+            </div>
+            <!-- Step 2 -->
+            <div class="form-step">
+                <h2>Step 2 of 5: Employment Details</h2>
+
+                <div class="form-group">
+                    <label for="source" class="question">How did you hear of this opening?</label>
+                    <input type="text" class="form-control" id="source" name="source">
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Have you ever applied for employment here?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="appliedBefore" value="yes" required>Yes</label>
+                        <label><input type="radio" name="appliedBefore" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="appliedWhen" class="question">If yes, when?</label>
+                    <input type="text" class="form-control" id="appliedWhen" name="appliedWhen">
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Have you ever been employed by this company?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="employedBefore" value="yes" required>Yes</label>
+                        <label><input type="radio" name="employedBefore" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="employedWhen" class="question">If yes, when?</label>
+                    <input type="text" class="form-control" id="employedWhen" name="employedWhen">
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Are you presently employed?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="currentlyEmployed" value="yes" required>Yes</label>
+                        <label><input type="radio" name="currentlyEmployed" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* May we contact your present employer?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="contactEmployer" value="yes" required>Yes</label>
+                        <label><input type="radio" name="contactEmployer" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Will you continue with your present employer if offered a position with this company?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="continueEmployment" value="yes" required>Yes</label>
+                        <label><input type="radio" name="continueEmployment" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="question">* Are you willing to travel?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="willingToTravel" value="yes" required>Yes</label>
+                        <label><input type="radio" name="willingToTravel" value="no">No</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelPercent" class="question">* What percent?</label>
+                    <input type="number" class="form-control" id="travelPercent" name="travelPercent" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate" class="question">* Date you can start (mm/dd/yyyy)</label>
+                    <input type="text" class="form-control" id="startDate" name="startDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="desiredSalary" class="question">* Desired starting salary</label>
+                    <input type="text" class="form-control" id="desiredSalary" name="desiredSalary" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills" class="question">* Please list applicable skills</label>
+                    <textarea class="form-control" id="skills" name="skills" required></textarea>
+                </div>
+
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+                <div class="error-message" style="color:red;"></div>
+            </div>
+            <!-- Step 3 -->
+            <div class="form-step">
+                <h2>Step 3 of 5: Education Details</h2>
+
+                <!-- High School -->
+                <fieldset>
+                    <legend>High School</legend>
+                    <label for="highSchoolYears">Year(s): <input type="text" id="highSchoolYears" name="highSchoolYears"></label>
+                    <label for="highSchoolMajor">Major: <input type="text" id="highSchoolMajor" name="highSchoolMajor"></label>
+                    <label for="highSchoolDegree">Degree: <input type="text" id="highSchoolDegree" name="highSchoolDegree"></label>
+                </fieldset>
+                <br><br>
+
+                <!-- College -->
+                <fieldset>
+                    <legend>College</legend>
+                    <label for="collegeYears">Year(s): <input type="text" id="collegeYears" name="collegeYears"></label>
+                    <label for="collegeMajor">Major: <input type="text" id="collegeMajor" name="collegeMajor"></label>
+                    <label for="collegeDegree">Degree: <input type="text" id="collegeDegree" name="collegeDegree"></label>
+                </fieldset>
+                <br><br>
+
+                <!-- Additional College -->
+                <fieldset>
+                    <legend>Additional College</legend>
+                    <label for="additionalCollegeYears">Year(s): <input type="text" id="additionalCollegeYears" name="additionalCollegeYears"></label>
+                    <label for="additionalCollegeMajor">Major: <input type="text" id="additionalCollegeMajor" name="additionalCollegeMajor"></label>
+                    <label for="additionalCollegeDegree">Degree: <input type="text" id="additionalCollegeDegree" name="additionalCollegeDegree"></label>
+                </fieldset>
+                <br><br>
+
+                <!-- Post-College -->
+                <fieldset>
+                    <legend>Post-College</legend>
+                    <label for="postCollegeYears">Year(s): <input type="text" id="postCollegeYears" name="postCollegeYears"></label>
+                    <label for="postCollegeMajor">Major: <input type="text" id="postCollegeMajor" name="postCollegeMajor"></label>
+                    <label for="postCollegeDegree">Degree: <input type="text" id="postCollegeDegree" name="postCollegeDegree"></label>
+                </fieldset>
+                <br><br>
+
+                <!-- Other Training -->
+                <fieldset>
+                    <legend>Other Training</legend>
+                    <label for="otherTrainingYears">Year(s): <input type="text" id="otherTrainingYears" name="otherTrainingYears"></label>
+                    <label for="otherTrainingMajor">Major: <input type="text" id="otherTrainingMajor" name="otherTrainingMajor"></label>
+                    <label for="otherTrainingDegree">Degree: <input type="text" id="otherTrainingDegree" name="otherTrainingDegree"></label>
+                </fieldset>
+                <br><br>
+
+                <label for="additionalSkills">* In addition to your work history, are there any other skills, qualifications, or experience that we should consider? <textarea id="additionalSkills" name="additionalSkills" required></textarea></label>
+                <br><br>
+                <label for="scholasticHonors">* Please list any scholastic honors received and offices held in school or employers: <textarea id="scholasticHonors" name="scholasticHonors" required></textarea></label>
+                <br><br>
+
+                <label>* Are you planning to continue your studies? <br>
+                    <input type="radio" name="continueStudies" value="yes" id="continueStudiesYes" required><label for="continueStudiesYes">Yes</label>
+                    <input type="radio" name="continueStudies" value="no" id="continueStudiesNo"><label for="continueStudiesNo">No</label>
+                </label>
+
+                <div class="form-group">
                     <button type="button" class="prev-btn">Previous</button>
                     <button type="button" class="next-btn">Next</button>
+                    <div class="error-message" style="color:red;"></div>
                 </div>
-                    <!-- Step 4 -->
-                    <div class="form-step">
-                        <h2>Step 4 of 5: Employment History & References</h2>
-
-                        <h3>Employment History</h3>
-                        <p>Start with your most recent employer.</p>
-                        <button type="button">Add Employment History</button>
-                        <br><br>
-
-                        <h3>Professional References</h3>
-                        <p>List three professional references, not related to you, who have known you for more than one year.</p>
-                        <button type="button">Add Professional Reference</button>
-                        <br><br>
-
-                        <h3>Emergency Contact</h3>
-                        <fieldset>
-                            <legend>In case of emergency, please notify:</legend>
-                            <label>First Name: <input type="text" name="emergencyFirstName"></label>
-                            <label>Last Name: <input type="text" name="emergencyLastName"></label>
-                            <label>Phone: <input type="tel" name="emergencyPhone"></label>
-                            <label>Address: <input type="text" name="emergencyAddress"></label>
-                        </fieldset>
-                        <br><br>
-
-                        <h3>Consent*</h3>
-                        <label class="consent">
-                            I certify that all information provided by me on this application is true and complete to the best of my knowledge and that I have withheld nothing that, if disclosed, would alter the integrity of this application.
-                            <br><br>
-                            I authorize my previous employers, schools, or persons listed as references to give any information regarding employment or educational record. I agree that this company and my previous employers will not be held liable in any respect if a job offer is not extended, or is withdrawn, or employment is terminated because of false statements, omissions, or answers made by myself on this application. In the event of any employment with this company, I will comply with all rules and regulations as set by the company in any communication distributed to the employees.
-                            <br><br>
-                            In compliance with the Immigration Reform and Control Act of 1986, I understand that I am required to provide approved documentation to the company that verifies my right to work in the United States on the first day of employment. I have received from the company a list of the approved documents that are required.
-                            <br><br>
-                            I understand that employment at this company is “at will,” which means that either I or this company can terminate the employment relationship at any time, with or without prior notice, and for any reason not prohibited by statute. All employment is continued on that basis.
-                            <br><br>
-                            <input type="checkbox" name="consent" required>I have read and understand the above statements.
-                        </label>
-
-                        <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn">Next</button>
-                    </div>
-                    <!-- Step 5 -->
-                    <div class="form-step">
-                        <h2>Step 5 of 5: Background Check Authorization</h2>
-
-                        <fieldset>
-                        <legend><h3>Notice And Acknowledgment</h3></legend>
-                
-                        <p class="important-notice">
-                            <strong>Important -- Please Read Carefully Before Signing Acknowledgment</strong>
-                        </p>
-                        <p>
-                            Notice Regarding Background Investigation* NVS Corporate Services, Inc. may obtain information about you from a consumer reporting agency for employment purposes. Thus, you may be the subject of a “consumer report” and/or an “investigative consumer report” which may include, but is not limited to: employment and education verifications; social security number verification; criminal and civil court records; personal interviews; driving records; and/or any other public records or any other information bearing on your character, general reputation, personal characteristics and trustworthiness. These reports may be obtained at any time after receipt of your authorization and, if you are selected, throughout your affiliation with the Company. You have the right, upon written request made within a reasonable time after receipt of this notice, to request disclosure of the nature and scope of any investigative consumer report. The report will be generated by BSCAIbackgroundchecks.com (1200 South Outer Road, Blue Springs, MO 64015/816-228-5255) or another outside organization. The scope of this notice and authorization is all-encompassing, however, allowing the Company to obtain from any outside organization all manner of consumer reports and investigative consumer reports now and, if you are selected, throughout your affiliation with the Company to the extent permitted by law. As a result, you should carefully consider whether to exercise your right to request disclosure of the nature and scope of any investigative consumer report.
-                        </p>
-                        <label for="acknowledge">
-                            I acknowledge receipt of the NOTICE REGARDING BACKGROUND INVESTIGATION (above) and A SUMMARY OF YOUR RIGHTS UNDER THE FAIR CREDIT REPORTING ACT (separate document) and certify that I have read and understand both of those documents. I hereby authorize the obtaining of “consumer reports” and/or “investigative consumer reports” at any time after receipt of this authorization and, if I am selected, throughout my affiliation with the Company. To this end, I hereby authorize, without reservation, any law enforcement agency, administrator, state or federal agency, institution, school or university (public or private), information service bureau, employer, or insurance company to furnish any and all background information requested by BSCAIbackgroundchecks.com, another outside organization acting on behalf of the Company, and/or the Company itself. I agree that a facsimile (“fax”) or photographic copy of this Authorization shall be as valid as the original.
-                        </label>
-                    </fieldset>
-                        <input type="checkbox" id="acknowledge" name="acknowledge" required>I have read the above
-                        <br><br>
-                        <br><br>
-
-                        <fieldset>
-                            <legend>Acknowledgement and Authorization</legend>
-                            <input type="checkbox" name="reportCopyMNOK"> Minnesota and Oklahoma applicants only: Check here if you would like to receive a copy of a consumer report if one is obtained by the Company.
-                            <br><br>
-                            <input type="checkbox"> New York applicants only: By signing, you acknowledge receipt of Article 23-A of the New York Correction Law.
-                            <br><br>
-                            <input type="checkbox" name="reportCopyCA"> California applicants only: Check here if you would like to receive a copy of an investigative consumer report or consumer credit report if one is obtained by the Company.
-                            </fieldset>
-                            <br><br>
-    
-                        <label>* Full Name: 
-                            <input type="text" name="fullName" required>
-                        </label>
-                        <br><br>
-                        <div class="dynamic-fields">
-                            <div class="field-container">
-                                <label>*Maiden Name, Previous Names, or Aliases Used:</label>
-                                <div id="namesContainer" class="input-group">
-                                    <input type="text" name="firstName[]" placeholder="First" />
-                                    <input type="text" name="middleName[]" placeholder="Middle" />
-                                    <input type="text" name="lastName[]" placeholder="Last" />
-                                </div>
-                                <button type="button" class="addButton" data-target="namesContainer">Add Name</button>
-                            </div>
-                        </div>
-                        <br><br>
-
-                        <label>* Social Security Number:
-                            <input type="text" name="ssn" required>
-                        </label>
-                        <br><br>
-    
-                        <label>* Date of Birth:
-                            <input type="date" name="dob" required>
-                        </label>
-                        <br><br>
-
-                        <label>* Driver's License/ID State:
-                            <input type="text" name="licenseState" required>
-                        </label>
-                        <br><br>
-    
-                        <label>* Driver's License/ID Number:
-                            <input type="text" name="licenseNumber" required>
-                        </label>
-                        <br><br>
-
-                        <label>* Contact Phone Number:
-                            <input type="tel" name="contactPhone" required>
-                        </label>
-                        <br><br>
-
-                        <div class="dynamic-fields">
-                            <div class="field-container">
-                                <label>*Please provide ALL residential addresses for the past seven (7) years, starting with current residence:</label>
-                                <div id="residentialAddressContainer" class="input-group">
-                                    <input type="text" name="address[]" placeholder="Address" />
-                                    <input type="text" name="fromTo[]" placeholder="From/To" />
-                                </div>
-                                <button type="button" class="addButton" data-target="residentialAddressContainer">Add Address</button>
-                            </div>
-                    </div>
-                        <br><br>
-
-                        <div class="signature-pad">
-                            <label>*Signature:</label>
-                            <canvas id="signatureCanvas"></canvas>
-                            <button type="button" id="clearSignature">Clear Signature</button>
-                        </div>
-
-                        <button type="button" class="prev-btn">Previous</button>
-                        <button type="button" class="next-btn" onclick="submitForm()">Submit</button>
-                    </div>
-                </form>
             </div>
-        
-            <script src="ApplyNowPg.js"></script>
+            <!-- Step 4 -->
+            <div class="form-step">
+                <h2>Step 4 of 5: Employment History & References</h2>
 
-    </main>
+                <div class="dynamic-fields">
+                    <div class="field-container">
+                        <fieldset>
+                            <legend>* Employment History</legend>
+                            <p>Start with your most recent employer.</p>
+                            <div class="form-group">
+                                <label for="companyName">Company Name: <input type="text" id="companyName" name="companyName[]" ></label>
+                            </div>
 
-    <footer class="footer">
-    
-      <div class="footerLogo"><a href="/index.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
-  
-      <div class="footerContact">
-          <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>
-          <a href="https://www.google.com/maps/place/800+Wild+Rose+Ln,+Brownsville,+TX+78520/@25.9384021,-97.5112075,16.75z/data=!4m6!3m5!1s0x866f941dd2e0afe3:0x94802186facf9221!8m2!3d25.9385078!4d-97.5090305!16s%2Fg%2F11cphdf24g?entry=ttu"><p>800 Wildrose Ln., Brownsville, TX 78520</p></a>
-          <a href="tel:+18445534017"><p>Phone: 1-844-553-4017</p></a>
-          <a href= "mailto: info@nvscsi.com"><p>Email: info@nvscsi.com</p></a>
-      </div>
-  
-      <div class="rightSec">
-      <nav class="footerNav">
-          <a href="/index.html">Home</a>
-          <a href="../Services/Janitor&Ground/Jan&GrndPg.html">Services</a>
-          <a href="../AboutUs/AboutUsPg.html">About Us</a>
-          <a href="../OurWork/OurWorkPg.html">Our Work</a>
-          <a href="../Contact/ContactPg.html">Contact Us</a>
-          <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
-      </nav>
-  
-      <div class="footerSocial">
-          <a href="https://www.facebook.com/nvscsi1" target="_blank">
-              <i class="fab fa-facebook-f"></i>  
-          </a>
-          <a href="https://www.linkedin.com/company/nvs-corporate-services-inc-/mycompany/" target="_blank">
-              <i class="fab fa-linkedin-in"></i>  
-          </a>
-      </div>
-  
-      <div class="copyrightSec">
-      <p>© Copyright 2024, <a href="../Design&DevTeam/Des&DevTeam.html">Website Design & Development by Nick and friends</a></p>
-      
-      </div>
-  </div>
-  
-  </footer>
-  
+                            <div class="form-group">
+                                <label for="companyAddress">Address: <input type="text" id="companyAddress" name="companyAddress[]" ></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyPhone">Phone: <input type="tel" id="companyPhone" name="companyPhone[]" ></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateStarted" class="question">Date Started (mm/dd/yyyy):</label><input type="text" class="form-control" id="startDate" name="startDate" required>                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="startingWage">Starting Wage: <input type="text" id="startingWage" name="startingWage[]"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateEnded" class="question">Date Ended (mm/dd/yyyy):</label><input type="text" class="form-control" id="startDate" name="startDate" required>                                
+                            </div>
+                            <div class="form-group">
+                                <label for="endingWage">Ending Wage: <input type="text" id="endingWage" name="endingWage[]"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="supervisorName">Name of Supervisor: <input type="text" id="supervisorName" name="supervisorName[]"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmployer">May we contact this employer?</label>
+                                <select id="contactEmployer" name="contactEmployer[]" class="full-width">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="responsibilities">Responsibilities: <textarea id="responsibilities" name="responsibilities[]"></textarea></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reasonForLeaving">Reason for Leaving: <textarea id="reasonForLeaving" name="reasonForLeaving[]"></textarea></label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div id="employmentHistoryContainer"></div>
+                    <button type="button" class="addButton" data-target="employmentHistoryContainer">Add Employment History</button>
+                </div>
+
+                <!-- Professional References -->
+                <div class="dynamic-fields">
+                    <div class="field-container">
+                        <fieldset>
+                            <legend>* Professional References</legend>
+                            <p>List professional references, not related to you, who have known you for more than one year.</p>
+                            <div class="form-group">
+                                <label for="refName">Name: <input type="text" id="refName" name="refName[]"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refPhone">Phone: <input type="tel" id="refPhone" name="refPhone[]"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refAddress">Address: <input type="text" id="refAddress" name="refAddress[]"></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refYearsKnown" class="question">Years Known: </label><input type="number" class="form-control" id="travelPercent" name="travelPercent" required>                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="refPosition">Position: <input type="text" id="refPosition" name="refPosition[]" ></label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div id="referenceContainer"></div>
+                    <button type="button" class="addButton" data-target="referenceContainer">Add Professional Reference</button>
+                </div>
+
+                <h3>* Emergency Contact</h3>
+                <fieldset>
+                    <legend>In case of emergency, please notify:</legend>
+                    <div class="form-group">
+                        <label for="emergencyFirstName">First Name: <input type="text" id="emergencyFirstName" name="emergencyFirstName"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyLastName">Last Name: <input type="text" id="emergencyLastName" name="emergencyLastName"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyPhone">Phone: <input type="tel" id="emergencyPhone" name="emergencyPhone"></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyAddress">Address: <input type="text" id="emergencyAddress" name="emergencyAddress"></label>
+                    </div>
+                </fieldset>
+
+                <h3>* Consent</h3>
+                <label class="consent">
+                    I certify that all information provided by me on this application is true and complete to the best of my knowledge and that I have withheld nothing that, if disclosed, would alter the integrity of this application.
+                    <br><br>
+                    I authorize my previous employers, schools, or persons listed as references to give any information regarding employment or educational record. I agree that this company and my previous employers will not be held liable in any respect if a job offer is not extended, or is withdrawn, or employment is terminated because of false statements, omissions, or answers made by myself on this application. In the event of any employment with this company, I will comply with all rules and regulations as set by the company in any communication distributed to the employees.
+                    <br><br>
+                    In compliance with the Immigration Reform and Control Act of 1986, I understand that I am required to provide approved documentation to the company that verifies my right to work in the United States on the first day of employment. I have received from the company a list of the approved documents that are required.
+                    <br><br>
+                    I understand that employment at this company is “at will,” which means that either I or this company can terminate the employment relationship at any time, with or without prior notice, and for any reason not prohibited by statute. All employment is continued on that basis.
+                    <br><br>
+                    <input type="checkbox" id="consent" name="consent" required> <label for="consent">I have read and understand the above statements.</label>
+                </label>
+
+                <div>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                    <div class="error-message" style="color:red;"></div>
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="form-step">
+                <h2>Step 5 of 5: Background Check Authorization</h2>
+
+                <fieldset>
+                    <legend><h3>Notice And Acknowledgment</h3></legend>
+
+                    <p class="important-notice">
+                        <strong>Important -- Please Read Carefully Before Signing Acknowledgment</strong>
+                    </p>
+                    <p>
+                        * Notice Regarding Background Investigation NVS Corporate Services, Inc. may obtain information about you from a consumer reporting agency for employment purposes. Thus, you may be the subject of a “consumer report” and/or an “investigative consumer report” which may include, but is not limited to: employment and education verifications; social security number verification; criminal and civil court records; personal interviews; driving records; and/or any other public records or any other information bearing on your character, general reputation, personal characteristics and trustworthiness. These reports may be obtained at any time after receipt of your authorization and, if you are selected, throughout your affiliation with the Company. You have the right, upon written request made within a reasonable time after receipt of this notice, to request disclosure of the nature and scope of any investigative consumer report. The report will be generated by BSCAIbackgroundchecks.com (1200 South Outer Road, Blue Springs, MO 64015/816-228-5255) or another outside organization. The scope of this notice and authorization is all-encompassing, however, allowing the Company to obtain from any outside organization all manner of consumer reports and investigative consumer reports now and, if you are selected, throughout your affiliation with the Company to the extent permitted by law. As a result, you should carefully consider whether to exercise your right to request disclosure of the nature and scope of any investigative consumer report.
+                    </p>
+                    <label for="acknowledge">
+                        I acknowledge receipt of the NOTICE REGARDING BACKGROUND INVESTIGATION (above) and A SUMMARY OF YOUR RIGHTS UNDER THE FAIR CREDIT REPORTING ACT (separate document) and certify that I have read and understand both of those documents. I hereby authorize the obtaining of “consumer reports” and/or “investigative consumer reports” at any time after receipt of this authorization and, if I am selected, throughout my affiliation with the Company. To this end, I hereby authorize, without reservation, any law enforcement agency, administrator, state or federal agency, institution, school or university (public or private), information service bureau, employer, or insurance company to furnish any and all background information requested by BSCAIbackgroundchecks.com, another outside organization acting on behalf of the Company, and/or the Company itself. I agree that a facsimile (“fax”) or photographic copy of this Authorization shall be as valid as the original.
+                    </label>
+                </fieldset>
+                <input type="checkbox" id="acknowledge" name="acknowledge" required> <label for="acknowledge">I have read the above</label>
+                <br><br>
+                <fieldset>
+                    <legend>Acknowledgement and Authorization</legend>
+                    <input type="checkbox" id="reportCopyMNOK" name="reportCopyMNOK"> <label for="reportCopyMNOK">Minnesota and Oklahoma applicants only: Check here if you would like to receive a copy of a consumer report if one is obtained by the Company.</label>
+                    <br><br>
+                    <input type="checkbox" id="reportCopyNY" name="reportCopyNY"> <label for="reportCopyNY">New York applicants only: By signing, you acknowledge receipt of Article 23-A of the New York Correction Law.</label>
+                    <br><br>
+                    <input type="checkbox" id="reportCopyCA" name="reportCopyCA"> <label for="reportCopyCA">California applicants only: Check here if you would like to receive a copy of an investigative consumer report or consumer credit report if one is obtained by the Company.</label>
+                </fieldset>
+                <br><br>
+
+                <label for="fullName">* Full Name: 
+                    <input type="text" id="fullName" name="fullName" required>
+                </label>
+                <br><br>
+                <div class="field-container">
+                    <label for="aliases">* Maiden Name, Previous Names, or Aliases Used:</label>
+                    <div id="namesContainer" class="input-group">
+                        <input type="text" name="aliases[]"  />
+                        <input type="text" name="aliases[]" />
+                        <input type="text" name="aliases[]"  />
+                    </div>
+                </div>
+                
+                <label for="ssn">* Social Security Number:
+                    <input type="text" id="ssn" name="ssn" required>
+                </label>
+                <br><br>
+            
+                <div class="form-group">
+                    <label for="dob" id="dob" name="dob">* Date of Birth (mm/dd/yyyy): </label>
+                    <input type="text" class="form-control" id="dob" name="dob" required>
+                </div>
+                <br><br>
+            
+                <label for="licenseState">* Driver's License/ID State:
+                    <input type="text" id="licenseState" name="licenseState" required>
+                </label>
+                <br><br>
+            
+                <label for="licenseNumber">* Driver's License/ID Number:
+                    <input type="text" id="licenseNumber" name="licenseNumber" required>
+                </label>
+                <br><br>
+            
+                <label for="contactPhone">* Contact Phone Number:
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </label>
+                <br><br>
+            
+                <div class="dynamic-fields">
+                    <div class="field-container">
+                        <label for="address">* Please provide ALL residential addresses for the past seven (7) years, starting with current residence:</label>
+                        <div id="residentialAddressContainer" class="input-group">
+                            <div class="form-group">
+                                <label for="address">Address:</label>
+                                <input type="text" name="address[]">
+                            </div>
+                            <div class="form-group">
+                                <label for="addressFrom">From:</label>
+                                <input type="text" name="addressFrom[]">
+                            </div>
+                            <div class="form-group">
+                                <label for="addressTo">To:</label>
+                                <input type="text" name="addressTo[]">
+                            </div>
+                        </div>
+                        <button type="button" class="addButton" data-target="residentialAddressContainer">Add Address</button>
+                    </div>
+                </div>
+            
+                <div class="signature-pad">
+                    <label>* Signature:</label>
+                    <canvas id="signatureCanvas"></canvas>
+                    <button type="button" id="clearSignature">Clear Signature</button>
+                </div>
+            
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" class="next-btn">Submit</button>
+                <div class="error-message" style="color:red;"></div>
+            </div>
+        </form>
+    </div>
+
+    <script src="ApplyNowPg.js"></script>
+
+</main>
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="footerLogo">
+            <a href="/index.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></a>
+        </div>
+        <div class="footerContact">
+            <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>
+            <a href="https://www.google.com/maps/place/800+Wild+Rose+Ln,+Brownsville,+TX+78520/@25.9384021,-97.5112075,16.75z/data=!4m6!3m5!1s0x866f941dd2e0afe3:0x94802186facf9221!8m2!3d25.9385078!4d-97.5090305!16s%2Fg%2F11cphdf24g?entry=ttu"><p>800 Wildrose Ln., Brownsville, TX 78520</p></a>
+            <a href="tel:+18445534017"><p>Phone: 1-844-553-4017</p></a>
+            <a href="mailto:info@nvscsi.com"><p>Email: info@nvscsi.com</p></a>
+        </div>
+        <div class="rightSec">
+            <nav class="footerNav">
+                <a href="/index.html">Home</a>
+                <a href="../Services/Janitor&Ground/Jan&GrndPg.html">Services</a>
+                <a href="../AboutUs/AboutUsPg.html">About Us</a>
+                <a href="../OurWork/OurWorkPg.html">Our Work</a>
+                <a href="../Contact/ContactPg.html">Contact Us</a>
+                <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
+            </nav>
+            <div class="footerSocial">
+                <a href="https://www.facebook.com/nvscsi1" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/nvs-corporate-services-inc-/mycompany/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="copyrightSec">
+                <p>© Copyright 2024, <a href="../Design&DevTeam/Des&DevTeam.html">Website Design & Development Team</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
 </body>
 </html>

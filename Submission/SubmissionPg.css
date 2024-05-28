@@ -1,0 +1,100 @@
+html {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Images/bg_squares.svg);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+}
+
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.mainContent .titleCard {
+    max-width: 100%;
+    background-image: url(../Images/lawn_car_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.mainContent .titleCard h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+/* --------------------------------------Styles for the main content---------------------------------------------- */
+
+.mainContent .application-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #e1e1e1;
+    min-height: 300px;
+    text-align: center;
+}
+
+.mainContent .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.mainContent .progress {
+    height: 100%;
+    background-color: #3e2a75;
+    border-radius: 10px;
+    width: 100%; 
+    position: relative;
+}
+
+.mainContent .progress-percentage {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    color: white; 
+    font-size: 0.8em;
+    line-height: 20px; 
+    font-weight: bold;
+    pointer-events: none; 
+    transition: transform 0.3s ease;
+}
+
+.mainContent .form-step.active {
+    display: block; 
+}
+
+.mainContent h2 {
+    color: #3e2a75;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.mainContent p {
+    color: #333333;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}

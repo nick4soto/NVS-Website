@@ -1,67 +1,46 @@
-/* Reset default margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    background-image: url(../Images/bg_squares.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #333;
-    overflow-x: hidden; 
-}
-
 /* Header Styles */
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: white;
     padding: 1rem;
     position: relative;
     background-image: url(../Images/mainHeader.png);
-    gap: 20px;
 }
 
 .nvsLogo img {
-    width: 150px;
+    width: 175px;
     height: auto;
 }
 
 .navBar {
     display: flex;
-    flex: 1;
-    justify-content: space-between;
     align-items: center;
+    padding: 0;
+    margin-left: 20px;
 }
 
 .navBar a, .dropbtn {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 15px;
     color: #3e2a75;
     font-weight: bold;
     text-decoration: none;
+    margin-right: 20px;
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
     background-color: #fff;
-    color: #3e2a75;
-    text-decoration: none;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
+    width: auto; 
 }
 
 .dropdown-content {
@@ -71,6 +50,7 @@ body {
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width: auto; 
 }
 
 .dropdown-content a {
@@ -78,6 +58,7 @@ body {
     padding: 12px 10px;
     text-decoration: none;
     display: block;
+    text-align: left;
     border-radius: 5px;
 }
 
@@ -86,8 +67,27 @@ body {
     color: #3e2a75;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown .dropbtn:hover + .dropdown-content,
+.dropdown-content:hover {
     display: block;
+}
+
+
+.dropdown-content .jan{ 
+    border-bottom-left-radius: 0%; 
+    border-bottom-right-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.dropdown-content .mec, .dropdown-content .rep{ 
+    border-radius: 0%; 
+    margin-right: 0px; 
+}
+
+.dropdown-content .oth{ 
+    border-top-left-radius: 0%; 
+    border-top-right-radius: 0%; 
+    margin-right: 0px; 
 }
 
 .requestQuote {
@@ -95,27 +95,27 @@ body {
     color: #3e2a75;
     border-radius: 20px;
     border: 2px solid #3e2a75;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 30px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
-    white-space: nowrap; 
-    align-items: center;
-    justify-content: center; 
-    text-decoration: none; 
 }
 
 .requestQuote:hover, .requestQuote:focus {
     background-color: #3e2a75;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 a.requestQuoteMobile, .plus-icon {
-    display: none; 
+    display: none;
 }
 
 .burger {
@@ -125,7 +125,7 @@ a.requestQuoteMobile, .plus-icon {
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
     .navBar a, .dropbtn, .requestQuote {
-        font-size: 0.9rem; 
+        font-size: 0.9rem;
         padding: 8px 16px;
     }
 
@@ -134,7 +134,7 @@ a.requestQuoteMobile, .plus-icon {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1100px) {
     .navBar a, .dropbtn, .requestQuote {
         font-size: 0.8rem;
         padding: 6px 12px;
@@ -145,7 +145,7 @@ a.requestQuoteMobile, .plus-icon {
     }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 915px) {
     .header {
         justify-content: space-between;
     }
