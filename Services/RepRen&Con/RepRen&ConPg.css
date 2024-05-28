@@ -309,14 +309,12 @@ body {
 }
 
 .ourTeam{
-    padding: 20px;
     max-width: 1200px;
     background-color: #3e2a75;
     text-align: center;
-    height: 20em;
     border: #1e123f 3px solid;
     border-radius: 10px;
-    height: 10%;
+    height: 100%;
 }
 
 .ourTeam h3{
@@ -350,6 +348,10 @@ body {
     color: white;
     border-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.sectionContainer2{
+    size: 200px;
 }
 
 
