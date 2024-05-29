@@ -5,41 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NVS Corporate Services</title>
     <link rel="stylesheet" type="text/css" href="OtherServPg.css">
+    <link rel="stylesheet" type="text/css" href="/HeaderFooter/footer.css">
+    <link rel="stylesheet" type="text/css" href="/HeaderFooter/header.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
 </head>
 
 <body>
 
-<header class="header">
-  <a href="/index.html"><div class="nvsLogo"><img src="../../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
-  <nav class="navBar">
-      <a href="/index.html">Home</a>
-      <div class="dropdown">
-          <a class="dropbtn">Services</a>
-          <div class="dropdown-content">
-              <a href="../../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groudskeeping</a>
-              <a href="../../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
-              <a href="../../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
-              <a href="../../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
+    <!-- Header Start -->
+    <header class="header">
+      <a href="/index.html"><div class="nvsLogo"><img src="../../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
+      <nav class="navBar">
+          <a href="/index.html">Home</a>
+          <div class="dropdown">
+              <a class="dropbtn">Services <span class="plus-icon">+</span></a>
+              <div class="dropdown-content">
+                  <a href="../../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groundskeeping</a>
+                  <a href="../../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
+                  <a href="../../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
+                  <a href="../../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
+              </div>
           </div>
+          <a href="../../AboutUs/AboutUsPg.html">About Us</a>
+          <a href="../../OurWork/OurWorkPg.html">Our Work</a>
+          <a href="../../Contact/ContactPg.html">Contact Us</a>
+          <a href="../../ApplyNow/ApplyNowPg.html">Apply Now</a>
+          <a href="../../Contact/ContactPg.html" class="requestQuoteMobile">Request a Quote</a>
+      </nav>
+      <a href="../../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
+      <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <script src="../../methods/burger.js"></script>
       </div>
-      <a href="../../AboutUs/AboutUsPg.html">About Us</a>
-      <a href="../../OurWork/OurWorkPg.html">Our Work</a>
-      <a href="../../Contact/ContactPg.html">Contact Us</a>
-      <a href="../../ApplyNow/ApplyNowPg.html">Apply Now</a>
-  </nav>
-  <a href="../../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
-</header>
+  </header>
+  <!-- Header End -->
 
-    <main>
+<main>
 
+    <section class="titleCard">
+        <h5>Services</h5>
+        <h2>Other Services</h2>
+      </section>
 
-        <section class="titleCard">
-            <h5>Services</h5>
-            <h2>Other Services</h2>
-          </section>
+      <section class="topSection">
+        <div class="topSectionContent">
+            <p>NVS Corporate Services Inc. offers a wide range of services to help your business run smoothly.  In addition to our janitorial and facility maintenance services, NVS offers services such as pest control, parking lot sweeping, business support services and much more.</p>
+            <div class="topSectionButtons">
+                <div class="imgTwo"><a href="/Images/NVS Capability Statement.pdf"><button>Capability Statement</button></a></div>
+            </div>
+        </div>
+    </section>
 
-    </main>
+    <section class="serviceSection">
+        <div class="serviceCard">
+          <img src="../../Images/SVGs/pest_control.svg" alt="Pest Control" class="serviceIcon">
+          <h3>Pest Control</h3>
+          <p>NVS provides exceptional pest control services that eliminate unwanted pests quickly and efficiently. We will protect your building from pests like termites, ants, roaches, crickets, rats, mice, bees, wasps and more! Don’t let pests get in the way of your day-to-day operations. We provide treatments that are designed to be tough on pests while still being safe for your employees.</p>
+        </div>
+        <div class="serviceCard">
+          <img src="../../Images/SVGs/sweeper.svg.svg" alt="Parking Lot Sweeping" class="serviceIcon" >
+          <h3>Parking Lot Sweeping</h3>
+          <p>The exterior of your building makes a first impression. When visitors pull into your parking lot make sure the experience is a positive one. NVS can provide regularly scheduled parking sweeping services to maintain the parking surfaces surrounding your buildings. Our comprehensive parking lot services include sweeping, blowing and power washing if needed.</p>
+        </div>
+        <div class="serviceCard">
+          <img src="../../Images/SVGs/briefcase.svg" alt="Business Services" class="serviceIcon">
+          <h3>Business Services</h3>
+          <p>NVS offers comprehensive office administration and business support services to facilities of all sizes. There is no job too small. We can handle color copies, copies, shredding, packaging and mailing services, and much more. Contact us today to assist with all of your business support services.</p>
+        </div>
+
+        <section class="ourTeam">
+          <h3>No Job Is Too Small!</h3>
+          <p>We can provide a custom solution for your facility on a daily, weekly or monthly basis. Contact us today to get started.</p>
+          <a href="../../Contact/ContactPg.html"><button>REQUEST A QUOTE</button></a>
+        </section>
+
+      </section>
+
+      </div>
+
+</main>
 
     <footer class="footer">
     
@@ -72,7 +118,7 @@
       </div>
   
       <div class="copyrightSec">
-      <p>© Copyright 2024, <a href="../../Design&DevTeam/Des&DevTeam.html">Website Design & Development by Nick and friends</a></p>
+      <p>© Copyright 2024, <a href="../../Design&DevTeam/Des&DevTeam.html">Website Design & Development Team</a></p>
       
       </div>
   </div>

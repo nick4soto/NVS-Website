@@ -15,128 +15,52 @@ body {
     color: #333333; 
 }
 
-/* --------------------------------------Styles for the header---------------------------------------------- */
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    background-image: url(../../Images/mainHeader.png);
-}
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
 
-.nvsLogo img {
-    width: 175px;
+.topSection {
     height: auto;
-}
-
-.navBar {
     display: flex;
-    align-items: center;
-    padding: 0;
-    margin-left: 20px;
+    justify-content: space-between; 
+    max-width: 950px;
+    margin: 20px auto; 
+    padding: 20px 40px;
+    text-align: center;
 }
 
-.navBar a, .dropbtn {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: #3e2a75;
-    font-weight: bold;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.topSection p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    margin: 0 auto 20px;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5em; 
+    max-width: 75rem;
 }
 
-.navBar a:hover, .navBar a:focus, .dropbtn:hover, .dropbtn:focus {
-    background-color: #fff;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto; 
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #3e2a75;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: auto; 
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    border-radius: 5px;
-}
-
-.dropdown-content a:hover {
-    background-color: #fff;
-    color: #3e2a75;
-}
-
-.dropdown .dropbtn:hover + .dropdown-content,
-.dropdown-content:hover {
-    display: block;
-}
-
-
-.dropdown-content .jan{ 
-    border-bottom-left-radius: 0%; 
-    border-bottom-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .mec, .dropdown-content .rep{ 
-    border-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.dropdown-content .oth{ 
-    border-top-left-radius: 0%; 
-    border-top-right-radius: 0%; 
-    margin-right: 0px; 
-}
-
-.requestQuote {
+.imgTwo button {
     background-color: transparent;
-    color: #3e2a75;
+    color: #3e2a75; 
     border-radius: 20px;
-    border: 2px solid #3e2a75;
+    border: 2px solid #3e2a75; 
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease;
-    text-transform: uppercase;
+    transition: all 0.3s ease; 
     letter-spacing: 1px;
+    text-transform: uppercase; 
 }
 
-.requestQuote:hover, .requestQuote:focus {
-    background-color: #3e2a75;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.imgTwo button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
-
-/* --------------------------------------Styles for the Title Card---------------------------------------------- */
 
 .titleCard {
     max-width: 100%;
-    background-image: url(../../Images/renovation_header-scaled.jpg);
+    background-image: url(../../Images/Other-Services-Header-scaled.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -164,114 +88,167 @@ body {
 
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
-/*-----------------------------------------====--Styles for the footer-------------------------------------------- */
 
-footer {
-    display: flex;
-    background-color: #231f20;
-    color: white;
-    width: 100%;
+.serviceSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    padding: 50px;
+    background: transparent;
+    justify-content: center;
+    align-items: stretch; 
+    grid-auto-rows: minmax(100px, auto); 
 }
 
-.footerLogo{
-    width: 200px;
-    height: auto;
-    display: flex;
-    margin-bottom: 2%;  
-    margin-top: 2%;
-    float: left;
-    padding-left: 2%;
-    padding-right: 1%;
-    border-right: #666 1px solid;
-}
-
-.footerLogo img{
-    width: 100%;
-    height: auto;
-}
-
-.footerLogo img:hover{
-    opacity: 0.8;
-}
-
-.footerContact {
-    margin: 5px 0; 
-    flex-direction: column;
-    float: left; 
-    padding-left: 1%;
-}
-
-.footerContact a{
-    color: white;
-    text-decoration: none;
-}
-
-.footerContact a:hover{
-    color: #ff7c1a;
-}
-
-.rightSec{
+.serviceCard {
+    background: #3e2a7549;
+    border-radius: 8px;
+    border: .2cap solid #3e2a75; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    float: right;
-    margin-left: 8%;
+    align-items: center;
+    justify-content: space-between; 
+    height: auto; 
+    margin-bottom: 20px; 
 }
 
-.footerNav {
-    width: 700px;
-    flex-wrap: wrap;  
-    text-align: right;
-    margin-top: 2%;
-    margin-bottom: 5%;
+
+.serviceIcon {
+    width: 100px;
+    margin-bottom: 0.1em;
 }
 
-.footerNav a {
-    padding: 5px 10px; 
-    text-decoration: none;
+.serviceCard h3 {
+    color: #3e2a75;
+    font-size: 3rem;
+    margin-bottom: 1%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.serviceCard p {
+    font-size: 1.3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+@media screen and (max-width: 768px) {
+    .serviceSection {
+        grid-template-columns: 1fr; 
+        padding: 30px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .serviceCard {
+        padding: 15px;
+        margin-bottom: 20px; 
+    }
+
+    .serviceIcon {
+        width: 80px;
+    }
+}
+
+.bottomLeft{
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.bottomLeft img{
+    width: 35%; 
+    height: auto;
+    margin: 0 auto;
+    -ms-flex-align: center;
+    margin-left: 10%;
+}
+
+.bottomLeft p{
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
+
+.ourTeam {
+    max-width: 1200px;
+    background-color: #3e2a75;
+    text-align: center;
+    border: #1e123f 3px solid;
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensures padding does not affect the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 416px;
+}
+
+.ourTeam h3 {
     color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Controlled margin for spacing */
 }
 
-.footerNav a:hover {
-    color: #ff7c1a;
-}
-
-.footerSocial {
-    text-align: right;
-}
-
-.footerSocial a {
-    display: inline-flex;  
-    justify-content: center; 
-    align-items: center;  
-    width: 40px;  
-    height: 40px; 
-    margin: 0 10px;
-    font-size: 24px; 
+.ourTeam p {
     color: white;
-    border: 2px solid white; 
-    border-radius: 50%;  
-    background-color: #231f20;  
-    transition: all 0.3s ease; 
-    text-decoration: none;  /* Removes underline from the link */
+    font-size: 1.5rem;
+    line-height: 1.8;
+    max-width: 80%;  
 }
 
-.footerSocial a:hover {
-    color: #ff7c1a;
-    border-color: #ff7c1a;
-    transition: color 0.3s ease;  
+.ourTeam button {
+    background-color: white;
+    color: #3e2a75;
+    border-radius: 20px;
+    border: 2px solid #3e2a75;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.copyrightSec {
-    font-size: 0.75em;
-    text-align: right;
-    margin-top: 3%;
-}
-
-.copyrightSec a{
+.ourTeam button:hover {
+    background-color: #3e2a75;
     color: white;
-    text-decoration: none;
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.copyrightSec a:hover{
-    color: #ff7c1a;
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .ourTeam {
+        padding: 20px;
+    }
+
+    .ourTeam h3 {
+        font-size: 2rem;
+    }
+
+    .ourTeam p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .ourTeam button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bottomLeft, .ourTeam {
+        flex-basis: 100%; 
+    }
 }
