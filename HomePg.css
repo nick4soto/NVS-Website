@@ -27,19 +27,6 @@ video {
     z-index: -1; 
 }
 
-@media (max-width: 768px) and (max-height: 768px) {
-    video {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) and (max-height: 768px) {
-    html {
-        background-image: none; 
-        background-color: transparent; 
-    }
-}
-
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
 .frontText {
@@ -469,4 +456,107 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+/* --------------------------------------Styles for the sizing section---------------------------------------------- */
 
+
+@media (min-width: 319px) and (max-width: 480px){
+    /* Styles for very small devices like mobile phones */
+    html, body {
+        font-size: 14px; /* Smaller font size for small devices */
+    }
+    .frontText {
+        padding: 20px 10px; /* Smaller padding */
+        margin-top: 275px;
+    }
+    .frontText h3, .frontText h4 {
+        font-size: 1.2rem; /* Smaller font size for text */
+        
+    }
+    .downArrow {
+        font-size: 20px; /* Smaller icon size */
+        padding-top: 3%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    /* Styles for medium devices like tablets and small laptops */
+    html, body {
+        font-size: 16px; /* Medium font size */
+    }
+    .frontText {
+        padding: 40px 20px; /* Medium padding */
+        margin-top: 30%;
+    }
+    .frontText h3, .frontText h4 {
+        font-size: 1.5rem; /* Medium font size for text */
+    }
+    .downArrow {
+        font-size: 30px; /* Medium icon size */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    /* Styles for large devices like desktops */
+    html, body {
+        font-size: 14px; /* Larger font size for readability on large screens */
+    }
+    .frontText {
+        padding: 50px 30px; /* Larger padding */
+        margin-top: 20%;
+    }
+    .frontText h3, .frontText h4 {
+        font-size: 2rem; /* Larger font size for text */
+    }
+    .downArrow {
+        font-size: 40px; /* Larger icon size */
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    html, body {
+        font-size: 18px; /* Larger font size for larger tablets */
+    }
+    .frontText {
+        padding: 50px 30px; /* Larger padding */
+        margin-top: 20%;
+    }
+    .frontText h3, .frontText h4 {
+        font-size: 2.2rem; /* Larger font size for text */
+    }
+    .downArrow {
+        font-size: 45px; /* Larger icon size */
+    }
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+    html, body {
+        font-size: 20px; /* Very large font size for high-resolution screens */
+    }
+    .frontText {
+        padding: 60px 35px; /* Very large padding */
+        margin-top: 20%;
+    }
+    .frontText h3, .frontText h4 {
+        font-size: 2.5rem; /* Very large font size for text */
+    }
+    .downArrow {
+        font-size: 50px; /* Very large icon size */
+    }
+}
+
+@media (min-width: 1601px) {
+    /* Styles for extra large devices like large desktops */
+    html, body {
+        font-size: 20px; /* Extra large font size for very large screens */
+    }
+    .frontText {
+        padding: 60px 40px; /* Extra large padding */
+        margin-top: 28%;
+    }
+    .frontText h3, .frontText h4 {
+        font-size: 2.5rem; /* Extra large font size for text */
+    }
+    .downArrow {
+        font-size: 50px; /* Extra large icon size */
+    }
+}
