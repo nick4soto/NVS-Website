@@ -25,10 +25,20 @@
 
 <body>
 
-    <video autoplay muted loop>
-        <source src="./Images/shutterstock_1101936483.mov" type="video/mp4">
-    </video>
-
+    <div id="video-container">
+        <video autoplay muted loop>
+            <source src="./Images/shutterstock_1101936483.mov" type="video/mp4">
+        </video>
+        <div class="text-overlay">
+            <section class="frontText">
+                <h3>COMPREHENSIVE FACILITY SERVICES</h3>
+                <h4>We Excel At Our Job So You Can Excel At Yours</h4>
+                <button class="downArrow" onclick="scrollDown()">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </section>
+        </div>
+    </div>
 
     <!-- Header Start -->
     <header class="header">
@@ -61,15 +71,6 @@
     <!-- Header End -->
 
 <main>
-    <section class="frontText">
-        <h3>COMPREHENSIVE FACILITY SERVICES</h3>
-        <h4>We Excel At Our Job So You Can Excel At Yours</h4>
-        
-        <button class="downArrow" onclick="scrollDown()"> 
-            <i class="fas fa-chevron-down"></i> <!-- icon for down arrow -->
-        </button>
-        
-    </section>
 
     <section id="nextSection">
     <section class="secondText">
