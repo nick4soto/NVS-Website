@@ -7,6 +7,7 @@
     padding: 1rem;
     position: relative;
     background-image: url(../Images/mainHeader.png);
+    font-family: Open Sans, sans-serif;
 }
 
 .nvsLogo img {

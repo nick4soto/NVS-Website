@@ -4,6 +4,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../../Images/bg_squares.svg);
+    font-family: Open Sans, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -51,13 +52,13 @@ body {
     height: auto;
     display: flex;
     justify-content: space-between; 
+    max-width: 950px;
     margin: 20px auto; 
     padding: 20px 40px;
     text-align: center;
 }
 
 .topSection p{
-    font-family: 'Times New Roman', Times, serif;
     font-size: 1rem;
     margin: 0 auto 20px;
     padding: 2%;

@@ -129,7 +129,8 @@ video {
     margin: 20px auto; 
     padding: 20px 40px;
     text-align: center;
-    margin-top: 100vh;
+    margin-top: 90vh;
+    font-family: Open Sans, sans-serif;
 }
 
 .secondText h2 {
@@ -174,6 +175,7 @@ video {
     max-width: 1000px; 
     margin: 10px auto; 
     padding: 10px;
+    font-family: Open Sans, sans-serif;
 }
 
 .thirdText h3 {
@@ -303,6 +305,7 @@ video {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: Open Sans, sans-serif;
   }
 
 .head1, .head2 {
@@ -447,37 +450,4 @@ html, body {
     background-color: #3e2a75; 
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-/* --------------------------------------Styles for the sizing section---------------------------------------------- */
-
-
-@media (max-width: 480px){
-    /* Styles for very small devices like mobile phones */
-
-}
-
-@media (min-width: 481px) and (max-width: 768px){
-    /* Styles for medium devices like tablets in portrait mode */
-
-}
-
-@media (min-width: 769px) and (max-width: 1024px){
-    /* Styles for tablets in landscape and small desktops */
-
-}
-
-@media (min-width: 1025px) and (max-width: 1366px) {
-    /* Styles for large tablets and low-res laptops */
-
-}
-
-@media (min-width: 1367px) and (max-width: 1600px) {
-    /* Styles for standard laptops and desktops */
-
-}
-
-@media (min-width: 1601px) {
-    /* Styles for extra large devices like large desktops */
-
 }
