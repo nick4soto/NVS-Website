@@ -51,6 +51,7 @@ body {
     height: auto;
     display: flex;
     justify-content: space-between; 
+    max-width: 950px;
     margin: 20px auto; 
     padding: 20px 40px;
     text-align: center;
