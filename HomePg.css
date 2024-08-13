@@ -25,6 +25,7 @@ body {
     z-index: 0; 
 }
 
+
 video {
     position: absolute;
     top: 0;
@@ -36,9 +37,8 @@ video {
 
 .text-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    top: 15%;
+    bottom: -10vh; /* 5% from the bottom */
+    left: 0vw;
     width: 100%;
     z-index: 1;
 }
@@ -118,6 +118,9 @@ video {
     }
 }
 
+.frontText, .downArrow {
+    font-size: 2.5cap;
+}
 
 /* --------------------------------------Styles for the second section---------------------------------------------- */
 
@@ -451,85 +454,30 @@ html, body {
 
 @media (max-width: 480px){
     /* Styles for very small devices like mobile phones */
-    .frontText {
-        margin-top: 40%; /* Adjusted margin for small screens */
-        color: red;
-    }
-    .frontText h3, .frontText h4 {
-        font-size: 1rem; /* Smaller font size for text */
-    }
-    .downArrow {
-        font-size: 20px; /* Smaller icon size */
-        padding-top: 20px;
-    }
+
 }
 
 @media (min-width: 481px) and (max-width: 768px){
     /* Styles for medium devices like tablets in portrait mode */
-    .frontText {
-        margin-top: 20%;
-        color: lime;
-    }
-    .frontText h3, .frontText h4 {
-        font-size: 1.2rem; /* Medium font size for text */
-    }
-    .downArrow {
-        font-size: 25px; /* Medium icon size */
-    }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
     /* Styles for tablets in landscape and small desktops */
-    .frontText {
-        margin-top: 25%;
-        color: turquoise;
-    }
-    .frontText h3, .frontText h4 {
-        font-size: 1.5rem; /* Larger font size for text */
-    }
-    .downArrow {
-        font-size: 30px; /* Larger icon size */
-    }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1366px) {
     /* Styles for large tablets and low-res laptops */
-    .frontText {
-        margin-top: 10%; /* Slightly reduced margin for better vertical spacing */
-        color: tomato;
-    }
-    .frontText h3, .frontText h4 {
-        font-size: 2rem; /* Slightly larger font size */
-    }
-    .downArrow {
-        font-size: 40px; /* Slightly larger icon size */
-    }
+
 }
 
 @media (min-width: 1367px) and (max-width: 1600px) {
     /* Styles for standard laptops and desktops */
-    .frontText {
-        margin-top: 30%; /* Optimized margin for medium to large screens */
-        color: yellow;
-    }
-    .frontText h3, .frontText h4 {
-        font-size: 2.2rem; /* Very large font size for readability */
-    }
-    .downArrow {
-        font-size: 45px; /* Very large icon size for visibility */
-    }
+
 }
 
 @media (min-width: 1601px) {
     /* Styles for extra large devices like large desktops */
-    .frontText {
-        margin-top: 30%; /* Consistent margin top for extra large screens */
-        color: violet;
-    }
-    .frontText h3, .frontText h4 {
-        font-size: 2.8rem; /* Enhanced font size for large displays */
-    }
-    .downArrow {
-        font-size: 50px; /* Enhanced icon size for emphasis */
-    }
+
 }
