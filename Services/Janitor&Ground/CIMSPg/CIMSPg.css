@@ -4,6 +4,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../../../Images/bg_squares.svg);
+    font-family: Open Sans, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;

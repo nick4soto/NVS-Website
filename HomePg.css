@@ -129,7 +129,8 @@ video {
     margin: 20px auto; 
     padding: 20px 40px;
     text-align: center;
-    margin-top: 100vh;
+    margin-top: 90vh;
+    font-family: Open Sans, sans-serif;
 }
 
 .secondText h2 {
@@ -174,6 +175,7 @@ video {
     max-width: 1000px; 
     margin: 10px auto; 
     padding: 10px;
+    font-family: Open Sans, sans-serif;
 }
 
 .thirdText h3 {
@@ -303,6 +305,7 @@ video {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: Open Sans, sans-serif;
   }
 
 .head1, .head2 {
