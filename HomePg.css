@@ -170,15 +170,45 @@ video {
 }
 
 /* --------------------------------------Styles for the third section---------------------------------------------- */
-
 .thirdText {
-    max-width: 1000px; 
-    margin: 10px auto; 
+    max-width: 1250px;
+    margin: 10px auto;
     padding: 10px;
     font-family: Open Sans, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ensure equal column widths */
+    gap: 20px; /* Space between the boxes */
+    grid-auto-rows: minmax(100px, auto); /* Ensure consistent row heights */
 }
 
-.thirdText h3 {
+.janGrnd, .mechBuild, .repRenCon, .hoo-wii-r {
+    color: black;
+    margin: 0; /* Remove margin to prevent extra space */
+    padding: 10px; /* Add padding for inner spacing */
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.janGrnd {
+    grid-column: 1;
+}
+
+.mechBuild {
+    grid-column: 2;
+}
+
+.repRenCon {
+    grid-column: 1;
+}
+
+.hoo-wii-r {
+    grid-column: 2;
+}
+
+.OurFacility {
     text-align: center;
     font-size: 2.5rem; 
     font-weight: 700;
@@ -190,41 +220,23 @@ video {
     padding-bottom: 2%;
 }
 
-/* Styles for Janitorial and Drywall images (aligned to the left) */
-.janImg{
+.janImg, .hvacGuyImg, .dryWallImg {
     position: relative;
     z-index: 9;
-    width: 450px; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0px 20px 0px 0; 
-    float: left; 
-}
-
-.hvacGuyImg {
-    position: relative;
-    z-index: 9;
-    width: 450px;
-    height: auto;
+    max-width: 100%; /* Ensure images do not exceed column width */
+    height: 315px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0px 0 0px 20px; 
-    float: right;
+    margin-bottom: 20px;
 }
 
-.dryWallImg{
-    position: relative;
-    z-index: 9;
-    width: 450px; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 15px;
+.hoo-wii-r iframe {
+    width: 100%; 
+    height: 315px; 
+    border-radius: 15px; 
+    margin: 0 auto 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    margin: 0px 20px 0px 0; 
-    float: left; 
 }
 
 .janGrnd{
@@ -242,40 +254,27 @@ video {
     border: .4cap solid #ff7c1a; 
 }
 
-.janGrnd, .mechBuild, .repRenCon{
-    position: relative;
-    z-index: 10;
-    color: black;
-    margin: 10px;
-    margin-bottom: 4%;
-    border-radius: 20px;  
-    width: 100%;
-    padding-bottom: 0%;
-    padding-top: 0%;
-    text-align: center;
-}
-
-.janGrnd h4, .mechBuild h4, .repRenCon h4{
-    font-size: 2.5rem; 
+.janGrnd h2, .mechBuild h2, .repRenCon h2, .hoo-wii-r h2 {
+    font-size: 2rem; 
     font-weight: 700; 
     letter-spacing: 1.5px; 
     color: #3e2a75; 
     margin: 0 auto 20px; 
     padding: 0; 
-    padding-top: 8%;
+    padding-top: 1%;
     padding-bottom: 1vh;
-    padding-right: 1%;
 }
 
-.janGrnd p, .mechBuild p, .repRenCon p{
-    font-size: 1.5rem; 
-    font-weight: 400; 
+.janGrnd p, .mechBuild p, .repRenCon p, .hoo-wii-r p {
+    font-size: 1.2rem; 
+    font-weight: 500; 
     text-align: center;
     padding-right: 1%;
     padding-left: 1%;
+    word-wrap: break-word; /* Ensure text doesn't overflow */
 }
 
-.janGrnd button, .mechBuild button, .repRenCon button{
+.janGrnd button, .mechBuild button, .repRenCon button {
     background-color: transparent;
     color: #3e2a75; 
     border-radius: 20px; 
@@ -293,13 +292,42 @@ video {
     letter-spacing: 1px;
 }
 
-.janGrnd button:hover, .mechBuild button:hover, .repRenCon button:hover, .janGrnd button:focus, .mechBuild button:focus, .repRenCon button:focus{
+.janGrnd button:hover, .mechBuild button:hover, .repRenCon button:hover, .janGrnd button:focus, .mechBuild button:focus, .repRenCon button:focus {
     background-color: #3e2a75; 
     color: #fff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+.hoo-wii-r {
+    background-color: #f1f1f1;
+    border: 4px solid #3e2a75d2;
+}
 
+.hoo-wii-r h2 {
+    color: #3e2a75; 
+}
+
+.hoo-wii-r button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 1%; 
+    margin-bottom: 5%;
+}
+
+.hoo-wii-r button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
 
 /* ------------------------------------------Styles for the carousel section-------------------------------------- */
 html, body {
@@ -387,67 +415,4 @@ html, body {
 
 .logoCarousel {
     position: relative;
-}
-
-
-/* --------------------------------------Styles for the Video section---------------------------------------------- */
-
-.hoo-wii-r {
-    max-width: 1000px;
-    margin: 10px auto;
-    padding: 10px;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 20px;
-    border: 4px solid #3e2a75d2;
-    margin-top: 7%;
-    margin-bottom: 7%;
-}
-
-.hoo-wii-r h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #3e2a75; 
-    margin: 0 auto 20px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.hoo-wii-r iframe {
-    width: 560px; 
-    height: 315px; 
-    border-radius: 15px; 
-    margin: 0 auto 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.hoo-wii-r p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #666; 
-    padding: 1%;
-    margin-bottom: 20px; 
-}
-
-.hoo-wii-r button {
-    background-color: transparent;
-    color: #3e2a75; 
-    border-radius: 20px;
-    border: 2px solid #3e2a75; 
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease; 
-    letter-spacing: 1px;
-    text-transform: uppercase; 
-    margin-top: 1%; 
-    margin-bottom: 5%;
-}
-
-.hoo-wii-r button:hover {
-    background-color: #3e2a75; 
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
