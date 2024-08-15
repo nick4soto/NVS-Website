@@ -69,10 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {});
             const div = document.createElement('div');
             div.className = 'input-group';
     
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.placeholder = container.querySelector('input').placeholder;
-            div.appendChild(input);
+            const addressInput = document.createElement('input');
+            addressInput.type = 'text';
+            addressInput.placeholder = 'Address';
+            div.appendChild(addressInput);
+    
+            const dateRangeInput = document.createElement('input');
+            dateRangeInput.type = 'text';
+            dateRangeInput.placeholder = 'To/From';
+            div.appendChild(dateRangeInput);
     
             const removeBtn = document.createElement('button');
             removeBtn.type = 'button';
