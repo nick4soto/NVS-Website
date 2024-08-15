@@ -1,0 +1,212 @@
+html {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../Images/bg_squares.svg);
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+}
+
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.titleCard {
+    max-width: 100%;
+    background-image: url(../../Images/renovation_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.titleCard h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.container {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #e1e1e1;
+    min-height: 300px;
+}
+
+/* Title Styles */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #3e2a75;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #3e2a75;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 20px;
+}
+
+/* Label Styles */
+label {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus {
+    border-color: #3e2a75;
+    outline: none;
+}
+
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: #333333;
+}
+
+.checkbox-group input[type="checkbox"] {
+    vertical-align: middle;
+    transform: translateY(-10%);
+}
+
+/* Button Styles */
+.addButton,
+.signature button {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: #3e2a75;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.signature button:hover {
+    background-color: #291c4f;
+}
+
+.signature {
+    text-align: left; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+}
+
+.signature canvas {
+    border: 1px solid #000; 
+    display: block; 
+    margin: 0 auto 10px; 
+    cursor: crosshair;
+    margin-right: 75%;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #3e2a75;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    background-color: #29235c;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .signature canvas {
+        width: 100%;
+    }
+}
+
+/* Button Styles */
+.addButton,
+.removeButton,
+.signature button {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: #3e2a75;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.addButton:hover,
+.removeButton:hover,
+.signature button:hover {
+    background-color: #291c4f;
+}
+
+/* Remove Button Specific Styles */
+.removeButton {
+    margin-left: 10px; /* Adds space between Add and Remove buttons */
+    background-color: #ff7c1a;
+}
+
+.removeButton:hover {
+    background-color: #ff6f00;/* Darker shade on hover */
+}
