@@ -224,11 +224,11 @@ video {
     position: relative;
     z-index: 9;
     max-width: 100%; /* Ensure images do not exceed column width */
-    height: 315px;
+    height: 350px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hoo-wii-r iframe {
