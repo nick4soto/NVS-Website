@@ -59,13 +59,47 @@ document.addEventListener('DOMContentLoaded', function () {});
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.addButton').forEach(button => {
             button.addEventListener('click', function () {
-                const container = document.getElementById(this.getAttribute('data-target'));
-                const newInputGroup = createInputGroup(container);
-                container.appendChild(newInputGroup);
+                const targetContainerId = this.getAttribute('data-target');
+                const container = document.getElementById(targetContainerId);
+    
+                if (targetContainerId === 'employmentHistoryContainer') {
+                    addNameFields(container);
+                } else if (targetContainerId === 'residentialAddressContainer') {
+                    addAddressFields(container);
+                }
             });
         });
     
-        function createInputGroup(container) {
+        function addNameFields(container) {
+            const div = document.createElement('div');
+            div.className = 'input-group';
+    
+            const firstNameInput = document.createElement('input');
+            firstNameInput.type = 'text';
+            firstNameInput.placeholder = 'First Name';
+            div.appendChild(firstNameInput);
+    
+            const middleNameInput = document.createElement('input');
+            middleNameInput.type = 'text';
+            middleNameInput.placeholder = 'Middle Name';
+            div.appendChild(middleNameInput);
+    
+            const lastNameInput = document.createElement('input');
+            lastNameInput.type = 'text';
+            lastNameInput.placeholder = 'Last Name';
+            div.appendChild(lastNameInput);
+    
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.textContent = 'Remove';
+            removeBtn.className = 'removeButton';
+            removeBtn.addEventListener('click', () => div.remove());
+            div.appendChild(removeBtn);
+    
+            container.appendChild(div);
+        }
+    
+        function addAddressFields(container) {
             const div = document.createElement('div');
             div.className = 'input-group';
     
@@ -86,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {});
             removeBtn.addEventListener('click', () => div.remove());
             div.appendChild(removeBtn);
     
-            return div;
+            container.appendChild(div);
         }
     });
     
