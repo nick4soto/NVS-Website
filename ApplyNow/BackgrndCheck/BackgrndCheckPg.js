@@ -76,18 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {});
     
             const firstNameInput = document.createElement('input');
             firstNameInput.type = 'text';
-            firstNameInput.placeholder = 'First Name';
+            firstNameInput.placeholder = 'First Middle Last';
             div.appendChild(firstNameInput);
-    
-            const middleNameInput = document.createElement('input');
-            middleNameInput.type = 'text';
-            middleNameInput.placeholder = 'Middle Name';
-            div.appendChild(middleNameInput);
-    
-            const lastNameInput = document.createElement('input');
-            lastNameInput.type = 'text';
-            lastNameInput.placeholder = 'Last Name';
-            div.appendChild(lastNameInput);
     
             const removeBtn = document.createElement('button');
             removeBtn.type = 'button';
