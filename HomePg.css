@@ -233,7 +233,6 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .flip-card-front img {
@@ -241,6 +240,7 @@ video {
     height: auto;
     border-radius: 15px;
     transition: transform 0.3s ease;
+    object-fit: cover; /* Ensure the image covers the entire area */
 }
 
 .flip-card-front img:hover {
@@ -258,6 +258,8 @@ video {
     align-items: center;
     border-radius: 15px;
     z-index: 2; /* Ensure the back of the card is visible during the flip */
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+    max-height: 100%;/* Handle long words or text */
 }
 
 .flip-card-back h2 {
@@ -269,6 +271,8 @@ video {
     font-size: 1rem;
     line-height: 1.5;
     max-width: 85%;
+    word-wrap: break-word; /* Ensure text breaks to the next line */
+    overflow-y: auto;
 }
 
 .flip-card-back a {
@@ -340,6 +344,7 @@ video {
 
 .janGrnd .flip-card-front {
     border: 5px solid #3e2a75;
+    background-color: #a08dd6;
 }
 
 .mechBuild .flip-card-back {
@@ -349,6 +354,7 @@ video {
 
 .mechBuild .flip-card-front {
     border: 5px solid darkgreen;
+    background-color: #08bc7d;
 }
 
 .repRenCon .flip-card-back {
@@ -358,10 +364,105 @@ video {
 
 .repRenCon .flip-card-front {
     border: 5px solid #ff7c1a;
+    background-color: #ffa45f;
 }
 
 .hoo-wii-r .flip-card-front {
     border: 5px solid #3e2a75;
+}
+
+@media (max-width: 767px) {
+    .thirdText {
+        grid-template-columns: 1fr; /* Stack boxes vertically */
+        gap: 20px; /* Reduce the gap between the boxes */
+    }
+
+    .janGrnd, .mechBuild, .repRenCon, .hoo-wii-r {
+        height: 300px; /* Adjust height to fit better on smaller screens */
+    }
+
+    .flip-card-back h2 {
+        font-size: 1.8rem;
+    }
+
+    .flip-card-back p {
+        font-size: 0.9rem;
+    }
+
+    .flip-card-back a {
+        padding: 10px 20px;
+    }
+
+    .capButton a {
+        padding: 10px 40px; /* Adjust the button size */
+    }
+
+    .hoo-wii-r iframe {
+        height: calc(100% - 50px); /* Adjust height to accommodate the button */
+    }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .thirdText {
+        gap: 15px;
+    }
+
+    .janGrnd, .mechBuild, .repRenCon, .hoo-wii-r {
+        height: 280px;
+    }
+
+    .flip-card-back h2 {
+        font-size: 1.5rem;
+    }
+
+    .flip-card-back p {
+        font-size: 0.85rem;
+    }
+
+    .flip-card-back a {
+        padding: 8px 18px;
+    }
+
+    .capButton a {
+        padding: 8px 35px;
+    }
+
+    .hoo-wii-r iframe {
+        height: calc(100% - 45px);
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .thirdText {
+        gap: 10px;
+        padding: 10px; /* Reduce padding */
+    }
+
+    .janGrnd, .mechBuild, .repRenCon, .hoo-wii-r {
+        height: 250px;
+    }
+
+    .flip-card-back h2 {
+        font-size: 1.3rem;
+    }
+
+    .flip-card-back p {
+        font-size: 0.75rem;
+    }
+
+    .flip-card-back a {
+        padding: 6px 15px;
+    }
+
+    .capButton a {
+        padding: 6px 30px;
+    }
+
+    .hoo-wii-r iframe {
+        height: calc(100% - 40px);
+    }
 }
 
 /* ------------------------------------------Styles for the carousel section-------------------------------------- */
