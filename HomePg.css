@@ -106,7 +106,7 @@ video {
   }
 
 .frontText h4 {
-    max-width: auto;
+    max-width: 625px;
     font-weight: 400;
     text-shadow: 
         2px 2px 6px rgba(0, 0, 0, 0.6), 
