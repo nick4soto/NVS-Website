@@ -78,7 +78,32 @@ video {
         3px 3px 5px rgba(0, 0, 0, 0.8), 
         0 0 10px rgba(0, 0, 255, 0.7), 
         1px 1px 0px rgba(255, 255, 255, 0.8); 
+    position: relative; /* Ensure ::before is positioned relative to the h2 */
+     
 }
+
+.frontText h3::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .frontText h3:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .frontText h3::before {
+    content: " ";
+    width: 325px;
+    display: block;
+    position: absolute;
+    border-radius: 1%;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #48ff48;
+    z-index: -1;
+    transition: transform 1s ease;
+  }
 
 .frontText h4 {
     max-width: auto;
@@ -86,7 +111,32 @@ video {
     text-shadow: 
         2px 2px 6px rgba(0, 0, 0, 0.6), 
         0 0 8px rgba(0, 0, 255, 0.7); 
+    position: relative; /* Ensure ::before is positioned relative to the h2 */
+     
 }
+
+.frontText h4::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .frontText h4:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .frontText h4::before {
+    content: " ";
+    max-width: 625px;
+    display: block;
+    position: absolute;
+    border-radius: 1%;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #48ff48;
+    z-index: -1;
+    transition: transform 1s ease;
+  }
 
 .downArrow {
     position: relative;
@@ -120,16 +170,6 @@ video {
 
 .frontText, .downArrow {
     font-size: 2.5cap;
-}
-
-@media (min-width: 1024px) {
-    .frontText {
-        margin-top: 25vh; 
-    }
-
-    .downArrow {
-        bottom: 60px; 
-    }
 }
 
 /* Extra large screens (1440px and up) */
@@ -191,10 +231,71 @@ video {
     margin-bottom: 20px; 
 }
 
+.tracking-in-expand {
+    opacity: 0; /* Ensure text is visible initially */
+    letter-spacing: normal; /* Ensure normal letter spacing initially */
+    transition: none; /* Remove any unwanted transition effects */
+}
+
+.tracking-in-expand.animate {
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
 .secondText p {
     color: black; 
     font-size: 1.5em; 
+    position: relative; /* Ensure ::before is positioned relative to the h2 */
+    overflow: hidden; 
 }
+
+.secondText p::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .secondText p:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .secondText p::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    border-radius: 1%;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #b0abf3;
+    z-index: -1;
+    transition: transform 1s ease;
+  }
 
 .secondText button {
     background-color: transparent;
@@ -221,6 +322,35 @@ video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+.secondText button {
+    animation: wiggle 4s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
 @media (min-width: 2560px) {
     .secondText {
         margin-top: 60%;
@@ -249,7 +379,11 @@ video {
     margin: 0 auto 20px; 
     padding: 0; 
     padding-top: 0%;
-    padding-bottom: 2%;
+    padding-bottom: 0%;
+}
+
+.OurFacility h3{
+    margin-bottom: 0%;
 }
 
 .janGrnd, .mechBuild, .repRenCon, .hoo-wii-r {
@@ -538,8 +672,13 @@ html, body {
     letter-spacing: 1.5px;
     color: black;
     margin: 0 auto 0px;
-    padding: 0 0 2% 0;
-    padding-top: 1%;
+    padding: 0 0 0% 0;
+    padding-top: 0%;
+}
+
+.head1 h3, .head2 h3 {
+    margin-bottom: 2%;
+    margin-top: 1%;
 }
 
 .head1 {
