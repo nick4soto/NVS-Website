@@ -666,7 +666,9 @@ html, body {
   }
 
 .head1, .head2 {
+    position: absolute;
     text-align: center;
+    width: 100%;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -674,6 +676,7 @@ html, body {
     margin: 0 auto 0px;
     padding: 0 0 0% 0;
     padding-top: 0%;
+    z-index: -1;
 }
 
 .head1 h3, .head2 h3 {
@@ -692,8 +695,8 @@ html, body {
 .logos1, .logos2 {
     white-space: nowrap;
     padding: 60px 0;
-    padding-top: 0;
-    padding-bottom: 1%;
+    padding-top: 8%;
+    padding-bottom: 0%;
     position: relative;
 }
 
@@ -742,9 +745,11 @@ html, body {
 }
 
 .logos-slide a:hover .logo-description {
+    position: absolute;
     display: block; 
     opacity: 1; 
     visibility: visible;
+    z-index: 1;
 }
 
 .logoCarousel {
