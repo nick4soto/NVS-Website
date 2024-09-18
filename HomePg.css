@@ -82,31 +82,8 @@ video {
      
 }
 
-.frontText h3::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-  .frontText h3:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .frontText h3::before {
-    content: " ";
-    width: 325px;
-    display: block;
-    position: absolute;
-    border-radius: 1%;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: #48ff48;
-    z-index: -1;
-    transition: transform 1s ease;
-  }
-
 .frontText h4 {
-    max-width: auto;
+    max-width: 625px;
     font-weight: 400;
     text-shadow: 
         2px 2px 6px rgba(0, 0, 0, 0.6), 
@@ -114,29 +91,6 @@ video {
     position: relative; /* Ensure ::before is positioned relative to the h2 */
      
 }
-
-.frontText h4::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-  .frontText h4:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .frontText h4::before {
-    content: " ";
-    max-width: 625px;
-    display: block;
-    position: absolute;
-    border-radius: 1%;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: #48ff48;
-    z-index: -1;
-    transition: transform 1s ease;
-  }
 
 .downArrow {
     position: relative;
@@ -274,28 +228,6 @@ video {
     position: relative; /* Ensure ::before is positioned relative to the h2 */
     overflow: hidden; 
 }
-
-.secondText p::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-  .secondText p:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-  
-  .secondText p::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    border-radius: 1%;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: #b0abf3;
-    z-index: -1;
-    transition: transform 1s ease;
-  }
 
 .secondText button {
     background-color: transparent;
@@ -484,6 +416,39 @@ video {
     color: #3e2a75;
 }
 
+.janGrnd .flip-card-back a {
+    background-color: transparent;
+    color: #fff; /* Match the card's color */
+    border: 2px solid #fff;
+}
+
+.janGrnd .flip-card-back a:hover {
+    background-color: white;
+    color: #3e2a75; /* Make text white on hover */
+}
+
+.mechBuild .flip-card-back a {
+    background-color: transparent;
+    color: #fff; /* Match the card's color */
+    border: 2px solid #fff;
+}
+
+.mechBuild .flip-card-back a:hover {
+    background-color: white;
+    color: darkgreen; /* Make text white on hover */
+}
+
+.repRenCon .flip-card-back a {
+    background-color: transparent;
+    color: #fff; /* Match the card's color */
+    border: 2px solid #fff;
+}
+
+.repRenCon .flip-card-back a:hover {
+    background-color: white;
+    color: #ff7c1a; /* Make text white on hover */
+}
+
 .hoo-wii-r {
     position: relative;
     width: 100%;
@@ -666,7 +631,9 @@ html, body {
   }
 
 .head1, .head2 {
+    position: absolute;
     text-align: center;
+    width: 100%;
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -674,6 +641,7 @@ html, body {
     margin: 0 auto 0px;
     padding: 0 0 0% 0;
     padding-top: 0%;
+    z-index: -1;
 }
 
 .head1 h3, .head2 h3 {
@@ -692,8 +660,8 @@ html, body {
 .logos1, .logos2 {
     white-space: nowrap;
     padding: 60px 0;
-    padding-top: 0;
-    padding-bottom: 1%;
+    padding-top: 8%;
+    padding-bottom: 0%;
     position: relative;
 }
 
@@ -742,9 +710,11 @@ html, body {
 }
 
 .logos-slide a:hover .logo-description {
+    position: absolute;
     display: block; 
     opacity: 1; 
     visibility: visible;
+    z-index: 1;
 }
 
 .logoCarousel {
