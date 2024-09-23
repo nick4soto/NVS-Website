@@ -89,182 +89,104 @@ body {
 
 /* --------------------------------------Logos---------------------------------------------- */
 
+
 .serviceSection {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted min-width for smaller boxes */
+    gap: 20px;
     padding: 50px;
     background: transparent;
     justify-content: center;
-    align-items: stretch; 
-    grid-auto-rows: minmax(100px, auto); 
+    align-items: stretch;
+    perspective: 1000px;
 }
 
 .serviceCard {
-    background: #3e2a7549;
-    border-radius: 8px;
-    border: .2cap solid #3e2a75; 
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #3e2a75, #7a53a3);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between; 
-    height: auto; 
-    margin-bottom: 20px; 
-}
-
-.serviceIconHVAC {
-    width: 140px;
+    align-items: center; /* Centering content horizontally */
+    justify-content: space-between;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 0.8s ease forwards;
+    min-height: 250px; /* Slightly reduced height to fit all five cards */
+    transform-style: preserve-3d;
+    text-align: center; /* Centering text */
 }
 
 .serviceIcon {
-    width: 100px;
-    margin-bottom: 0.1em;
+    width: 70px; /* Reduced icon size for smaller boxes */
+    margin-bottom: 0.5em;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 5px #ffdf6b);
+}
+
+.serviceCard:hover .serviceIcon {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 10px #ffdf6b);
 }
 
 .serviceCard h3 {
-    color: #3e2a75;
-    font-size: 3rem;
-    margin-bottom: 1%;
+    color: #ffdf6b;
+    font-size: 1.6rem; /* Slightly reduced font size */
+    margin-bottom: 10px;
     font-weight: bold;
+    z-index: 1;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    width: 100%; /* Ensuring full width for proper centering */
+    text-align: center; /* Centering the h3 text */
+}
+
+.serviceCard:hover h3 {
+    color: #ffeeba;
 }
 
 .serviceCard p {
-    font-size: 1.3rem;
-    color: black;
+    font-size: 0.9rem; /* Slightly reduced font size */
+    color: #f1f1f1;
     text-align: center;
     margin-bottom: 20px;
-    flex-grow: 1; 
+    flex-grow: 1;
+    z-index: 1;
+    padding: 0 10px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .serviceSection {
-        grid-template-columns: 1fr; 
-        padding: 30px;
-        grid-auto-rows: minmax(100px, auto);
+.serviceCard:hover p {
+    opacity: 1;
+    transform: translateZ(30px);
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
     }
-
-    .serviceCard {
-        padding: 15px;
-        margin-bottom: 20px; 
-    }
-
-    .serviceIcon {
-        width: 80px;
-    }
-}
-
-.sectionContainer2 {
-    display: flex;
-    justify-content: center; 
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 5%;
-}
-
-.bottomLeft{
-    flex: 1; 
-    padding: 20px;
-    box-sizing: border-box; 
-}
-
-.bottomLeft img{
-    width: 35%; 
-    height: auto;
-    margin: 0 auto;
-    -ms-flex-align: center;
-    margin-left: 10%;
-}
-
-.bottomLeft p{
-    margin: auto; 
-    width: 100%; 
-    max-width: 80%; 
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: black;
-    text-align: justify;
-}
-
-.ourTeam {
-    max-width: 1200px;
-    background-color: #3e2a75;
-    text-align: center;
-    border: #1e123f 3px solid;
-    border-radius: 10px;
-    box-sizing: border-box; /* Ensures padding does not affect the width */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 452px;
-}
-
-.ourTeam h3 {
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 20px; /* Controlled margin for spacing */
-}
-
-.ourTeam p {
-    color: white;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    max-width: 80%;  
-}
-
-.ourTeam button {
-    background-color: white;
-    color: #3e2a75;
-    border-radius: 20px;
-    border: 2px solid #3e2a75;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.ourTeam button:hover {
-    background-color: #3e2a75;
-    color: white;
-    border-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .ourTeam {
-        padding: 20px;
-    }
-
-    .ourTeam h3 {
-        font-size: 2rem;
-    }
-
-    .ourTeam p {
-        font-size: 1.2rem;
-        max-width: 90%;
-    }
-
-    .ourTeam button {
-        padding: 10px 20px;
-        font-size: 14px;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-
-@media (max-width: 768px) {
-    .sectionContainer2 {
-        flex-direction: column;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
     }
-
-    .bottomLeft, .ourTeam {
-        flex-basis: 100%; 
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
     }
 }
