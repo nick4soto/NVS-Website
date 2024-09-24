@@ -41,125 +41,148 @@ body {
 /* --------------------------------------Styles for the main content---------------------------------------------- */
 
 .topSection {
-    max-width: 70%;
-    height: auto;
+    max-width: 80%;
     margin: 40px auto;
-    padding: 20px;
+    padding: 30px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .topSectionContent {
-    width: 60%; 
-    padding-right: 20px;  
+    width: 55%;
+    padding-right: 20px;
     font-size: 1.2rem;
-    line-height: 1.8; 
-    color: black;
+    line-height: 1.8;
+    color: #333;
 }
 
 .topSectionImgs {
-    width: 27%; 
+    width: 40%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    position: relative;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation */
 }
 
 .topSectionImgs img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imgOne a {
-    text-decoration: none;
-    color: #ff7c1a; 
-    font-size: .95rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase; 
+.topSectionImgs img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.imgTwo button {
-    background-color: transparent;
-    color: #3e2a75; 
-    border-radius: 20px;
-    border: 2px solid #3e2a75; 
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease; 
-    letter-spacing: 1px;
-    text-transform: uppercase; 
-    margin-top: 5%; 
-}
-
-.imgTwo button:hover {
-    background-color: #3e2a75; 
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-
-
-
+/* Service Card Styles */
 .serviceCard {
     background: #3e2a7549;
-    border-radius: 8px;
-    border: .2cap solid #3e2a75; 
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
-    height: auto; 
-    margin-bottom: 20px; 
+    justify-content: space-between;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly off-screen */
 }
 
-.serviceIconEnhancClean {
-    width: 80px;
+.serviceCard.animate {
+    opacity: 1;
+    transform: translateY(0); /* Slide in */
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .serviceIcon {
-    width: 100px;
-    margin-bottom: 0.1em;
+    width: 80px;
+    margin-bottom: 0.5em;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 5px #ffdf6b);
+}
+
+.serviceCard:hover .serviceIcon {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 10px #ffdf6b);
 }
 
 .serviceCard h3 {
-    color: #3e2a75;
-    font-size: 3rem;
-    margin-bottom: 1%;
+    color: #ffdf6b;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.serviceCard:hover h3 {
+    color: #ffeeba;
 }
 
 .serviceCard p {
-    font-size: 1.3rem;
-    color: black;
+    font-size: 1rem;
+    color: #f1f1f1;
     text-align: center;
     margin-bottom: 20px;
-    flex-grow: 1; 
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
+.serviceCard:hover p {
+    opacity: 1;
+}
+
+/* Logo Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
-    .serviceSection {
-        grid-template-columns: 1fr; 
-        padding: 30px;
-        grid-auto-rows: minmax(100px, auto);
+    .topSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topSectionContent, .topSectionImgs {
+        width: 100%;
     }
 
     .serviceCard {
         padding: 15px;
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
     }
 
     .serviceIcon {
-        width: 80px;
+        width: 60px;
     }
 }
-
-
-
-
 
 .topSection button {
     background-color: transparent;
