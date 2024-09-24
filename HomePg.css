@@ -176,113 +176,110 @@ video {
     padding: 20px 40px;
     text-align: center;
     margin-top: 85vh;
-    font-family: Open Sans, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
 
 .secondText h2 {
     color: #3e2a75; 
     font-size: 2.5em; 
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .tracking-in-expand {
-    opacity: 0; /* Ensure text is visible initially */
-    letter-spacing: normal; /* Ensure normal letter spacing initially */
-    transition: none; /* Remove any unwanted transition effects */
+    opacity: 0;
+    letter-spacing: normal;
+    transition: none;
 }
 
 .tracking-in-expand.animate {
-    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @-webkit-keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-    letter-spacing: normal;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: normal;
+    }
 }
+
 @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-    letter-spacing: normal;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: normal;
+    }
 }
 
 .secondText p {
-    color: black; 
-    font-size: 1.5em; 
-    position: relative; /* Ensure ::before is positioned relative to the h2 */
-    overflow: hidden; 
+    color: #333;
+    font-size: 1.5em;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
 .secondText button {
     background-color: transparent;
     color: #3e2a75;
-    border-radius: 20px; 
-    border: 2px solid #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75;
     margin-top: 3%;
-    padding: 15px 30px; 
-    font-size: 16px; 
+    padding: 15px 30px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    right: 20px; 
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .secondText button:hover, .secondText button:focus {
-    background-color: #3e2a75; 
-    color: #fff; 
-    border-color: #3e2a75; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #3e2a75;
+    color: #fff;
+    border-color: #3e2a75;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.secondText button {
-    animation: wiggle 4s linear infinite;
-  }
-  
-  /* Keyframes */
-  @keyframes wiggle {
+@keyframes wiggle {
     0%, 7% {
-      transform: rotateZ(0);
+        transform: rotateZ(0);
     }
     15% {
-      transform: rotateZ(-15deg);
+        transform: rotateZ(-15deg);
     }
     20% {
-      transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
     }
     25% {
-      transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
     }
     30% {
-      transform: rotateZ(6deg);
+        transform: rotateZ(6deg);
     }
     35% {
-      transform: rotateZ(-4deg);
+        transform: rotateZ(-4deg);
     }
     40%, 100% {
-      transform: rotateZ(0);
+        transform: rotateZ(0);
     }
-  }
-  
+}
+
 @media (min-width: 2560px) {
     .secondText {
         margin-top: 60%;
