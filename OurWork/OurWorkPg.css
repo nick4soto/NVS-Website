@@ -56,20 +56,26 @@ body {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  font-family: Open Sans, sans-serif;
 }
 
-.head1, .head2, .head3{
-  font-family: Open Sans, sans-serif;
-  position: relative;
+.head1, .head2 {
+  position: absolute;
   text-align: center;
+  width: 100%;
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: black;
-  margin: 0 auto 20px;
-  padding: 0 0 2% 0;
-  padding-top: 4%;
+  margin: 0 auto 0px;
+  padding: 0 0 0% 0;
+  padding-top: 0%;
   z-index: -1;
+}
+
+.head1 h3, .head2 h3 {
+  margin-bottom: 2%;
+  margin-top: 1%;
 }
 
 .head1 {
@@ -83,8 +89,8 @@ html, body {
 .logos1, .logos2 {
   white-space: nowrap;
   padding: 60px 0;
-  padding-top: 0;
-  padding-bottom: 1%;
+  padding-top: 8%;
+  padding-bottom: 0%;
   position: relative;
 }
 
@@ -103,7 +109,7 @@ html, body {
 }
 
 .logos-slide img {
-  height: 100px;
+  height: 115px;
   margin: 0 50px;
   padding: 12.5px 0;
   transition: transform 0.3s;
@@ -133,19 +139,33 @@ html, body {
 }
 
 .logos-slide a:hover .logo-description {
+  position: absolute;
   display: block; 
   opacity: 1; 
   visibility: visible;
+  z-index: 1;
 }
 
 .logoCarousel {
   position: relative;
 }
 
+
 /* Project gallery styles */
 .projectGallery {
   position: relative;
   padding-bottom: 2rem;
+}
+
+.head3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: black;
+  margin: 0 auto 0px;
+  padding: 0 0 0% 0;
+  padding-top: 0%;
 }
 
 .galleryWindow {
