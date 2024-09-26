@@ -28,10 +28,11 @@ body {
 }
 
 .titleCard h2 {
+    text-align: center;
     font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: white; 
+    color: #f9f9f9;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 500;  
     margin: 0 auto 20px;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -85,8 +86,9 @@ body {
 }
 
 .rComp .textContent h2 {
+    font-size: 2.5rem;
     color: #3e2a75;
-    font-size: 2.5em;
+    font-weight: 400;
     margin-bottom: 15px;
     text-align: center; /* Center the heading for emphasis */
     text-transform: uppercase; /* Make the heading stand out */
@@ -179,24 +181,32 @@ body {
 }
 
 .contentWrapper {
-    background-color: #3e2a7549; 
-    border: #3e2a75 3px solid; 
-    border-radius: 10px; 
-    padding: 20px;
-    width: 90%; 
+    background: linear-gradient(145deg, #3e2a75, #7a53a3); /* Gradient background */
+    color: white; /* White text for better contrast */
+    border: 3px solid #3e2a75; /* Solid border matching the darker tone of the gradient */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding for text spacing */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
 }
 
-.certifExcell h2 {
-    color: black; 
-    font-size: 2em; 
-    margin-bottom: 15px; 
+.contentWrapper h2 {
+    color: #ffdf6b; /* Bright color for headers for emphasis */
+    font-size: 2em; /* Larger font size for headers */
+    text-align: center; /* Centering the text */
+    margin-bottom: 15px; /* Space below the header */
+    text-transform: uppercase; /* Uppercase text for a formal look */
+    letter-spacing: 1.5px; /* Spacing out letters for readability */
 }
 
-.certifExcell p {
-    font-size: 1.2rem; 
-    line-height: 1.5; 
-    color: #333333; 
-    text-align: justify; 
+.contentWrapper p {
+    font-size: 1rem; /* Readable font size */
+    line-height: 1.6; /* Adequate line height for readability */
+    text-align: justify; /* Justified text for a clean look */
+    text-indent: 20px; /* Indent for the first line of each paragraph */
+    margin-top: 15px; /* Margin above the paragraph */
+    opacity: 0.9; /* Slightly reduced opacity for a softer appearance */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
 }
 
 @media (max-width: 768px) {
@@ -221,9 +231,9 @@ html, body {
     text-align: center;
     width: 100%;
     font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: black;
+    color: #3e2a75;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 400;
     margin: 0 auto 0px;
     padding: 0 0 0% 0;
     padding-top: 0%;

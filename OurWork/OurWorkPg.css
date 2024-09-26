@@ -26,11 +26,11 @@ body {
 }
 
 .titleCard h2 {
-  font-family: Open Sans, sans-serif;
+  text-align: center;
   font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: white; 
+  color: #f9f9f9;
+  text-transform: uppercase; /* Styling the header to stand out */
+  font-weight: 500; 
   margin: 0 auto 20px;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -127,12 +127,13 @@ html, body {
 
 .head1, .head2 {
   position: absolute;
-  text-align: center;
   width: 100%;
+  text-align: center;
   font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: black;
+  color: #3e2a75;
+  margin-bottom: 30px; /* Spacing between the header and the text boxes */
+  text-transform: uppercase; /* Styling the header to stand out */
+  font-weight: 400;
   margin: 0 auto 0px;
   padding: 0 0 0% 0;
   padding-top: 0%;
@@ -227,9 +228,9 @@ html, body {
   position: relative;
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: black;
+  color: #3e2a75;
+  text-transform: uppercase; /* Styling the header to stand out */
+  font-weight: 400;
   margin: 0 auto 0px;
   padding: 0 0 0% 0;
   padding-top: 0%;
