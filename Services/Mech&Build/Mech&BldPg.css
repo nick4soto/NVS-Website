@@ -38,9 +38,9 @@ body {
 
 .titleCard h2 {
     font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: white; 
+    color: #f9f9f9;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 500; 
     margin: 0 auto 20px;
     padding-bottom: 2%;
     text-align: center;

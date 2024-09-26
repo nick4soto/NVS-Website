@@ -181,9 +181,11 @@ video {
 
 
 .secondText h2 {
-    color: #3e2a75; 
-    font-size: 2.5em; 
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3e2a75;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 400;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -313,6 +315,11 @@ video {
 
 .OurFacility h3{
     margin-bottom: 0%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3e2a75;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 400;
 }
 
 .janGrnd, .mechBuild, .repRenCon, .hoo-wii-r {
@@ -644,6 +651,11 @@ html, body {
 .head1 h3, .head2 h3 {
     margin-bottom: 2%;
     margin-top: 1%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3e2a75;
+     text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 400;
 }
 
 .head1 {
