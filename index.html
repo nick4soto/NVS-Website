@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVS Corporate Services</title>
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="HomePg.css">
+    <link rel="stylesheet" type="text/css" href="/HeaderFooter/footer.css">
+    <link rel="stylesheet" type="text/css" href="/HeaderFooter/header.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- You need this if you want to use the Icons -->
+
+<!--The website is hosted on WordPress
+
+nvscsi.com/wp-admin
+
+username: clerk
+password: a6#u7r!y#//-->
+
+</head>
+
+<script>
+    function scrollDown() {
+        const nextSection = document.getElementById('nextSection');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the next section
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const animatedElements = document.querySelectorAll(".tracking-in-expand"); // Select all elements with the class
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        animatedElements.forEach(element => {
+            if (isInViewport(element)) {
+                element.classList.add("animate");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Trigger scroll event once in case the element is already in view on page load
+    handleScroll();
+});
+    </script>
+
+<body>
+
+    <div id="video-container">
+        <video autoplay muted loop>
+            <source src="./Images/59.mp4" type="video/mp4">
+        </video>
+        <div class="text-overlay">
+            <section class="frontText">
+                <h3>COMPREHENSIVE FACILITY MAINTENANCE SERVICES</h3>
+                <h4>We Excel At Our Job So You Can Excel At Yours</h4>
+                <button class="downArrow" onclick="scrollDown()">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </section>
+        </div>
+    </div>
+
+    <!-- Header Start -->
+    <header class="header">
+        <a href="/index.html"><div class="nvsLogo"><img src="../Images/nvs_logo.svg" alt="NVS Logo"></div></a>
+        <nav class="navBar">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <a class="dropbtn">Services <span class="plus-icon">+</span></a>
+                <div class="dropdown-content">
+                    <a href="../Services/Janitor&Ground/Jan&GrndPg.html" class="jan">Janitorial & Groundskeeping</a>
+                    <a href="../Services/Mech&Build/Mech&BldPg.html" class="mec">Mechanical & Building Maintenance</a>
+                    <a href="../Services/RepRen&Con/RepRen&ConPg.html" class="rep">Repairs, Renovations & Construction</a>
+                    <a href="../Services/OtherServices/OtherServPg.html" class="oth">Other Services</a>
+                </div>
+            </div>
+            <a href="../AboutUs/AboutUsPg.html">About Us</a>
+            <a href="../OurWork/OurWorkPg.html">Our Work</a>
+            <a href="../Contact/ContactPg.html">Contact Us</a>
+            <div class="dropdown">
+                <a class="dropbtn">Apply Now <span class="plus-icon">+</span></a>
+                <div class="dropdown-content">
+                    <a href="./ApplyNow/ApplyNowPg.html" class="jan">Application for Employment</a>
+                    <a href="./ApplyNow/BackgrndCheck/BackgrndCheckPg.html" class="oth">Background Check Authorization</a>
+                    <a href="./ApplyNow/AnmEmpFbSur/AEFS.html" class="oth">Anonymous Employee Feedback Survey</a>
+                    <a href="./ApplyNow/AnmEmpFbSurSpanish/AEFSSpan.html" class="oth">Encuesta anónima de comentarios de los empleados de NVS</a>
+                </div>
+            </div>
+            <a href="../Contact/ContactPg.html" class="requestQuoteMobile">Request a Quote</a>
+        </nav>
+        <a href="../Contact/ContactPg.html"><button class="requestQuote">Request a Quote</button></a>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <script src="../methods/burger.js"></script>
+        </div>
+    </header>
+    <!-- Header End -->
+
+<main>
+
+<section id="nextSection" class="secondText">
+    <h2 class="tracking-in-expand">Our Strategy</h2>
+    <p>At NVS Corporate Services, Inc., we pioneer facility management solutions for both government and private sectors, crafting tailor-made strategies to meet diverse needs. Our dedicated team, boasting over two decades of industry leadership, is committed to delivering exceptional service nationwide. By integrating advanced technology with our vast expertise, we ensure operational excellence and sustainable practices that advance your mission. We're not just service providers—we're your strategic partners, dedicated to ensuring your facilities reflect the professionalism of your operations.</p>
+    <h2 class="tracking-in-expand">Award-Winning Excellence</h2>
+    <p>NVS Corporate Services, Inc. stands out as a beacon of quality, having garnered prestigious accolades such as the 2024 SBA Small Businessperson of the Year and ISSA CIMS certifications. Our reputation as an industry leader is solidified by a history of exceeding standards and client expectations, reflecting our commitment to excellence in all facets of facility management.</p>
+    <a href="../AboutUs/AboutUsPg.html"><button>Learn More</button></a>
+</section>
+
+<div class="OurFacility"><h3 class="tracking-in-expand">Our Facility Services Include:</h3></div>
+<section class="thirdText">
+    <div class="janGrnd">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./Images/janitorialpic.png" alt="Guy mowing lawn" class="janImg">
+            </div>
+            <div class="flip-card-back">
+                <h2>Janitorial & Groundskeeping</h2>
+                <p>In today’s climate, a clean, disinfected, and well-maintained facility is essential to operations. From sparkling floors and sanitized surfaces to well-manicured grounds, NVS provides effective and sustainable custodial and groundskeeping services.</p>
+                <a href="../Services/Janitor&Ground/Jan&GrndPg.html">More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mechBuild">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./Images/constructpic.png" alt="Hvac guy" class="hvacGuyImg">
+            </div>
+            <div class="flip-card-back">
+                <h2>Mechanical & Building Maintenance</h2>
+                <p>Protect your facility’s assets with planned preventative maintenance. We maintain critical systems such as HVAC, boilers, lighting, and emergency response systems.</p>
+                <a href="../Services/Mech&Build/Mech&BldPg.html">More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="repRenCon">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./Images/repairpic.png" alt="Some dry wall" class="dryWallImg">
+            </div>
+            <div class="flip-card-back">
+                <h2>Repairs, Renovations & Construction</h2>
+                <p>From conceptualization through project completion, NVS utilizes innovative engineering and proven project management to build cost-effectiveness into each project.</p>
+                <a href="../Services/RepRen&Con/RepRen&ConPg.html">More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hoo-wii-r">
+        <div class="capButton">
+            <a href="/Images/NVS CAPABILITY STATEMENT.pdf">Capability Statement</a>
+        </div>
+        <iframe src="https://www.youtube-nocookie.com/embed/MHlHdesxoeo" allowfullscreen></iframe>
+    </div>
+</section>
+
+    <section class="logoCarousel">
+        <div class="head1"><h3 class="tracking-in-expand">Certifications & Associations:</h3></div>
+        <div class="logos1">
+            <div class="logos-slide">
+                <a href="#">
+                    <img src="../Images/Logos/CIMS-Certified-1536x852.png" alt="CIMS Certified">
+                    <div class="logo-description">CIMS Certified - High standards for cleaning and management</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/CIMS-GB-Honors-RGB-UP.png" alt="CIM GB Honors">
+                    <div class="logo-description">CIMS GB Honors - Green Building Standards</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/gsa_contract_holder.png" alt="gsa contract">
+                    <div class="logo-description">GSA Contract Holder - Government Services Administration</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/bscai_member.png" alt="bscai Member">
+                    <div class="logo-description">BSCAI Member - Building Service Contractors Association International</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/sba-small-disadvantaged-business-logo-300x253-1.png" alt="sba Logo">
+                    <div class="logo-description">SBA Small Disadvantaged Business - Support for small businesses</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/Hubzone.png" alt="Hub zone Logo">
+                    <div class="logo-description">HubZone Certified - Promoting job growth in historically underutilized areas</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="head2"><h3 class="tracking-in-expand">Serving Clients Such as:</h3></div>
+        <div class="logos2">
+            <div class="logos-slide">
+                <a href="#">
+                    <img src="../Images/Logos/GSA.png" alt="GSA Web">
+                    <div class="logo-description">General Services Administration - Federal procurement and property management</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/DOJ.png" alt="DOJ Web">
+                    <div class="logo-description">Department of Justice - Federal executive department responsible for law enforcement</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/va.png" alt="VA seal">
+                    <div class="logo-description">Veterans Affairs - Government-run military veteran benefit system</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/US_DHS.png" alt="US DHS">
+                    <div class="logo-description">Department of Homeland Security - Responsible for public security, roughly comparable to the interior or home ministries of other countries</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/us-army-corps-of-engineers.png" alt="US Army Web">
+                    <div class="logo-description">US Army Corps of Engineers - Provides public engineering services in peace and war to strengthen national security</div>
+                </a>
+                <a href="#">
+                    <img src="../Images/Logos/Navy.png" alt="Navy Web">
+                    <div class="logo-description">United States Navy - Naval warfare service branch of the United States Armed Forces</div>
+                </a>
+            </div>
+        </div>
+
+        <script src="../methods/carousel.js"></script>
+    </section>
+
+</main>
+
+<footer class="footer">
+    
+    <div class="footerLogo"><a href="/index.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
+
+    <div class="footerContact">
+        <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>
+        <a href="https://www.google.com/maps/place/800+Wild+Rose+Ln,+Brownsville,+TX+78520/@25.9384021,-97.5112075,16.75z/data=!4m6!3m5!1s0x866f941dd2e0afe3:0x94802186facf9221!8m2!3d25.9385078!4d-97.5090305!16s%2Fg%2F11cphdf24g?entry=ttu"><p>800 Wildrose Ln., Brownsville, TX 78520</p></a>
+        <a href="tel:+18445534017"><p>Phone: 1-844-553-4017</p></a>
+        <a href= "mailto: info@nvscsi.com"><p>Email: info@nvscsi.com</p></a>
+    </div>
+
+    <div class="rightSec">
+    <nav class="footerNav">
+        <a href="/index.html">Home</a>
+        <a href="../Services/Janitor&Ground/Jan&GrndPg.html">Services</a>
+        <a href="../AboutUs/AboutUsPg.html">About Us</a>
+        <a href="../OurWork/OurWorkPg.html">Our Work</a>
+        <a href="../Contact/ContactPg.html">Contact Us</a>
+        <a href="../ApplyNow/ApplyNowPg.html">Apply Now</a>
+    </nav>
+
+    <div class="footerSocial">
+        <a href="https://www.facebook.com/nvscsi1" target="_blank">
+            <i class="fab fa-facebook-f"></i>  
+        </a>
+        <a href="https://www.linkedin.com/company/nvs-corporate-services-inc-/mycompany/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>  
+        </a>
+    </div>
+
+    <div class="copyrightSec">
+    <p>© Copyright 2024, <a href="../Design&DevTeam/Des&DevTeam.html">Website Design & Development Team</a></p>
+    
+    </div>
+</div>
+
+</footer>
+
+</body>
+</html>

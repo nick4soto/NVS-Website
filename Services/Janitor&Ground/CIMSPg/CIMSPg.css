@@ -1,0 +1,307 @@
+html {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../../Images/bg_squares.svg);
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+}
+
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.titleCard {
+    max-width: 100%;
+    background-image: url(../../../Images/Other-Services-Header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  
+  .titleCard h2 {
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 500; 
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+  }
+
+/* --------------------------------------Styles for the main content---------------------------------------------- */
+
+.topSection {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.topSectionContent {
+    width: 55%;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.topSectionImgs {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation */
+}
+
+.topSectionImgs img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topSectionImgs img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Service Card Styles */
+.serviceCard {
+    background: #3e2a7549;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly off-screen */
+}
+
+.serviceCard.animate {
+    opacity: 1;
+    transform: translateY(0); /* Slide in */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.serviceIcon {
+    width: 80px;
+    margin-bottom: 0.5em;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 5px #ffdf6b);
+}
+
+.serviceCard:hover .serviceIcon {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 10px #ffdf6b);
+}
+
+.serviceCard h3 {
+    color: #ffdf6b;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.serviceCard:hover h3 {
+    color: #ffeeba;
+}
+
+.serviceCard p {
+    font-size: 1rem;
+    color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.serviceCard:hover p {
+    opacity: 1;
+}
+
+/* Logo Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .topSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .topSectionContent, .topSectionImgs {
+        width: 100%;
+    }
+
+    .serviceCard {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .serviceIcon {
+        width: 60px;
+    }
+}
+
+.topSection button {
+    background-color: transparent;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-top: 5%; 
+}
+
+.topSection button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.bottomLeft{
+    flex: 1; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.bottomLeft img{
+    width: 35%; 
+    height: auto;
+    margin: 0 auto;
+    -ms-flex-align: center;
+    margin-left: 10%;
+}
+
+.bottomLeft p{
+    margin: auto; 
+    width: 100%; 
+    max-width: 80%; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: black;
+    text-align: justify;
+}
+
+.ourTeam{
+    flex: 1; 
+    margin-top: 5%;
+    padding: 20px;
+    box-sizing: border-box; 
+    background-color: #3e2a75;
+    text-align: center;
+    height: 20em;
+    border: #1e123f 3px solid;
+    border-radius: 10px;
+    height: 10%;
+}
+
+.ourTeam h3{
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ourTeam p{
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.ourTeam button {
+    background-color: white;
+    color: #3e2a75; 
+    border-radius: 20px;
+    border: 2px solid #3e2a75; 
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+}
+
+.ourTeam button:hover {
+    background-color: #3e2a75; 
+    color: white;
+    border-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+@media (max-width: 768px) {
+    .sectionContainer2 {
+        flex-direction: column;
+    }
+
+    .bottomLeft, .ourTeam {
+        flex-basis: 100%; 
+    }
+}
+
+.boxes{
+    margin: 5%;
+    display: flexbox;
+
+}
+.boxes h2{
+    color: #3e2a75;
+}
+
+.boxes p, .boxes li{
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 80%;
+}
+
+.topSectionImgs{
+    float: right;
+}

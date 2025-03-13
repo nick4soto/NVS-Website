@@ -1,0 +1,292 @@
+html {
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Images/bg_squares.svg);
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+}
+
+/* --------------------------------------Styles for the Title Card---------------------------------------------- */
+
+.titleCard {
+    max-width: 100%;
+    background-image: url(../Images/lawn_car_header-scaled.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.titleCard h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    text-transform: uppercase; /* Styling the header to stand out */
+    font-weight: 500;  
+    margin: 0 auto 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+/* --------------------------------------Styles for the main content---------------------------------------------- */
+
+
+.application-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #e1e1e1;
+    min-height: 300px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.progress {
+    height: 100%;
+    background-color: #3e2a75;
+    border-radius: 10px;
+    width: 20%; 
+    position: relative;
+}
+
+.progress-percentage {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    color: white; 
+    font-size: 0.8em;
+    line-height: 20px; 
+    font-weight: bold;
+    pointer-events: none; 
+    transition: transform 0.3s ease;
+    display: block;
+    width: 100%;  
+    text-align: end; 
+    margin-left: 45%;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block; 
+}
+
+h2 {
+    color: #3e2a75;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 5px 0;
+}
+
+.form-group {
+    margin: 5px 0;
+}
+
+.form-group select.full-width {
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.question {
+    margin-bottom: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 97%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.radio-group input[type="radio"] {
+    vertical-align: middle;
+    transform: translateY(-20%);
+}
+
+.checkbox-group input[type="checkbox"] {
+    vertical-align: middle;
+    transform: translateY(-10%);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #2e2a75;
+    outline: none;
+}
+
+button.next-btn,
+button.prev-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #3e2a75;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button.next-btn:hover,
+button.prev-btn:hover {
+    background-color: #29235c;
+}
+
+button.prev-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+button.prev-btn:hover {
+    background-color: #bbb;
+}
+
+.error-message{ 
+    margin-top: 10px; 
+}
+
+.field-container {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.input-row {
+    display: block;
+    justify-content: start;
+    gap: 10px;
+}
+
+.input-group input {
+    flex-grow: 1; 
+    display: flex;
+}
+
+.addButton, .removeButton {
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    background-color: #3e2a75;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.removeButton {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    background-color: #ff7c1a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+
+#namesContainer, #residentialAddressContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-pad {
+    text-align: left; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+}
+
+.signature-pad canvas {
+    border: 1px solid #000; 
+    display: block; 
+    margin: 0 auto 10px; 
+    cursor: crosshair;
+    margin-right: 75%;
+}
+
+#clearSignature {
+    display: inline-block; 
+    padding: 8px 16px; 
+    background-color: #3e2a75;
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+#clearSignature:hover {
+    background-color: #291c4f; 
+}
+
+@media (max-width: 768px) {
+    .application-form {
+        padding: 20px;
+        margin: 20px;
+    }
+}
