@@ -50,7 +50,7 @@ video {
     font-family: 'Fira Sans', sans-serif;
     padding: 50px 20px;
     margin-top: 40vh;
-    color: white; 
+    color: red; 
     opacity: 0;
     transform: translateX(-100px); 
     animation: slideInRight 1.5s ease forwards; 
