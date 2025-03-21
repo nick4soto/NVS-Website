@@ -23,8 +23,20 @@ body {
     height: calc(100vh - 50px); 
     width: 100%;
     z-index: 0; 
+    overflow: hidden;
 }
 
+#video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.7), rgba(0, 0, 255, 0.4), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
 
 video {
     position: absolute;
@@ -288,6 +300,199 @@ video {
     }
 }
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 5%;
+    margin-top: 10px;
+    background: #f8fafc;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.service-item img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    filter: invert(100%);
+
+}
+
+.service-text h4 {
+    color: #1a365d;
+    font-size: 0.95rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.service-text p {
+    color: #4a5568;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-item {
+        flex-direction: row;
+        text-align: left;
+        padding: 1rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    .service-item img {
+        margin-bottom: 0;
+        margin-right: 1rem;
+        flex-shrink: 0;
+    }
+}
+
+/* Grid Style Certifications */
+.certifications-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.certs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+.cert-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(62, 42, 117, 0.08);
+    transition: transform 0.3s ease;
+    border-left: 6px solid #3e2a75;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.issuer-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.cert-meta h3 {
+    color: #3e2a75;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.validity {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.cert-details {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    flex-grow: 1;
+}
+
+.cert-details li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cert-details li:last-child {
+    border-bottom: none;
+}
+
+.cert-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    background: #3e2a75;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    width: fit-content;
+}
+
+.cert-button:hover {
+    background: #ff7c1a;
+    transform: translateY(-2px);
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .certs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .certs-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .cert-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cert-button {
+        width: 100%;
+    }
+}
 
 /* --------------------------------------Styles for the third section---------------------------------------------- */
 .thirdText {
