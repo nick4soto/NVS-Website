@@ -27,33 +27,6 @@ password: a6#u7r!y#//-->
             nextSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the next section
         }
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-    const animatedElements = document.querySelectorAll(".tracking-in-expand"); // Select all elements with the class
-
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function handleScroll() {
-        animatedElements.forEach(element => {
-            if (isInViewport(element)) {
-                element.classList.add("animate");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Trigger scroll event once in case the element is already in view on page load
-    handleScroll();
-});
     </script>
 
 <body>
@@ -112,8 +85,6 @@ password: a6#u7r!y#//-->
 <main>
 
 <section id="nextSection" class="secondText">
-    <h2 class="tracking-in-expand">Our Strategy</h2>
-    <p>At NVS Corporate Services, Inc., we pioneer facility management solutions for both government and private sectors, crafting tailor-made strategies to meet diverse needs. Our dedicated team, boasting over two decades of industry leadership, is committed to delivering exceptional service nationwide. By integrating advanced technology with our vast expertise, we ensure operational excellence and sustainable practices that advance your mission. We're not just service providers—we're your strategic partners, dedicated to ensuring your facilities reflect the professionalism of your operations.</p>
     <div class="services-grid">
         <div class="service-item">
             <img src="/Images/SVGs/briefcase.svg" alt="Facility">
@@ -163,57 +134,55 @@ password: a6#u7r!y#//-->
             </div>
         </div>
     </div>
+
+    <h2 class="tracking-in-expand">Our Strategy</h2>
+    <p>At NVS Corporate Services, Inc., we pioneer facility management solutions for both government and private sectors, crafting tailor-made strategies to meet diverse needs. Our dedicated team, boasting over two decades of industry leadership, is committed to delivering exceptional service nationwide. By integrating advanced technology with our vast expertise, we ensure operational excellence and sustainable practices that advance your mission. We're not just service providers—we're your strategic partners, dedicated to ensuring your facilities reflect the professionalism of your operations.</p>
     <a href="../AboutUs/AboutUsPg.html"><button>Learn More</button></a>
 </section>
 
 <section class="certifications-section">
-    <h2 class="section-title">Accreditations Timeline</h2>
-    
-    <div class="timeline-container">
-        <div class="timeline-line"></div>
-        
-        <!-- HUBZone -->
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-date">2018-Present</div>
-                <img src="/Images/Logos/hubzone-logo.png" alt="HUBZone" class="timeline-logo">
-                <h3>HUBZone Certified</h3>
-                <p>Committed to economic development in historically underutilized business zones</p>
-                <a href="/path-to-certificates/HUBZone-certificate.pdf" class="cert-button">View Certification</a>
-            </div>
+    <h4 class="section-title">Accreditations Timeline</h4>
+  
+    <div class="accreditations-grid">
+  
+      <div class="accreditation-card">
+        <div class="accreditation-header">
+          <img src="/Images/Logos/Hubzone.png" alt="HUBZone" class="issuer-logo">
+          <div class="accreditation-meta">
+            <h3>HUBZone Certified</h3>
+            <span class="validity">2018–Present</span>
+          </div>
         </div>
-
-        <!-- SBA Awards -->
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-date">2019-2024</div>
-                <img src="/Images/Logos/sba-logo.png" alt="SBA" class="timeline-logo">
-                <h3>SBA Recognition</h3>
-                <div class="awards-group">
-                    <div class="award-item highlight">
-                        <div class="award-title">Small Business Person of the Year</div>
-                        <div class="award-year">2024</div>
-                    </div>
-                </div>
-                <a href="/path-to-certificates/SBA-PERSON-OF-THE-YEAR.pdf" class="cert-button">View Awards</a>
-            </div>
+        <p class="accreditation-description">Committed to economic development in historically underutilized business zones.</p>
+        <a href="/path-to-certificates/HUBZone-certificate.pdf" class="cert-button">View Certificate</a>
+      </div>
+  
+      <div class="accreditation-card">
+        <div class="accreditation-header">
+          <img src="/Images/Logos/sba-small-disadvantaged-business-logo-300x253-1.png" alt="SBA" class="issuer-logo">
+          <div class="accreditation-meta">
+            <h3>SBA Recognition</h3>
+            <span class="validity">2019–2024</span>
+          </div>
         </div>
-
-        <!-- CIMS Certification -->
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <div class="timeline-date">2020-2022</div>
-                <img src="/Images/Logos/cims-logo.png" alt="CIMS" class="timeline-logo">
-                <h3>CIMS Certified with Honors</h3>
-                <ul class="cert-details">
-                    <li>GB Advanced by GEBAC</li>
-                    <li>Green Building Certified</li>
-                </ul>
-                <a href="/path-to-certificates/CIMS-certificate.pdf" class="cert-button">View Certificate</a>
-            </div>
+        <p class="accreditation-description"><strong>2024:</strong> Small Business Person of the Year.</p>
+        <a href="/path-to-certificates/SBA-PERSON-OF-THE-YEAR.pdf" class="cert-button">View Award</a>
+      </div>
+  
+      <div class="accreditation-card">
+        <div class="accreditation-header">
+          <img src="/Images/Logos/CIMS-GB-Honors-RGB-UP.png" alt="CIMS" class="issuer-logo">
+          <div class="accreditation-meta">
+            <h3>CIMS Certified with Honors</h3>
+            <span class="validity">2020–2022</span>
+          </div>
         </div>
+        <p class="accreditation-description">Certified in Green Building and GB Advanced by GEBAC.</p>
+        <a href="/path-to-certificates/CIMS-certificate.pdf" class="cert-button">View Certificate</a>
+      </div>
+  
     </div>
-</section>
+  </section>
 
 <div class="OurFacility"><h3 class="tracking-in-expand">Our Facility Services Include:</h3></div>
 <section class="thirdText">
@@ -265,7 +234,7 @@ password: a6#u7r!y#//-->
 </section>
 
     <section class="logoCarousel">
-        <div class="head1"><h3 class="tracking-in-expand">Certifications & Associations:</h3></div>
+        <div class="head1"><h4 class="tracking-in-expand">Certifications & Associations:</h4></div>
         <div class="logos1">
             <div class="logos-slide">
                 <a href="#">
@@ -295,7 +264,7 @@ password: a6#u7r!y#//-->
             </div>
         </div>
         
-        <div class="head2"><h3 class="tracking-in-expand">Serving Clients Such as:</h3></div>
+        <div class="head2"><h4 class="tracking-in-expand">Serving Clients Such as:</h4></div>
         <div class="logos2">
             <div class="logos-slide">
                 <a href="#">

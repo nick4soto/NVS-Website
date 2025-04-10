@@ -188,6 +188,7 @@ video {
     padding: 20px 40px;
     text-align: center;
     margin-top: 85vh;
+    margin-bottom: 0%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -201,45 +202,7 @@ video {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-.tracking-in-expand {
-    opacity: 0;
-    letter-spacing: normal;
-    transition: none;
-}
-
-.tracking-in-expand.animate {
-    animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@-webkit-keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-        letter-spacing: normal;
-    }
-}
-
-@keyframes tracking-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-        letter-spacing: normal;
-    }
-}
-
-.secondText p {
+.secondText {
     color: #333;
     font-size: 1.5em;
     position: relative;
@@ -299,6 +262,114 @@ video {
         margin-top: 60%;
     }
 }
+
+.accreditations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1.5rem;
+  }
+  
+  .certifications-section h4 {
+    text-align: center;
+    font-size: 2rem;
+    color: #3e2a75;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-top: 0%;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .accreditation-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.75rem;
+    border-top: 4px solid #3e2a75;
+    box-shadow: 0 6px 20px rgba(62, 42, 117, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+  }
+  
+  .accreditation-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .accreditation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background: url('/Images/bg_squares.svg');
+    opacity: 0.04;
+    pointer-events: none;
+  }
+  
+  .accreditation-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .issuer-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  
+  .accreditation-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .accreditation-meta h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3e2a75;
+    margin: 0;
+  }
+  
+  .accreditation-meta .validity {
+    font-size: 0.75rem;
+    color: #888;
+  }
+  
+  .accreditation-description {
+    font-size: 1.1rem; /* smaller size */
+    color: #4a5568;
+    text-align: left; /* align text to the right */
+  }
+  
+  .cert-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    background-color: #3e2a75;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-button:hover {
+    background-color: #ff7c1a;
+    transform: translateY(-2px);
+  }
+
 
 .services-grid {
     display: grid;
@@ -401,7 +472,7 @@ video {
 
 /* Grid Style Certifications */
 .certifications-section {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -862,7 +933,7 @@ html, body {
   }
 
 .head1, .head2 {
-    position: absolute;
+    position: relative;
     text-align: center;
     width: 100%;
     font-size: 2.5rem;
@@ -875,11 +946,11 @@ html, body {
     z-index: -1;
 }
 
-.head1 h3, .head2 h3 {
+.head1 h4, .head2 h4 {
     margin-bottom: 2%;
     margin-top: 1%;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #3e2a75;
      text-transform: uppercase; /* Styling the header to stand out */
     font-weight: 400;
@@ -896,7 +967,7 @@ html, body {
 .logos1, .logos2 {
     white-space: nowrap;
     padding: 60px 0;
-    padding-top: 8%;
+    padding-top: 0%;
     padding-bottom: 0%;
     position: relative;
 }
