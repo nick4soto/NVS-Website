@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {});
     document.querySelector('.submit-button').addEventListener('click', function (event) {
         event.preventDefault();
 
-        const form = document.querySelector('form');
+        const form = document.getElementById('backgroundCheckForm');
         const formData = new FormData(form);
 
         const signatureData = canvas.toDataURL();
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {});
         .then(response => response.text())
         .then(result => {
             console.log('Server response:', result);
-            window.location.href = 'submission.html';
+            window.location.href = 'SubmissionPg.html';
         })
         .catch(error => {
             console.error('Error:', error);

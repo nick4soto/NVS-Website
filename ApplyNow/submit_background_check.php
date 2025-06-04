@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($data['signature'])) {
         $signatureDataURL = $data['signature'];
         $signatureData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $signatureDataURL));
-        $signatureFilePath = 'signatures/' . uniqid() . '.png';
+        $signatureFilePath = __DIR__ . '/signatures/' . uniqid() . '.png';
         file_put_contents($signatureFilePath, $signatureData);
         $fields['Signature'] = "<img src=\"cid:signature\" style=\"max-width:200px;\" />";
     }
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $message .= "</body></html>";
 
-    $logFile = 'application_log.txt';
+    $logFile = __DIR__ . '/application_log.txt';
 
     $mail = new PHPMailer(true);
     try {
