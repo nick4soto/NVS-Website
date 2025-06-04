@@ -27,40 +27,13 @@ password: a6#u7r!y#//-->
             nextSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the next section
         }
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-    const animatedElements = document.querySelectorAll(".tracking-in-expand"); // Select all elements with the class
-
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function handleScroll() {
-        animatedElements.forEach(element => {
-            if (isInViewport(element)) {
-                element.classList.add("animate");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Trigger scroll event once in case the element is already in view on page load
-    handleScroll();
-});
     </script>
 
 <body>
 
     <div id="video-container">
         <video autoplay muted loop>
-            <source src="./Images/59.mp4" type="video/mp4">
+            <source src="./Images/shutterstock_1101936483.mov" type="video/mp4">
         </video>
         <div class="text-overlay">
             <section class="frontText">
@@ -94,9 +67,7 @@ password: a6#u7r!y#//-->
                 <a class="dropbtn">Apply Now <span class="plus-icon">+</span></a>
                 <div class="dropdown-content">
                     <a href="./ApplyNow/ApplyNowPg.html" class="jan">Application for Employment</a>
-                    <a href="./ApplyNow/BackgrndCheck/BackgrndCheckPg.html" class="oth">Background Check Authorization</a>
-                    <a href="./ApplyNow/AnmEmpFbSur/AEFS.html" class="oth">Anonymous Employee Feedback Survey</a>
-                    <a href="./ApplyNow/AnmEmpFbSurSpanish/AEFSSpan.html" class="oth">Encuesta anónima de comentarios de los empleados de NVS</a>
+                    <a href="./ApplyNow/BackgrndCheckPg.html" class="oth">Background Check Authorization</a>
                 </div>
             </div>
             <a href="../Contact/ContactPg.html" class="requestQuoteMobile">Request a Quote</a>
@@ -114,12 +85,104 @@ password: a6#u7r!y#//-->
 <main>
 
 <section id="nextSection" class="secondText">
+    <div class="services-grid">
+        <div class="service-item">
+            <img src="/Images/SVGs/briefcase.svg" alt="Facility">
+            <div class="service-text">
+                <h4>Facility Management</h4>
+                <p>Operational excellence & efficiency solutions</p>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="/Images/SVGs/janitorial.svg" alt="Cleaning">
+            <div class="service-text">
+                <h4>Janitorial Services</h4>
+                <p>Eco-friendly cleaning & maintenance</p>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="/Images/SVGs/plumbing.svg" alt="Maintenance">
+            <div class="service-text">
+                <h4>Full Maintenance</h4>
+                <p>Proactive facility care & support</p>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="/Images/SVGs/construction.svg" alt="Construction">
+            <div class="service-text">
+                <h4>Construction</h4>
+                <p>Professional construction and renovation services</p>
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <img src="/Images/SVGs/life_saving_systems.svg" alt="Repairs">
+            <div class="service-text">
+                <h4>Repairs & Alterations</h4>
+                <p>Expert repair and modification solutions</p>
+            </div>
+        </div>
+    
+        <div class="service-item">
+            <img src="/Images/SVGs/landscaping.svg" alt="Landscaping">
+            <div class="service-text">
+                <h4>Landscaping</h4>
+                <p>Curb appeal enhancement & care</p>
+            </div>
+        </div>
+    </div>
+
     <h2 class="tracking-in-expand">Our Strategy</h2>
     <p>At NVS Corporate Services, Inc., we pioneer facility management solutions for both government and private sectors, crafting tailor-made strategies to meet diverse needs. Our dedicated team, boasting over two decades of industry leadership, is committed to delivering exceptional service nationwide. By integrating advanced technology with our vast expertise, we ensure operational excellence and sustainable practices that advance your mission. We're not just service providers—we're your strategic partners, dedicated to ensuring your facilities reflect the professionalism of your operations.</p>
-    <h2 class="tracking-in-expand">Award-Winning Excellence</h2>
-    <p>NVS Corporate Services, Inc. stands out as a beacon of quality, having garnered prestigious accolades such as the 2024 SBA Small Businessperson of the Year and ISSA CIMS certifications. Our reputation as an industry leader is solidified by a history of exceeding standards and client expectations, reflecting our commitment to excellence in all facets of facility management.</p>
     <a href="../AboutUs/AboutUsPg.html"><button>Learn More</button></a>
 </section>
+
+<section class="certifications-section">
+    <h4 class="section-title">Accreditations Timeline</h4>
+  
+    <div class="accreditations-grid">
+  
+      <div class="accreditation-card">
+        <div class="accreditation-header">
+          <img src="/Images/Logos/Hubzone.png" alt="HUBZone" class="issuer-logo">
+          <div class="accreditation-meta">
+            <h3>HUBZone Certified</h3>
+            <span class="validity">2018–Present</span>
+          </div>
+        </div>
+        <p class="accreditation-description">Committed to economic development in historically underutilized business zones.</p>
+        <a href="/path-to-certificates/HUBZone-certificate.pdf" class="cert-button">View Certificate</a>
+      </div>
+  
+      <div class="accreditation-card">
+        <div class="accreditation-header">
+          <img src="/Images/Logos/sba-small-disadvantaged-business-logo-300x253-1.png" alt="SBA" class="issuer-logo">
+          <div class="accreditation-meta">
+            <h3>SBA Recognition</h3>
+            <span class="validity">2019–2024</span>
+          </div>
+        </div>
+        <p class="accreditation-description"><strong>2024:</strong> Small Business Person of the Year.</p>
+        <a href="/Images/Awards/SBA PERSON OF THE YEAR.pdf" class="cert-button">View Award</a>
+      </div>
+  
+      <div class="accreditation-card">
+        <div class="accreditation-header">
+          <img src="/Images/Logos/CIMS-GB-Honors-RGB-UP.png" alt="CIMS" class="issuer-logo">
+          <div class="accreditation-meta">
+            <h3>CIMS Certified with Honors</h3>
+            <span class="validity">2020–2022</span>
+          </div>
+        </div>
+        <p class="accreditation-description">Certified in Green Building and GB Advanced by GEBAC.</p>
+        <a href="/Images/NVS Corporate Services, Inc., CIMS GB Certified with Honors.pdf" class="cert-button">View Certificate</a>
+      </div>
+  
+    </div>
+  </section>
 
 <div class="OurFacility"><h3 class="tracking-in-expand">Our Facility Services Include:</h3></div>
 <section class="thirdText">
@@ -163,15 +226,16 @@ password: a6#u7r!y#//-->
     </div>
 
     <div class="hoo-wii-r">
-        <div class="capButton">
-            <a href="/Images/NVS CAPABILITY STATEMENT.pdf">Capability Statement</a>
-        </div>
         <iframe src="https://www.youtube-nocookie.com/embed/MHlHdesxoeo" allowfullscreen></iframe>
     </div>
 </section>
 
+<div class="capButton">
+    <a href="/Images/NVS CAPABILITY STATEMENT.pdf">Capability Statement</a>
+</div>
+
     <section class="logoCarousel">
-        <div class="head1"><h3 class="tracking-in-expand">Certifications & Associations:</h3></div>
+        <div class="head1"><h4 class="tracking-in-expand">Certifications & Accreditations:</h4></div>
         <div class="logos1">
             <div class="logos-slide">
                 <a href="#">
@@ -201,7 +265,7 @@ password: a6#u7r!y#//-->
             </div>
         </div>
         
-        <div class="head2"><h3 class="tracking-in-expand">Serving Clients Such as:</h3></div>
+        <div class="head2"><h4 class="tracking-in-expand">Serving Clients Such as:</h4></div>
         <div class="logos2">
             <div class="logos-slide">
                 <a href="#">
@@ -238,7 +302,7 @@ password: a6#u7r!y#//-->
 
 <footer class="footer">
     
-    <div class="footerLogo"><a href="/index.html"><img src="../Images/nvs_logo_all_white.svg" alt="NVS White Logo"></div></a>
+    <div class="footerLogo"><a href="/index.html"><img src="/Images/nvs_logo.svg" alt="NVS White Logo"></div></a>
 
     <div class="footerContact">
         <a href="https://www.google.com/search?q=NVS+Corporate+Services%2C+Inc.&rlz=1C1GEWG_enUS985US985&sourceid=chrome&ie=UTF-8#ip=1"><p>NVS Corporate Services, Inc.</p></a>

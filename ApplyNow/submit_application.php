@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['signature'])) {
         $signatureDataURL = $_POST['signature'];
         $signatureData = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $signatureDataURL));
-        $signatureFilePath = 'signatures/' . uniqid() . '.png';
+        $signatureFilePath = __DIR__ . '/signatures/' . uniqid() . '.png';
         file_put_contents($signatureFilePath, $signatureData);
         $fields['Signature'] = "<img src=\"cid:signature\" alt=\"Signature\" style=\"max-width: 200px; background-color: white;\" />";
     }
@@ -215,7 +215,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "</body>
     </html>";
 
-    $logFile = 'C:/xampp/htdocs/NVS-Website/ApplyNow/application_log.txt';
+    $logFile = __DIR__ . '/application_log.txt';
+
 
     $mail = new PHPMailer(true);
     try {
